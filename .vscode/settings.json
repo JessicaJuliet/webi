@@ -1,7 +1,7 @@
 {
    "python.linting.pylintEnabled": true,
    "python.linting.enabled": true,
-   "python.linting.pep8Enabled": false,
+   "python.linting.pycodestyleEnabled": false,
    "python.linting.flake8Enabled": true,
    "python.terminal.activateEnvironment": false,
    "python.formatting.autopep8Path": "/home/gitpod/.pyenv/shims/autopep8",
@@ -20,7 +20,7 @@
       "**/core.python*": true,
       "**/CVS": true
    },
-   "files.autoSave": "off",
+   "files.autoSave": "afterDelay",
    "workbench.colorTheme": "Visual Studio Dark",
    "editor.defaultFormatter": "HookyQR.beautify"
 }
