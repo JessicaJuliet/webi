@@ -56,13 +56,24 @@ A new Django project was created as follows:
 5. Run the initial migrations by typing ‘python3 manage.py migrate’ in the terminal
 
 A super user was created as follows:
-* Type ‘python3 manage.py createsuperuser’ in the terminal
-* Set a username, email address and password
+1. Type ‘python3 manage.py createsuperuser’ in the terminal
+2. Set a username, email address and password
 
 In Django a SECRET_KEY is automatically included in the settings.py file. This was removed after the initial commit as follows:
-* Find a Django Secret Key generator online and copy SECRET_KEY
-* Set the secret key in the environment variable
-* Check the server still runs
-* Push to GitHub
+1. Find a Django Secret Key generator online and copy SECRET_KEY
+2. Set the secret key in the environment variable
+3. Check the server still runs
+4. Push to GitHub
+
+### Local Deployment
+
+The following steps are required to run this locally:
+
+1. Go to the GitHub repository
+2. Click the 'Code' dropdown menu
+3. Copy Git URL from HTTPS box (https://github.com/JessicaJuliet/meditracker.git), or select to download the ZIP file
+4. If usings the Git URL, open a new terminal in your IDE and type the 'git clone' command in the CLI and paste the copied URL
+5. A clone of this project will be created locally on your machine
+6. Alternatively, if you download the ZIP, unpackage locally and open in your IDE
 
 [Back to top](#webi)
