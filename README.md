@@ -36,3 +36,33 @@ WEBI also offers its clients additional  marketing services to ensure their webs
 * [PEP8 Online](http://pep8online.com/) was used to check for PEP8 compliance
 
 [Back to top](#webi)
+
+## Deployment
+
+### Project Creation
+This project was created on GitHub using the following steps:
+
+1. On Github, a new repository named ‘webi’ was created by navigating to ‘New’ on the Repositories page, selecting the CI full template, providing a ‘Repository name’, ‘Description’ and then clicking ‘Create repository’
+2. Once the repository was created, I clicked the ‘Gitpod’ button to create the workspace in Gitpod
+3. Version control was used throughout the project using the following commands: git commit -m "descriptive updates" - This command was used to commit changes to the local repository
+4. git push - This command was used to push all committed changes to the GitHub repository
+
+A new Django project was created as follows:
+
+1. In the terminal, type ‘pip3 install django’ to install Django from the Python package index (version 3) and install in Gitpod
+2. To create the project in the current directory, type ‘django-admin startproject webi .’ in the terminal
+3. A .gitignore was created by typing ‘touch .gitignore’ in the terminal (included in CI template) which excluded our development database file (*.sqlite3) and compiled Python code (*.pyc and __pycache__) we don’t need in version control
+4. Test Django is installed correctly by typing ‘python3 manage.py runserver’ in the terminal
+5. Run the initial migrations by typing ‘python3 manage.py migrate’ in the terminal
+
+A super user was created as follows:
+* Type ‘python3 manage.py createsuperuser’ in the terminal
+* Set a username, email address and password
+
+In Django a SECRET_KEY is automatically included in the settings.py file. This was removed after the initial commit as follows:
+* Find a Django Secret Key generator online and copy SECRET_KEY
+* Set the secret key in the environment variable
+* Check the server still runs
+* Push to GitHub
+
+[Back to top](#webi)
