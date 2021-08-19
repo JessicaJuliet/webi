@@ -65,15 +65,28 @@ In Django a SECRET_KEY is automatically included in the settings.py file. This w
 3. Check the server still runs
 4. Push to GitHub
 
+### Heroku Deployment
+
+
 ### Local Deployment
 
 The following steps are required to run this locally:
 
 1. Go to the GitHub repository
 2. Click the 'Code' dropdown menu
-3. Copy Git URL from HTTPS box (https://github.com/JessicaJuliet/meditracker.git), or select to download the ZIP file
+3. Copy Git URL from HTTPS box (https://github.com/JessicaJuliet/webi.git), or select to download the ZIP file
 4. If usings the Git URL, open a new terminal in your IDE and type the 'git clone' command in the CLI and paste the copied URL
 5. A clone of this project will be created locally on your machine
 6. Alternatively, if you download the ZIP, unpackage locally and open in your IDE
+
+[Back to top](#webi)
+
+## Credits
+
+### Code
+
+### Acknowledgements
+
+A bit thank you to my mentor, and the Code Institute's tutors, for encouraging and guiding me throughout the development of this project.
 
 [Back to top](#webi)
