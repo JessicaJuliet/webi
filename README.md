@@ -9,6 +9,18 @@
 
 WEBI also offers its clients additional  marketing services to ensure their websites are discoverable online and reach the right audience.
 
+## Information Architecture
+
+### Data Schema
+
+<img src="readme-files/schema/product-app.png">
+
+<img src="readme-files/schema/checkout-app.png">
+
+<img src="readme-files/schema/case-study-app.png">
+
+[Back to top](#webi)
+
 ## Technologies Used
 ### Languages
 * [HTML](https://en.wikipedia.org/wiki/HTML) was the main language used to create this website
