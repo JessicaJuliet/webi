@@ -63,6 +63,7 @@ I researched colour schemes on Google and used Adobe's colour picker to choose t
 I selected blue to represent professionalism and pink to show creativity and a nice contrast to the blue.
 
 ### Typography
+The fonts chosen for this website are Lato for headings and Roboto for the paragraph text. These are both sans serif fonts and I imported them into the CSS file from Google Fonts.
 
 ### Logo
 I created the logo using Adobe Illustrator. I wanted a modern, clean and sans serif font for the logo and decided on Roboto Regular for this. The colours chosen were a combination of the blue and pink listed in the colour scheme above. The image below demonstrates how the logo should be used against dark and light backgrounds:
