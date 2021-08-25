@@ -5,9 +5,13 @@
 ## Purpose
 ### Introduction
 
-**WEBI** is a website design and development agency. Its affordable website packages are suited to small businesses and start up companies who wish to build a professional face for their business online. 
+**WEBI** is a website design and development agency. It offers affordable website packages aimed at small businesses and start up companies who wish to build a professional face for their company online. 
 
-WEBI also offers its clients additional  marketing services to ensure their websites are discoverable online and reach the right audience.
+WEBI's services also span beyond design and development and include marketing services, such as SEO management, to ensure its client's websites are discoverable online and reach the right audience, in addition to hosting services. 
+
+WEBI's affordable prices help the company to stand out in a competitive market and attract its target audience outlined above which often have a small budget for website projects.
+
+
 
 ## Information Architecture
 
