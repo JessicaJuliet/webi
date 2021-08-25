@@ -11,9 +11,53 @@ WEBI's services also span beyond design and development and include marketing se
 
 WEBI's affordable prices help the company to stand out in a competitive market and attract its target audience outlined above which often have a small budget for website projects.
 
+## Table of Contents
 
+* [Purpose](#Purpose)
+    * [Introduction](#Introduction)
+* [User Experience Design](#user-experience-design)
+    * [User Stories](#user-stories)
+    * [Design Inspiration](#design-inspiration)
+    * [Colour Scheme](#colour-scheme)
+    * [Typography](#logo)
+    * [Logo](#logo)
+* [Website Structure](#website-structure)
+    * [Wireframes](#wireframes)
+    * [Mockups](#mockups])
+    * [Data Schema](#data-schema)
+* Features
+    * Existing Features
+    * Features to be Implemented
+* [Technologies Used](#technologies-used)
+    * [Languages](#languages)
+    * [Libraries and Frameworks](#libraries-and-frameworks)
+    * [Tools](#tools)
+* Testing
+* [Deployment](#deployment)
+    * [Project Creation](#project-creation)
+    * Heroku Deployment
+    * [Local Deployment](#local-deployment)
+* [Credits](#credits)
+    * Code
+    * [Acknowledgements](#acknowledgements)
 
-## Information Architecture
+## User Experience Design
+
+### User Stories
+
+### Design Inspiration
+
+### Colour Scheme
+
+### Typography
+
+### Logo
+
+## Website Structure
+
+### Wireframes
+
+### Mockups
 
 ### Data Schema
 
@@ -26,6 +70,7 @@ WEBI's affordable prices help the company to stand out in a competitive market a
 [Back to top](#webi)
 
 ## Technologies Used
+
 ### Languages
 * [HTML](https://en.wikipedia.org/wiki/HTML) was the main language used to create this website
 * [CSS](https://en.wikipedia.org/wiki/CSS) was used to add bespoke design
