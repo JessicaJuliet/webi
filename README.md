@@ -47,6 +47,10 @@ WEBI's affordable prices help the company to stand out in a competitive market a
 
 ### Design Inspiration
 
+Before designing this website, I explored similar sites online to get an idea of the look and feel of websites in the industry. One company which really stood out to me was <a href="https://www.webstudio.ie/" target="_blank">WebStudio</a>. I drew great inpsiration from this website both strucutrally for my database and design-wise. 
+
+<img src="readme-files/readme-images/webstudio.png">
+
 ### Colour Scheme
 
 I researched colour schemes on Google and used Adobe's colour picker to choose the blue and pink shades for this website. Their Hexadecimal values are listed below:
