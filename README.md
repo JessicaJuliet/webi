@@ -72,6 +72,15 @@ I created the logo using Adobe Illustrator. I wanted a modern, clean and sans se
 
 ### Wireframes
 
+| Desktop Wireframes | Mobile Wireframes | Tablet Wireframes |
+|--------------------|-------------------|-------------------|
+| Homepage           | Homepage          | Homepage          |
+| Website Services   | Website Services  | Website Services  |
+| Add-ons            | Add-ons           | Add-ons           |
+| Design Services    | Design Services   | Design Services   |
+| About              | About             | About             |
+| Blog               | Blog              | Blog              |
+
 ### Mockups
 
 ### Data Schema
@@ -145,7 +154,6 @@ I created the logo using Adobe Illustrator. I wanted a modern, clean and sans se
 | Product         | product        | ForeignKey 'Product' |
 | Quantity        | quantity       | IntegerField         |
 | Line Item Total | lineitem_total | DecimalField         |
-
 
 
 #### Blog App
