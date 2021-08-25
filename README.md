@@ -52,6 +52,11 @@ WEBI's affordable prices help the company to stand out in a competitive market a
 ### Typography
 
 ### Logo
+I created the logo using Adobe Illustrator. I wanted a modern, clean and sans serif font for the logo and decided on Roboto Regular for this. The colours chosen were a combination of the blue and pink listed in the colour scheme above. The image below demonstrates how the logo should be used against dark and light backgrounds:
+
+<img src="readme-files/readme-images/webi-logo.png">
+
+
 
 ## Website Structure
 
