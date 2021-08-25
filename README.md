@@ -19,7 +19,7 @@ WEBI's affordable prices help the company to stand out in a competitive market a
     * [User Stories](#user-stories)
     * [Design Inspiration](#design-inspiration)
     * [Colour Scheme](#colour-scheme)
-    * [Typography](#logo)
+    * [Typography](#typography)
     * [Logo](#logo)
 * [Website Structure](#website-structure)
     * [Wireframes](#wireframes)
@@ -53,14 +53,12 @@ Before designing this website, I explored similar sites online to get an idea of
 
 ### Colour Scheme
 
-I researched colour schemes on Google and used Adobe's colour picker to choose the blue and pink shades for this website. Their Hexadecimal values are listed below:
+I researched colour schemes on Google and used Adobe's colour picker to choose the blue and pink shades for this website. I selected blue to represent professionalism and pink to show creativity and a nice contrast to the blue. Their Hexadecimal values are listed below:
 
 | Colour | Hex Value |
 | ------ | ------ |
 | Blue | #093d60 |
 | Pink | #feb5c5 |
-
-I selected blue to represent professionalism and pink to show creativity and a nice contrast to the blue.
 
 ### Typography
 The fonts chosen for this website are Lato for headings and Roboto for the paragraph text. These are both sans serif fonts and I imported them into the CSS file from Google Fonts.
@@ -70,8 +68,6 @@ I created the logo using Adobe Illustrator. I wanted a modern, clean and sans se
 
 <img src="readme-files/readme-images/webi-logo.png">
 
-
-
 ## Website Structure
 
 ### Wireframes
@@ -79,6 +75,46 @@ I created the logo using Adobe Illustrator. I wanted a modern, clean and sans se
 ### Mockups
 
 ### Data Schema
+
+**Product App**
+
+| Category Model |               |            |
+|----------------|---------------|------------|
+| Name           | Database Key  | Field Type |
+| Name           | name          | CharField  |
+| Friendly Name  | friendly_name | CharField  |
+
+| Website Model |              |              |
+|---------------|--------------|--------------|
+| Name          | Database Key | Field Type   |
+| Service ID    | service_id   | IntegerField |
+| Name          | name         | CharField    |
+| Description   | description  | TextField    |
+| Price         | price        | DecimalField |
+
+| Images Model |              |            |
+|--------------|--------------|------------|
+| Name         | Database Key | Field Type |
+| Image        | image        | URLField   |
+| Image URL    | image_url    | ImageField |
+
+| Design Model |              |              |
+|--------------|--------------|--------------|
+| Name         | Database Key | Field Type   |
+| Design ID    | design_id    | IntegerField |
+| Name         | name         | CharField    |
+| Description  | description  | TextField    |
+| Price        | price        | DecimalField |
+| Quantity     | quantity     | IntegerField |
+
+| Add-ons Models |              |              |
+|----------------|--------------|--------------|
+| Name           | Database Key | Field Type   |
+| Add-on ID      | addon_id     | IntegerField |
+| Name           | name         | CharField    |
+| Description    | description  | TextField    |
+| Price          | price        | DecimalField |
+| Quantity       | quantity     | IntegerField |
 
 <img src="readme-files/schema/product-app.png">
 
