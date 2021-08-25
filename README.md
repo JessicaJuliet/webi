@@ -76,40 +76,40 @@ I created the logo using Adobe Illustrator. I wanted a modern, clean and sans se
 
 ### Data Schema
 
-**Product App**
+> Product App
 
-| Category Model |               |            |
-|----------------|---------------|------------|
+**Category Model**
 | Name           | Database Key  | Field Type |
+|----------------|---------------|------------|
 | Name           | name          | CharField  |
 | Friendly Name  | friendly_name | CharField  |
 
-| Website Model |              |              |
-|---------------|--------------|--------------|
+**Website Model**
 | Name          | Database Key | Field Type   |
+|---------------|--------------|--------------|
 | Service ID    | service_id   | IntegerField |
 | Name          | name         | CharField    |
 | Description   | description  | TextField    |
 | Price         | price        | DecimalField |
 
-| Images Model |              |            |
-|--------------|--------------|------------|
+**Images Model**
 | Name         | Database Key | Field Type |
+|--------------|--------------|------------|
 | Image        | image        | URLField   |
 | Image URL    | image_url    | ImageField |
 
-| Design Model |              |              |
-|--------------|--------------|--------------|
+**Design Model**
 | Name         | Database Key | Field Type   |
+|--------------|--------------|--------------|
 | Design ID    | design_id    | IntegerField |
 | Name         | name         | CharField    |
 | Description  | description  | TextField    |
 | Price        | price        | DecimalField |
 | Quantity     | quantity     | IntegerField |
 
-| Add-ons Models |              |              |
-|----------------|--------------|--------------|
+**Addons Model**
 | Name           | Database Key | Field Type   |
+|----------------|--------------|--------------|
 | Add-on ID      | addon_id     | IntegerField |
 | Name           | name         | CharField    |
 | Description    | description  | TextField    |
