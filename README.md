@@ -23,7 +23,6 @@ WEBI's affordable prices help the company to stand out in a competitive market a
     * [Logo](#logo)
 * [Website Structure](#website-structure)
     * [Wireframes](#wireframes)
-    * [Mockups](#mockups])
     * [Data Schema](#data-schema)
 * Features
     * Existing Features
@@ -40,6 +39,8 @@ WEBI's affordable prices help the company to stand out in a competitive market a
 * [Credits](#credits)
     * Code
     * [Acknowledgements](#acknowledgements)
+
+--- 
 
 ## User Experience Design
 
@@ -68,20 +69,21 @@ I created the logo using Adobe Illustrator. I wanted a modern, clean and sans se
 
 <img src="readme-files/readme-images/webi-logo.png">
 
+[Back to top](#webi)
+
+---
+
 ## Website Structure
 
 ### Wireframes
 
 | Desktop Wireframes | Mobile Wireframes | Tablet Wireframes |
 |--------------------|-------------------|-------------------|
-| Homepage           | Homepage          | Homepage          |
-| Website Services   | Website Services  | Website Services  |
-| Add-ons            | Add-ons           | Add-ons           |
-| Design Services    | Design Services   | Design Services   |
-| About              | About             | About             |
-| Blog               | Blog              | Blog              |
-
-### Mockups
+| [Homepage](readme-files/wireframes/homepage-desktop-wireframe.png) | Homepage | Homepage |
+| [Web Development](readme-files/wireframes/web-dev-desktop-wireframe.png) | Web Development| Web Development |
+| [Add-ons](readme-files/wireframes/addon-desktop-wireframe.png) | Add-ons | Add-ons |
+| [About](readme-files/wireframes/about-desktop-wireframe.png) | About | About |
+| [Blog](readme-files/wireframes/blog-desktop-wireframe.png) | Blog | Blog |
 
 ### Data Schema
 
@@ -157,10 +159,10 @@ I created the logo using Adobe Illustrator. I wanted a modern, clean and sans se
 
 
 #### Blog App
-<img src="readme-files/schema/case-study-app.png">
 
 [Back to top](#webi)
 
+--- 
 ## Technologies Used
 
 ### Languages
@@ -190,6 +192,8 @@ I created the logo using Adobe Illustrator. I wanted a modern, clean and sans se
 * [TableConvert](https://tableconvert.com/) was used to convert csv data to markdown tables
 
 [Back to top](#webi)
+
+--- 
 
 ## Deployment
 
@@ -234,6 +238,8 @@ The following steps are required to run this locally:
 6. Alternatively, if you download the ZIP, unpackage locally and open in your IDE
 
 [Back to top](#webi)
+
+--- 
 
 ## Credits
 
