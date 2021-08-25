@@ -49,6 +49,15 @@ WEBI's affordable prices help the company to stand out in a competitive market a
 
 ### Colour Scheme
 
+I researched colour schemes on Google and used Adobe's colour picker to choose the blue and pink shades for this website. Their Hexadecimal values are listed below:
+
+| Colour | Hex Value |
+| ------ | ------ |
+| Blue | #093d60 |
+| Pink | #feb5c5 |
+
+I selected blue to represent professionalism and pink to show creativity and a nice contrast to the blue.
+
 ### Typography
 
 ### Logo
