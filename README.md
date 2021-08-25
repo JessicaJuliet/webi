@@ -76,7 +76,7 @@ I created the logo using Adobe Illustrator. I wanted a modern, clean and sans se
 
 ### Data Schema
 
-> Product App
+#### Product App
 
 **Category Model**
 | Name           | Database Key  | Field Type |
@@ -116,10 +116,39 @@ I created the logo using Adobe Illustrator. I wanted a modern, clean and sans se
 | Price          | price        | DecimalField |
 | Quantity       | quantity     | IntegerField |
 
-<img src="readme-files/schema/product-app.png">
 
-<img src="readme-files/schema/checkout-app.png">
+#### Checkout App
 
+**Order Model**
+
+| Name           | Database Key   | Field Type               |
+|----------------|----------------|--------------------------|
+| Order Number   | order_number   | CharField                |
+| User Profile   | user_profile   | ForeignKey 'UserProfile' |
+| Full Name      | full_name      | CharField                |
+| Email          | email          | EmailField               |
+| Phone Number   | phone_number   | CharField                |
+| Street Address | street_address | CharField                |
+| Country        | country        | CharField                |
+| Town or City   | town_or_city   | CharField                |
+| Postcode       | postcode       | CharField                |
+| Date           | date           | "DateTimeField"          |
+| Order Total    | order_total    | DecimalField             |
+| Grand Total    | grand_total    | DecimalField             |
+| Stripe PID     | stripe_pid     | CharField                |
+
+**OrderLineItem Model**
+
+| Name            | Database Key   | Field Type           |
+|-----------------|----------------|----------------------|
+| Order           | order          | ForeignKey 'Order'   |
+| Product         | product        | ForeignKey 'Product' |
+| Quantity        | quantity       | IntegerField         |
+| Line Item Total | lineitem_total | DecimalField         |
+
+
+
+#### Blog App
 <img src="readme-files/schema/case-study-app.png">
 
 [Back to top](#webi)
