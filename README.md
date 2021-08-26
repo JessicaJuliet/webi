@@ -42,36 +42,37 @@ Small companies and startups often have a small budget for website development s
 
 ### User Stories
 
-| USER STORY ID                  | AS A        | I WANT TO BE ABLE TO                                                | SO THAT I CAN                                                                                     |
-|--------------------------------|-------------|---------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| Viewing and Navigation         |             |                                                                     |                                                                                                   |
-| 1                              | Prospect     | View a list of services available                                   | Select a service to buy                                                                           |
-| 2                              | Prospect     | View specific categories of services                                | Easily find a service suited to my needs                                                          |
-| 3                              | Prospect     | View individual service details                                     | Identify the service price and description                                                        |
-| 4                              | Prospect     | Easily view the total of my purchases                               | Measure cost against business budget & see if I can afford to include additional service add-ons  |
-| Registration and User Accounts |             |                                                                     |                                                                                                   |
-| 5                              | Client   | Easily register for an account                                      | Setup my own personal area on the website to see my order history and profile                     |
-| 6                              | Client   | Easily login or logout                                              | Access my personal account information                                                            |
-| 7                              | Client   | Easily recover my password if I forget it                           | Recover access to my account                                                                      |
-| 8                              | Client   | Receive an email confirmation after registering                     | Verify that my account registration was successful                                                |
-| 9                              | Client   | Have a personalised user profile                                    | View my personal order history, order confirmations and save my payment details                   |
-| Sorting and Searching          |             |                                                                     |                                                                                                   |
-| 10                             | Prospect     | Sort the list of all available services                             | Quickly find a service that meets my requirements                                                 |
-| 11                             | Prospect     | Sort services by a specific category                                | Narrow down services to those of interest                                                         |
-| 14                             | Prospect     | Search for a product by name or description                         |                                                                                                   |
-| 15                             | Prospect     | Easily see what I've searched for and the number of results         |                                                                                                   |
-| Purchasing and Checkout        |             |                                                                     |                                                                                                   |
-| 12                             | Prospect     | Easily select the size and quantity of a product when purchasing it |                                                                                                   |
-| 13                             | Prospect     | View items in my bag to be purchased                                | See what the total cost of items in my basket are                                                 |
-| 14                             | Prospect     | Adjust the quantity of individual items in my bag                   | Make changes to items in my basket before checking out                                            |
-| 15                             | Prospect     | Easily enter my payment information                                 | Purchase my desired serviceds                                                                     |
-| 16                             | Prospect     | Feel my personal and payment information is safe and secure         | Provide my payment information to make a purchase                                                 |
-| 17                             | Prospect     | View and order confirmation after checkout                          | Ensure I have made the correct purchase                                                           |
-| 18                             | Prospect     | Receive an email confirmation after checking out                    | Record details of my purchase history                                                             |
-| Admin and Store Management     |             |                                                                     |                                                                                                   |
-| 19                             | Manager | Add a service/product                                               | Add new items to my store                                                                         |
-| 20                             | Manager | Edit/update a service/product                                       | Ammend service decriptions, price and images                                                      |
-| 21                             | Manager | Delete a product                                                    | Remove any items which are no longer being sold                                                   |
+| USER STORY ID                  | AS A       | I WANT TO BE ABLE TO                                        | SO THAT I CAN                                                                 |
+|--------------------------------|------------|-------------------------------------------------------------|-------------------------------------------------------------------------------|
+| Viewing and Navigation         |            |                                                             |                                                                               |
+| 1                              | Prospect   | View a list of services/ products available                 | Select a service/ product to buy                                              |
+| 2                              | Prospect   | View specific categories of services                        | Easily find a service suited to my needs                                      |
+| 3                              | Prospect   | View individual service details                             | Identify the service price, description and suitability                       |
+| 4                              | Prospect   | Easily view the total of my purchases                       | Ensure total cost falls within my budget                                      |
+| 5                              | Prospect   | Read blogs                                                  | Expand my knowledge on design and development                                 |
+| 6                              | Prospect   | Review case studies                                         | Trust the quality of the freelancing services on offer                        |
+| Registration and User Accounts |            |                                                             |                                                                               |
+| 7                              | Client     | Easily register for an account                              | Setup my own personal area on the website to see my order history and profile |
+| 8                              | Client     | Easily login or logout                                      | Access my personal account information                                        |
+| 9                              | Client     | Easily recover my password if I forget it                   | Recover access to my account                                                  |
+| 10                             | Client     | Receive an email confirmation after registering             | Verify that my account registration was successful                            |
+| 11                             | Client     | Have a personalised user profile                            | View my personal order history and progress                                   |
+| Sorting and Searching          |            |                                                             |                                                                               |
+| 12                             | Prospect   | Sort the list of all available services                     | Quickly find a service that meets my requirements                             |
+| 13                             | Prospect   | Sort services by a specific category                        | Narrow down services to those of interest                                     |
+| Purchasing and Checkout        |            |                                                             |                                                                               |
+| 14                             | Prospect   | View items in my bag to be purchased                        | See what the total cost of items in my basket are                             |
+| 15                             | Prospect   | Adjust the quantity of individual items in my bag           | Make changes to items in my basket before checking out                        |
+| 16                             | Prospect   | Easily enter my payment information                         | Purchase my desired services                                                  |
+| 17                             | Prospect   | Feel my personal and payment information is safe and secure | Feel comfortable in providing my payment information to make a purchase       |
+| 18                             | Prospect   | View my order confirmation after checkout                   | Ensure I have made the correct purchase                                       |
+| 19                             | Prospect   | View the progress of my order                               | I know when I can expect it to be ready                                       |
+| Admin and Store Management     |            |                                                             |                                                                               |
+| 20                             | Management | Add a service/ product                                      | Add new items to my store                                                     |
+| 21                             | Management | Edit/update a service/ product                              | Ammend service/ product decriptions, price and images                         |
+| 22                             | Management | Delete a product                                            | Remove any services which are no longer being sold                            |
+| 23                             | Management | Edit/ update the status of an order                         | Update clients of their order progress                                        |
+
 
 ### Design Inspiration
 
@@ -123,6 +124,7 @@ I created wireframes for this web application using balsamiq:
 |----------------|---------------|------------|
 | Name           | name          | CharField  |
 | Friendly Name  | friendly_name | CharField  |
+| Type           | type          | CharField  |
 
 **Bundle Model**
 | Name          | Database Key | Field Type   |
@@ -131,6 +133,7 @@ I created wireframes for this web application using balsamiq:
 | Name          | name         | CharField    |
 | Description   | description  | TextField    |
 | Price         | price        | DecimalField |
+| Add-on        | addon        | ForeignKey 'Addon' |
 
 **Images Model**
 | Name         | Database Key | Field Type |
@@ -138,19 +141,10 @@ I created wireframes for this web application using balsamiq:
 | Image        | image        | URLField   |
 | Image URL    | image_url    | ImageField |
 
-**Design Model**
-| Name         | Database Key | Field Type   |
-|--------------|--------------|--------------|
-| Design ID    | design_id    | IntegerField |
-| Name         | name         | CharField    |
-| Description  | description  | TextField    |
-| Price        | price        | DecimalField |
-| Quantity     | quantity     | IntegerField |
-
-**Addons Model**
+**Addon Model**
 | Name           | Database Key | Field Type   |
 |----------------|--------------|--------------|
-| Add-on ID      | addon_id     | IntegerField |
+| Addon ID      | addon_id     | IntegerField |
 | Name           | name         | CharField    |
 | Description    | description  | TextField    |
 | Price          | price        | DecimalField |
