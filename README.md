@@ -5,11 +5,7 @@
 ## Purpose
 ### Introduction
 
-**WEBI** is a website design and development agency. It offers affordable website packages aimed at small businesses and start up companies who wish to build a professional face for their company online. 
-
-WEBI's services also span beyond design and development and include marketing services, such as SEO management, to ensure its client's websites are discoverable online and reach the right audience, in addition to hosting services. 
-
-WEBI's affordable prices help the company to stand out in a competitive market and attract its target audience outlined above which often have a small budget for website projects.
+Small companies and startups often have a small budget for website development services. I decided to create **WEBI** to offer my design and development freelancing skills to small companies who wish to build a professional face for their brand online but are restricted by budget. In addition, my freelancing services span beyond just design and development, and include marketing and hosting services also.
 
 ## Table of Contents
 
