@@ -108,11 +108,11 @@ I created wireframes for this web application using balsamiq:
 
 | Desktop Wireframes | Mobile Wireframes | Tablet Wireframes |
 |--------------------|-------------------|-------------------|
-| [Homepage](readme-files/wireframes/homepage-desktop-wireframe.png) | Homepage | Homepage |
-| [Web Development](readme-files/wireframes/web-dev-desktop-wireframe.png) | Web Development| Web Development |
-| [Add-ons](readme-files/wireframes/addon-desktop-wireframe.png) | Add-ons | Add-ons |
-| [About](readme-files/wireframes/about-desktop-wireframe.png) | About | About |
-| [Blog](readme-files/wireframes/blog-desktop-wireframe.png) | Blog | Blog |
+| [Homepage](readme-files/wireframes/homepage-desktop.png) | [Homepage](readme-files/wireframes/homepage-mobile.png) | [Homepage](readme-files/wireframes/homepage-tablet.png) |
+| [Bundles](readme-files/wireframes/bundles-desktop.png) | [Bundles](readme-files/wireframes/bundles-mobile.png)| [Bundles](readme-files/wireframes/bundles-tablet.png) |
+| [Add-ons](readme-files/wireframes/addons-desktop.png) | [Add-ons](readme-files/wireframes/addons-mobile.png) | [Add-ons](readme-files/wireframes/addons-tablet.png) |
+| [About](readme-files/wireframes/about-desktop.png) | [About](readme-files/wireframes/about-mobile.png) | [About](readme-files/wireframes/about-tablet.png) |
+| [Blog](readme-files/wireframes/blog-desktop.png) | [Blog](readme-files/wireframes/blog-mobile.png) | [Blog](readme-files/wireframes/blog-tablet.png)  |
 
 ### Data Schema
 
