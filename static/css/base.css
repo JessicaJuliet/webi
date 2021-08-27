@@ -1,4 +1,15 @@
-/* Site Header */
+/* ---------- Site Header ---------- */
+
+.logo {
+    width: 150px;
+}
+.custom-nav {
+    background: white !important;
+}
+
+.nav-item:hover {
+    color: #feb5c5 !important;
+}
 
 .hero-image {
     background: url(/../media/hero.jpg);
@@ -6,8 +17,4 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
-}
-
-.h1 {
-    color: blue;
 }
