@@ -5,6 +5,7 @@
 }
 .custom-nav {
     background: white !important;
+    height: 120px;
 }
 
 .nav-item:hover {
@@ -17,4 +18,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
+}
+
+.hero-h1 {
+    color: #093d60;
+    padding-top: 50px;
 }
