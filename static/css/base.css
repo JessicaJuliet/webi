@@ -2,6 +2,7 @@
 
 h1, h2, h3, h4, h5 {
     font-family: 'Lato', sans-serif;
+    color: #093d60;
 }
 
 p {
@@ -9,7 +10,11 @@ p {
 }
 
 .page-section {
-    margin-top: 120px;
+    margin-top: 150px;
+}
+
+.section-padding {
+    padding: 60px 0px;
 }
 
 .custom-button {
@@ -39,7 +44,13 @@ p {
 
 .top-header i {
     font-size: 20px;
+    color: white;
 }
+
+.top-header i:hover {
+    color: #feb5c5;
+}
+
 
 .top-header a:hover {
     color: #feb5c5 !important;
@@ -132,7 +143,30 @@ p {
     opacity: 0.8; 
 }
 
+.home-services {
+    background-color:#093d6005;
+}
 
+.ul-services li {
+    list-style: none;
+}
+
+.ul-services i {
+    font-size: 17px;
+    padding-right: 10px;
+    color:#093d60;
+}
+
+.ul-services li::before {
+    /* Unicode for arrow sourced from - https://unicode-table.com/en/203A/ */
+    content: "\203A";
+    color: #feb5c5; 
+    font-weight: bold;
+    font-size: 24px;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
 
 /* ---------- Media Queries ---------- */
 
