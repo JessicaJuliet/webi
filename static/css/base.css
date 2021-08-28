@@ -1,5 +1,21 @@
 /* ---------- Website Header ---------- */
 
+.top-header {
+    background-color: #093d60;
+    height: 30px;
+}
+
+.top-header a {
+    color: white;
+    float: right;
+    padding-right: 40px;
+}
+
+.top-header a:hover {
+    color: #feb5c5 !important;
+    text-decoration: none;
+}
+
 .logo {
     width: 150px;
     margin-right: 125px;
@@ -53,3 +69,12 @@ ul li::before {
 .hero-btn:hover {
     color: #feb5c5; 
 }
+
+/* ---------- Media Queries ---------- */
+
+@media (mid-width: 992px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
