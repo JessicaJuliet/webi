@@ -54,7 +54,7 @@
     list-style: none;
 }
 
-ul li::before {
+.ul-hero li::before {
     /* Unicode for arrow sourced from - https://unicode-table.com/en/203A/ */
     content: "\203A";
     color: #feb5c5; 

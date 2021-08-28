@@ -1,7 +1,26 @@
 {% extends "base.html" %}
-
 {% load static %}
 
+{% block extra_title %} - Freelance Website Development {% endblock %}
+
+{% block page_header %}
+    <header>
+        {% include "includes/main-nav.html" %}
+        <div class="hero-image">
+            <div class="container">
+                <h1 class="hero-h1">Freelance Website <br> Development</h1>
+                <ul class="ul-hero">
+                    <li>Affordable Prices</li>
+                    <li>24/7 Support</li>
+                    <li>100% Customer Satisfaction</li>
+                </ul>
+                <!-- Resource: https://getbootstrap.com/docs/4.0/components/buttons/ -->
+                <a href="#" role="button" class="btn hero-btn">Our Services</a>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+
 {% block content %}
-    <!--<h1 class="display-4 text-success">It works!</h1>-->
+
 {% endblock %}
