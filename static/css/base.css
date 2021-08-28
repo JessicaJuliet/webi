@@ -168,6 +168,31 @@ p {
     margin-left: -1em;
 }
 
+/* ---------- Footer ---------- */
+
+footer {
+    background-color: #093d60;
+    color: white;
+}
+
+footer h4, footer a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+footer a:hover{
+    color: #feb5c5;
+}
+
+footer i {
+    font-size: 45px;
+    padding: 7px;
+}
+
+footer .logo {
+    padding-bottom: 50px;
+}
+
 /* ---------- Media Queries ---------- */
 
 @media (mid-width: 992px) {
