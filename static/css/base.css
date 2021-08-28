@@ -1,5 +1,9 @@
 /* ---------- Site-wide Styling ---------- */
 
+h1, h2, h3, h4, h5 {
+    font-family: 'Lato', sans-serif;
+}
+
 p {
     font-family: 'Roboto', sans-serif;
 }
@@ -105,6 +109,30 @@ p {
 .home-quote-section {
     text-align: right;
 }
+
+/* Resource: Code souced from - https://www.tutorialrepublic.com/codelab.php?topic=faq&file=css-overlay-one-div-over-another-div */
+
+.box-container{
+    position: relative;
+}
+
+.stacked-top {
+    width: 75%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1; 
+}
+
+.stacked-bottom {
+    width: 30%;
+    position: relative;
+    top: 65%;
+    left: 60%;
+    opacity: 0.8; 
+}
+
+
 
 /* ---------- Media Queries ---------- */
 
