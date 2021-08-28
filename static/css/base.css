@@ -1,3 +1,24 @@
+/* ---------- Site-wide Styling ---------- */
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.page-section {
+    margin-top: 120px;
+}
+
+.custom-button {
+    background-color: #093d60;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
+.custom-button:hover {
+    color: #feb5c5;
+}
+
 /* ---------- Website Header ---------- */
 
 .top-header {
@@ -75,6 +96,16 @@
     color: #feb5c5; 
 }
 
+/* ---------- Homepage ---------- */
+
+.fas {
+    color: #feb5c5; 
+}
+
+.home-quote-section {
+    text-align: right;
+}
+
 /* ---------- Media Queries ---------- */
 
 @media (mid-width: 992px) {
@@ -82,4 +113,5 @@
         max-width: 80%;
     }
 }
+
 
