@@ -2,13 +2,18 @@
 
 .top-header {
     background-color: #093d60;
-    height: 30px;
+    height: 40px;
 }
 
 .top-header a {
     color: white;
     float: right;
-    padding-right: 40px;
+    padding-right: 30px;
+    padding-top: 7px;
+}
+
+.top-header i {
+    font-size: 20px;
 }
 
 .top-header a:hover {
