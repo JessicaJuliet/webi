@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Category (models.Model):
+class Category(models.Model):
     """
     Category model to filter services by type
     """
@@ -15,7 +15,7 @@ class Category (models.Model):
         return self.friendly_name
 
 
-class Bundles(models.Model):
+class Bundle(models.Model):
     """
     Bundles model to display bundles information
     """
@@ -29,7 +29,7 @@ class Bundles(models.Model):
         return self.name
 
 
-class Addons(models.Model):
+class Addon(models.Model):
     """
     Addons model to display add-ons information
     """
@@ -43,7 +43,7 @@ class Addons(models.Model):
         return self.name
 
 
-class Images(models.Model):
+class Image(models.Model):
     """
     Images model to display services images
     """
