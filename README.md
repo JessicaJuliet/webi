@@ -181,7 +181,7 @@ I created wireframes for this web application using balsamiq:
 |-----------------|----------------|---------------------|-----------------------------------------------------------------------------|
 | Order           | order          | ForeignKey 'Order'  | null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems' |
 | Bundle          | bundle         | ForeignKey 'Bundle' | null=False, blank=False, on_delete=models.CASCADE                           |
-| Addon           | addnon         | ForeignKey 'Addon'  | null=False, blank=False, on_delete=models.CASCADE                           |
+| Addon           | addon          | ForeignKey 'Addon'  | null=False, blank=False, on_delete=models.CASCADE                           |
 | Quantity        | quantity       | IntegerField        | null=False, blank=False, default=0                                          |
 | Line Item Total | lineitem_total | DecimalField        | max_digits=6, decimal_places=2, null=False, blank=False, editable=False     |
 
