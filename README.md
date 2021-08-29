@@ -117,38 +117,40 @@ I created wireframes for this web application using balsamiq:
 
 ### Data Schema
 
-#### Product App
+#### Services App
 
 **Category Model**
-| Name           | Database Key  | Field Type |
-|----------------|---------------|------------|
-| Name           | name          | CharField  |
-| Friendly Name  | friendly_name | CharField  |
-| Type           | type          | CharField  |
+| Name          | Database Key  | Field Type | Type Validation                       |
+|---------------|---------------|------------|---------------------------------------|
+| Name          | name          | CharField  | max_length=254                        |
+| Friendly Name | friendly_name | CharField  | max_length=254, null=True, blank=True |
+| Type          | type          | CharField  | max_length=254, null=True, blank=True |
 
 **Bundle Model**
-| Name          | Database Key | Field Type   |
-|---------------|--------------|--------------|
-| Service ID    | service_id   | IntegerField |
-| Name          | name         | CharField    |
-| Description   | description  | TextField    |
-| Price         | price        | DecimalField |
-| Add-on        | addon        | ForeignKey 'Addon' |
-
-**Images Model**
-| Name         | Database Key | Field Type |
-|--------------|--------------|------------|
-| Image        | image        | URLField   |
-| Image URL    | image_url    | ImageField |
+| Name        | Database Key | Field Type            | Type Validation                                  |
+|-------------|--------------|-----------------------|--------------------------------------------------|
+| Category    | category     | ForeignKey 'Category' | null=True, blank=True, on_delete=models.SET_NULL |
+| Service ID  | service_id   | CharField             | max_length=254, null=True, blank=True            |
+| Name        | name         | CharField             | max_length=254                                   |
+| Description | description  | TextField             | max_length=350                                   |
+| Price       | price        | DecimalField          | max_digits=6, decimal_places=2                   |
 
 **Addon Model**
-| Name           | Database Key | Field Type   |
-|----------------|--------------|--------------|
-| Addon ID      | addon_id     | IntegerField |
-| Name           | name         | CharField    |
-| Description    | description  | TextField    |
-| Price          | price        | DecimalField |
-| Quantity       | quantity     | IntegerField |
+| Name        | Database Key | Field Type            | Type Validation                                  |
+|-------------|--------------|-----------------------|--------------------------------------------------|
+| Category    | category     | ForeignKey 'Category' | null=True, blank=True, on_delete=models.SET_NULL |
+| Add-on ID   | addon_id     | CharField             | max_length=254, null=True, blank=True            |
+| Name        | name         | CharField             | max_length=254                                   |
+| Description | description  | TextField             | max_length=350                                   |
+| Price       | price        | DecimalField          | max_digits=6, decimal_places=2                   |
+
+
+**Images Model**
+| Name      | Database Key | Field Type | Type Validation                        |
+|-----------|--------------|------------|----------------------------------------|
+| name      | Name         | CharField  | max_length=254                         |
+| Image     | image        | ImageField | null=True, blank=True                  |
+| Image URL | image_url    | ImageField | max_length=1024, null=True, blank=True |
 
 
 #### Checkout App
