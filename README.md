@@ -188,15 +188,15 @@ I created wireframes for this web application using balsamiq:
 
 #### Case Study App
 
-| Name               | Database Key       | Field Type | Type Validation                      |
-|--------------------|--------------------|------------|--------------------------------------|
-| Title              | title              | CharField  | max_length=50                        |
-| slug               | slug               | SlugField  | max_length=200, unique=True          |
-| Header Image       | header_image       | ImageField |                                      |
-| Study Subheading 1 | study_subheading_1 | CharField  | max_length=50                        |
-| Study Content 1    | study_content_1    | TextField  | validators=[MinLengthValidator(200)] |
-| Study Subheading 2 | study_subheading_2 | CharField  | max_length=50                        |
-| Study Content 2    | study_content_2    | TextField  | validators=[MinLengthValidator(200)] |
+| Name               | Database Key       | Field Type | Type Validation                                  |
+|--------------------|--------------------|------------|--------------------------------------------------|
+| Title              | title              | CharField  | max_length=50                                    |
+| slug               | slug               | SlugField  | max_length=200, unique=True                      |
+| Header Image       | header_image       | ImageField | null=True, blank=True, on_delete=models.SET_NULL |
+| Study Subheading 1 | study_subheading_1 | CharField  | max_length=50                                    |
+| Study Content 1    | study_content_1    | TextField  | validators=[MinLengthValidator(200)]             |
+| Study Subheading 2 | study_subheading_2 | CharField  | max_length=50                                    |
+| Study Content 2    | study_content_2    | TextField  | validators=[MinLengthValidator(200)]             |
 
 [Back to top](#webi)
 
