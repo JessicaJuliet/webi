@@ -157,30 +157,33 @@ I created wireframes for this web application using balsamiq:
 
 **Order Model**
 
-| Name           | Database Key   | Field Type               |
-|----------------|----------------|--------------------------|
-| Order Number   | order_number   | CharField                |
-| User Profile   | user_profile   | ForeignKey 'UserProfile' |
-| Full Name      | full_name      | CharField                |
-| Email          | email          | EmailField               |
-| Phone Number   | phone_number   | CharField                |
-| Street Address | street_address | CharField                |
-| Country        | country        | CharField                |
-| Town or City   | town_or_city   | CharField                |
-| Postcode       | postcode       | CharField                |
-| Date           | date           | "DateTimeField"          |
-| Order Total    | order_total    | DecimalField             |
-| Grand Total    | grand_total    | DecimalField             |
-| Stripe PID     | stripe_pid     | CharField                |
+| Name           | Database Key   | Field Type               | Type Validation                                                         |
+|----------------|----------------|--------------------------|-------------------------------------------------------------------------|
+| Order Number   | order_number   | CharField                | max_length=32, null=False, editable=False                               |
+| User Profile   | user_profile   | ForeignKey 'UserProfile' | on_delete=models.SET_NULL, null=True, blank=True, related_name='orders' |
+| Full Name      | full_name      | CharField                | max_length=50, null=False, blank=False                                  |
+| Email          | email          | EmailField               | max_length=254, null=False, blank=False                                 |
+| Phone Number   | phone_number   | CharField                | max_length=20, null=False, blank=False                                  |
+| Street Address | street_address | CharField                | max_length=80, null=False, blank=False                                  |
+| Country        | country        | CharField                | max_length=40, null=False, blank=False                                  |
+| County         | county         | CharField                | max_length=80, null=True, blank=True                                    |
+| Town or City   | town_or_city   | CharField                | max_length=40, null=False, blank=False                                  |
+| Postcode       | postcode       | CharField                | max_length=20, null=True, blank=True                                    |
+| Date           | date           | "DateTimeField           | auto_now_add=True                                                       |
+| Order Total    | order_total    | DecimalField             | max_digits=10, decimal_places=2, null=False, default=0                  |
+| Grand Total    | grand_total    | DecimalField             | max_digits=10, decimal_places=2, null=False, default=0                  |
+| Stripe PID     | stripe_pid     | CharField                | max_length=254, null=False, blank=False, default=''                     |
+
 
 **OrderLineItem Model**
 
-| Name            | Database Key   | Field Type           |
-|-----------------|----------------|----------------------|
-| Order           | order          | ForeignKey 'Order'   |
-| Product         | product        | ForeignKey 'Product' |
-| Quantity        | quantity       | IntegerField         |
-| Line Item Total | lineitem_total | DecimalField         |
+| Name            | Database Key   | Field Type          | Type Validation                                                             |
+|-----------------|----------------|---------------------|-----------------------------------------------------------------------------|
+| Order           | order          | ForeignKey 'Order'  | null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems' |
+| Bundle          | bundle         | ForeignKey 'Bundle' | null=False, blank=False, on_delete=models.CASCADE                           |
+| Addon           | addnon         | ForeignKey 'Addon'  | null=False, blank=False, on_delete=models.CASCADE                           |
+| Quantity        | quantity       | IntegerField        | null=False, blank=False, default=0                                          |
+| Line Item Total | lineitem_total | DecimalField        | max_digits=6, decimal_places=2, null=False, blank=False, editable=False     |
 
 
 #### Blog App
