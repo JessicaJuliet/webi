@@ -275,6 +275,31 @@ In Django a SECRET_KEY is automatically included in the settings.py file. This w
 4. Push to GitHub
 
 ### Heroku Deployment
+1. Setup Heroku App
+    * Go to Heroku.com
+    * Click to create new app
+    * Name the app and select region
+    * Then scroll 'Add-ons' and provision a new 'Heroku Postgress' database
+    * Install dj_database_url and psycopg_2 in Gitpod:
+
+    > pip3 install dj_database_url
+
+    > pip3 install psycopg2-binary
+
+    * Freeze requirements to ensure Heroku installs all our app requirements when deployed:
+    > pip3 freeze > requirements.txt
+
+2. Setup Database
+    * Import dj_database_url in settings.py
+    * Replace default database with a call to dj_database_url with the database URL from Heroku
+    * Run migrations:
+    > pythong3 manage.py migrate
+    * Import product data
+    > python3 manage.py loaddata categories
+    > python3 manage.py loaddata services
+
+
+### Amazon AWS Setup
 
 
 ### Local Deployment
