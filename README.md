@@ -30,7 +30,7 @@ Small companies and startups often have a small budget for website development s
 * Testing
 * [Deployment](#deployment)
     * [Project Creation](#project-creation)
-    * Heroku Deployment
+    * [Heroku Deployment](#heroku-deployment)
     * [Local Deployment](#local-deployment)
 * [Credits](#credits)
     * Code
@@ -297,6 +297,7 @@ In Django a SECRET_KEY is automatically included in the settings.py file. This w
     * Import product data
     > python3 manage.py loaddata categories
     > python3 manage.py loaddata services
+    * Remove Heroku database config before committing
 
 
 ### Amazon AWS Setup

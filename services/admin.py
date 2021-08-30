@@ -1,8 +1,49 @@
 from django.contrib import admin
-from .models import Bundle, Addon, Image, Category
+from .models import Category, Bundle, Addon, Image
 
-# Register your models here.
-admin.site.register(Bundle)
-admin.site.register(Addon)
-admin.site.register(Image)
-admin.site.register(Category)
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'friendly_name',
+        'type',
+    )
+
+
+class BundleAdmin(admin.ModelAdmin):
+    list_display = (
+        # 'category',
+        'name',
+        'description',
+        'price',
+    )
+
+    ordering = ('name',)
+
+
+class AddonAdmin(admin.ModelAdmin):
+    list_display = (
+        # 'category',
+        'name',
+        'description',
+        'price',
+    )
+
+    ordering = ('name',)
+
+
+class ImageAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'image',
+        'image_url',
+    )
+
+    ordering = ('name',)
+
+
+# Register Models
+admin.site.register(Bundle, BundleAdmin)
+admin.site.register(Addon, AddonAdmin)
+admin.site.register(Image, ImageAdmin)
+admin.site.register(Category, CategoryAdmin)

@@ -11,8 +11,8 @@ class Blog(models.Model):
     """
     title = models.CharField(max_length=50)
     slug = models.SlugField(max_length=200, unique=True)
-    header_image = models.ForeignKey(
-        Image, null=True, blank=True, on_delete=models.SET_NULL)
+    # header_image = models.ForeignKey(
+        # Image, null=True, blank=True, on_delete=models.SET_NULL)
     blog_subheading_1 = models.CharField(max_length=50)
     blog_content_1 = models.TextField(validators=[MinLengthValidator(200)])
     blog_subheading_2 = models.CharField(max_length=50)

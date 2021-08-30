@@ -20,11 +20,12 @@ class Bundle(models.Model):
     """
     Bundles model to display bundles information
     """
-    Category = models.ForeignKey(
-        'Category', null=True, blank=True, on_delete=models.SET_NULL)
+    #category = models.ForeignKey(
+    #    'Category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    # addon = models.ForeignKey('Addon', null=True, blank=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.name
@@ -34,8 +35,8 @@ class Addon(models.Model):
     """
     Addons model to display add-ons information
     """
-    Category = models.ForeignKey(
-        'Category', null=True, blank=True, on_delete=models.SET_NULL)
+    #category = models.ForeignKey(
+    #    'Category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
