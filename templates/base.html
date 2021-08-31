@@ -11,7 +11,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         {% endblock %}
 
-        {% block extra_meta %} <!-- For additional meta -->
+        {% block extra_meta %}
         {% endblock %}
 
         {% block corecss %}
@@ -23,7 +23,7 @@
             <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto&display=swap" rel="stylesheet">
         {% endblock %}
 
-        {% block extra_css %} <!-- For additional css -->
+        {% block extra_css %}
         {% endblock %}
 
         {% block corejs %}
@@ -33,7 +33,7 @@
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         {% endblock %}
 
-        {% block extra_js %} <!-- For additional js -->
+        {% block extra_js %}
         {% endblock %}
         
         <title>Webi {% block extra_title %} {% endblock %}</title>
@@ -42,7 +42,7 @@
         <header class="container-fluid fixed-top">
             {% include "includes/main-nav.html" %}
         </header>
-        
+
         {% if messages %}
             <div class="message-container"></div>
         {% endif %}
@@ -55,6 +55,5 @@
 
         {% block postloadjs %}
         {% endblock %}
-
     </body>
 </html>
