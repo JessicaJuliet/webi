@@ -74,6 +74,13 @@ header {
     margin-right: 125px;
 }
 
+nav {
+    /* Resource: Drop shadow generator - https://cssgenerator.org/box-shadow-css-generator.html */
+    box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.48);
+    -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.164);
+    -moz-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.48);
+}
+
 .custom-nav {
     background: white !important;
     height: 120px;
