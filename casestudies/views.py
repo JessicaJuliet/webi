@@ -1,3 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def casestudies(request):
+    """ A view to return the case studies page """
+    return render(request, 'casestudies/casestudies.html')
