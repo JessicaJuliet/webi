@@ -143,16 +143,6 @@ header {
     margin-left: -1em;
 }
 
-.hero-btn {
-    background-color: #093d60;
-    color: white;
-    margin-left: 1em;
-}
-
-.hero-btn:hover {
-    color: #feb5c5; 
-}
-
 /* ---------- Homepage ---------- */
 
 .fas {
