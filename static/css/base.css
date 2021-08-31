@@ -35,9 +35,14 @@ header {
 
 .page-heading {
     margin-top: 50px;
-    background-color: #feb5c50e;
     height: 80px;
     padding: 15px 0px;
+}
+
+.heading-border {
+    width: 80px;
+    height: 4px;
+    background: #feb5c5;
 }
 
 /* ---------- Website Header ---------- */
