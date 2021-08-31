@@ -45,6 +45,24 @@ header {
     background: #feb5c5;
 }
 
+.breadcrumb {
+    background-color: white;
+    box-shadow: none !important;
+}
+
+.breadcrumb li {
+    color: #093d60 !important;
+}
+
+.breadcrumb .active {
+    color: #093d60 !important;
+    font-weight: bold;
+}
+
+.breadcrumb a {
+    color: #093d60;
+}
+
 /* ---------- Website Header ---------- */
 
 .top-header {
@@ -79,7 +97,7 @@ header {
     margin-right: 125px;
 }
 
-nav {
+.custom-nav {
     /* Resource: Drop shadow generator - https://cssgenerator.org/box-shadow-css-generator.html */
     box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.48);
     -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.164);
