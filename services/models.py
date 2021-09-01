@@ -7,7 +7,8 @@ class Category(models.Model):
     """
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
-    type = models.CharField(max_length=254, null=True, blank=True)
+    type = models.ForeignKey(
+        'Type', null=True, blank=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.name
@@ -20,12 +21,19 @@ class Bundle(models.Model):
     """
     Bundles model to display bundles information
     """
-    #category = models.ForeignKey(
-    #    'Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        'Category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     # addon = models.ForeignKey('Addon', null=True, blank=True, on_delete=models.SET_NULL)
+
+    def __str__(self):
+        return self.name
+
+
+class Type(models.Model):
+    name = models.CharField(max_length=254)
 
     def __str__(self):
         return self.name
