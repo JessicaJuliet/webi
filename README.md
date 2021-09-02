@@ -322,6 +322,10 @@ The following steps are required to run this locally:
 
 ### Code
 
+* Django CKEditor:
+    * [Stack Overflow](https://stackoverflow.com/questions/34149541/is-there-any-way-to-change-the-default-text-editor-for-textfield-django-in-admin)
+    * [Github Django CKEditor](https://github.com/django-ckeditor/django-ckeditor)
+
 ### Acknowledgements
 
 A bit thank you to my mentor, and the Code Institute's tutors, for encouraging and guiding me throughout the development of this project.

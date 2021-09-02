@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 
 class Category(models.Model):
@@ -22,7 +23,7 @@ class Bundle(models.Model):
     Bundles model to display bundles information
     """
     name = models.CharField(max_length=254)
-    description = models.TextField()
+    description = RichTextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     # addon = models.ForeignKey('Addon', null=True, blank=True, on_delete=models.SET_NULL)
 
@@ -44,7 +45,7 @@ class Addon(models.Model):
     category = models.ForeignKey(
         'Type', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
-    description = models.TextField()
+    description = RichTextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
 
     def __str__(self):
