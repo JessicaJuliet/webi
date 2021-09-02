@@ -6,8 +6,8 @@ class BlogAdmin(admin.ModelAdmin):
     list_display = (
         'title',
         'slug',
-        # 'header_image',
-        'blog_content'
+        'blog_image',
+        'blog_content',
     )
 
 

@@ -9,7 +9,7 @@ class CasestudyAdmin(admin.ModelAdmin):
         'image',
         'image_url',
         'featured',
-        'url',
+        'website_url',
         'github_url',
         'case_study_content'
     )

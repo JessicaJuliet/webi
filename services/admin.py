@@ -6,13 +6,12 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'friendly_name',
-        'type',
     )
 
 
 class BundleAdmin(admin.ModelAdmin):
     list_display = (
-        # 'category',
+        'category',
         'name',
         'description',
         'price',
@@ -23,7 +22,8 @@ class BundleAdmin(admin.ModelAdmin):
 
 class AddonAdmin(admin.ModelAdmin):
     list_display = (
-        # 'category',
+        'category',
+        'type',
         'name',
         'description',
         'price',
@@ -46,6 +46,7 @@ class TypeAdmin(admin.ModelAdmin):
     list_display = (
         'name',
     )
+
 
 # Register Models
 admin.site.register(Bundle, BundleAdmin)
