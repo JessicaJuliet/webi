@@ -21,8 +21,6 @@ class Bundle(models.Model):
     """
     Bundles model to display bundles information
     """
-    category = models.ForeignKey(
-        'Category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
@@ -43,8 +41,8 @@ class Addon(models.Model):
     """
     Addons model to display add-ons information
     """
-    #category = models.ForeignKey(
-    #    'Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        'Type', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
