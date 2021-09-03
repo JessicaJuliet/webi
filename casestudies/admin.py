@@ -11,6 +11,7 @@ class CasestudyAdmin(admin.ModelAdmin):
         'featured',
         'website_url',
         'github_url',
+        'heading',
         'case_study_content'
     )
 

@@ -7,6 +7,8 @@ class BlogAdmin(admin.ModelAdmin):
         'title',
         'slug',
         'blog_image',
+        'blog_image_url',
+        'heading',
         'blog_content',
     )
 
