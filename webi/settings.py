@@ -137,11 +137,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 # Resource: Static root - https://groups.google.com/g/django-users/c/jrDZ-dz_gfU?pli=1, https://newbedev.com/collecting-staticfiles-throws-improperlyconfigured
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-
+# Review Static_Root below:
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/ckeditor')
+# CKEDITOR_BASEPATH = "/my_static/ckeditor/ckeditor/"
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
