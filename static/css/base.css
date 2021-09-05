@@ -81,6 +81,18 @@ header {
     padding-top: 7px;
 }
 
+.myaccount-dropdown a {
+    color: black;
+}
+
+.myaccount-btn {
+    color: white !important;
+}
+
+.myaccount-btn:hover {
+    font-weight: 700;
+}
+
 .top-header i {
     font-size: 20px;
     color: white;
@@ -88,12 +100,6 @@ header {
 
 .top-header i:hover {
     color: #feb5c5;
-}
-
-
-.top-header a:hover {
-    color: #feb5c5 !important;
-    text-decoration: none;
 }
 
 .logo {
