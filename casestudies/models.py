@@ -8,6 +8,9 @@ class Casestudy(models.Model):
     """
     Model to display case studies
     """
+    class Meta:
+        verbose_name_plural = 'Casestudies'
+
     title = models.CharField(max_length=50)
     slug = models.SlugField(max_length=200, unique=True)
     image = models.ImageField(null=True, blank=True)
