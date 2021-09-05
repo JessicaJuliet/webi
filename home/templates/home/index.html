@@ -110,6 +110,18 @@
                 <div class="col-12">
                     <h2>Case Studies</h2>
                 </div>
+                <div>
+                    {% for casestudy in casestudies %}
+                        {% if casestudy.featured == True %}
+                            <div class="casestudies col-md-12 col-lg-5">
+                                <h2>{{ casestudy.heading }}</h2>
+                                <br>
+                                <p>{{ casestudy.case_study_content|truncatechars:200 }}</p>
+                                <button class="custom-button">Read More</button>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
