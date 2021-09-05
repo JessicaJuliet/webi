@@ -26,6 +26,7 @@ p {
     color: white;
     padding: 10px 20px;
     margin-top: 20px;
+    border-radius: 10px;
 }
 
 .custom-button:hover {
@@ -235,25 +236,15 @@ footer .logo {
     padding-bottom: 50px;
 }
 
-/* ---------- Case Studies Page  ---------- */
+/* ---------- Blog & Case Studies Pages  ---------- */
 
-.casestudies {
+.blog, .casestudies {
     margin-bottom: 70px;
     margin-right: 30px;
     padding: 40px 60px 40px 40px;
     height: 350px;
     background-color: rgba(211, 211, 211, 0.103);
 }
-
-.casestudy-website {
-    color:#feb5c5;
-}
-
-.casestudy-website:hover {
-    color:#feb5c5;
-    text-decoration: none;
-}
-
 
 /* ---------- Media Queries ---------- */
 

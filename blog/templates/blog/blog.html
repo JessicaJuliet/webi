@@ -20,7 +20,30 @@
             <div class="heading-border"></div>
         </div>
     </div>  
-
+        <!-- Introduction section-->
+        <section>
+            <div class="container page-section">
+                <div class="row">
+                    <p>
+                        Looking to learn more about all things digital? Check out our latest blog posts below on a range of different topics:
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Blogs section -->
+        <section>
+            <div class="container page-section">
+                <div class="row">
+                    {% for blog in blogs %}
+                        <div class="blog col-md-12 col-lg-5">
+                            <h2>{{ blog.heading }}</h2>
+                            <p>{{ blog.blog_content|truncatechars:200 }}</p>
+                            <button class="btn custom-button" type="button">Read More</button>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
 
 {% include "includes/footer.html" %}
 {% endblock %}
