@@ -10,6 +10,10 @@ p {
 }
 
 .page-section {
+    margin-top: 50px;
+}
+
+.homepage-section {
     margin-top: 150px;
 }
 
