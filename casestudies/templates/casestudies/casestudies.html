@@ -3,22 +3,20 @@
 {% block extra_title %} - Case Studies {% endblock %}
 
 {% block content %}
-    {% include "includes/main-nav.html" %}
-
+{% include "includes/main-nav.html" %}
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
           <li class="breadcrumb-item active" aria-current="page">Case Studies</li>
         </ol>
     </nav>
-
     <div class="page-heading">
         <div class="container">
             <h1>Case Studies</h1>
             <div class="heading-border"></div>
         </div>
     </div>
-    
+    <!-- Introduction section-->
     <section>
         <div class="container page-section">
             <div class="row col-lg-9">
@@ -28,6 +26,19 @@
             </div>
         </div>
     </section>
-
+    <!-- Case studies section -->
+    <section>
+        <div class="container page-section">
+            <div class="row">
+                {% for casestudy in casestudies %}
+                    <div class="casestudies col-md-12 col-lg-5">
+                        <h2>{{ casestudy.heading }}</h2>
+                        <p>{{ casestudy.case_study_content|truncatechars:200 }}</p>
+                        <button class="custom-button">Read More</button>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 {% include "includes/footer.html" %}
 {% endblock %}
