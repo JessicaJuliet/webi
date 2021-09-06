@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_title %} - Freelance Website Development {% endblock %}
-
+<!-- Hero Image -->
 {% block page_header %}
     <header>
         {% include "includes/main-nav.html" %}
@@ -20,10 +20,9 @@
         </div>
     </header>
 {% endblock %}
-
 {% block content %}
     <!-- Quote Section -->
-    <div class="container homepage-section">
+    <section class="container homepage-section">
         <div class="row">
             <div class="col-6 box-container">
                 <!-- Resource: Unsplash image - https://unsplash.com/photos/z4n8CGRuzOA -->
@@ -40,16 +39,17 @@
                     <i class="fas fa-quote-right"></i>
                 </h2>
                 <br>
-                <p>It has never been more important for businesses <br>
-                to have a strong online presence... I'm committed <br> to providing this.</p>
-                <a href="{% url 'about' %}" class="btn custom-button">
-                    About
-                </a>
+                <p>
+                    It has never been more important for businesses <br>
+                    to have a strong online presence... I'm committed <br> 
+                    to providing this.
+                </p>
+                <a href="{% url 'about' %}" class="btn custom-button">About</a>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Our Services Section -->
-    <div class="homepage-section home-services">
+    <section class="homepage-section home-services">
         <div class="container">
             <div class="row">
                 <div class="col-4 section-padding">
@@ -102,28 +102,26 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- Case Studies Section -->
-    <div class="homepage-section">
-        <div class="container">
+    <section>
+        <div class="container homepage-section">
             <div class="row">
                 <div class="col-12">
-                    <h2>Case Studies</h2>
+                    <h2>Featured Case Studies</h2>
+                    <br>
                 </div>
-                <div>
-                    {% for casestudy in casestudies %}
-                        {% if casestudy.featured == True %}
-                            <div class="casestudies col-md-12 col-lg-5">
-                                <h2>{{ casestudy.heading }}</h2>
-                                <br>
-                                <p>{{ casestudy.case_study_content|truncatechars:200 }}</p>
-                                <button class="custom-button">Read More</button>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
+                {% for casestudy in casestudies %}
+                    {% if casestudy.featured == True %}
+                        <div class="casestudies col-md-12 col-lg-5">
+                            <h2>{{ casestudy.heading }}</h2>
+                            <p>{{ casestudy.case_study_content|truncatechars:200 }}</p>
+                            <a class="btn custom-button" type="button" href="{% url 'casestudy_content' casestudy.slug %}">Read More</a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
-    </div>
+    </section>
     {% include "includes/footer.html" %}
 {% endblock %}
