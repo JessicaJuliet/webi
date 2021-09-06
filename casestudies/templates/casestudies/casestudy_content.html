@@ -16,29 +16,22 @@
             <div class="heading-border"></div>
         </div>
     </div>
-    <!-- Introduction section-->
-    <section>
-        <div class="container page-section">
-            <div class="row col-lg-9">
-                <p>
-                    Explore some case studies below of work completed for previous clients. These range from single page static sites to more complex multi-page websites. Furthermore, the industries include retail and medical.
-                </p>
-            </div>
-        </div>
-    </section>
-    <!-- Case studies section -->
-    <section>
-        <div class="container page-section">
-            <div class="row">
-                {% for casestudy in casestudies %}
-                    <div class="casestudies col-md-12 col-lg-5">
+    <!-- Case Study Section-->
+    {% if casestudy.heading %}
+        <section>
+            <div class="container page-section">
+                <div class="row">
+                    <div class="col-12">
                         <h2>{{ casestudy.heading }}</h2>
-                        <p>{{ casestudy.case_study_content|truncatechars:200 }}</p>
-                        <button class="btn custom-button" type="button">Read More</button>
+                        <ul class="custom-ul page-section">
+                            <li><strong>Website: </strong><a href="{{ casestudy.website_url }}" target="_blank">{{ casestudy.website_url }}</a></li>
+                            <li><strong>GitHub: </strong><a href="{{ casestudy.website_url }}" target="_blank">{{ casestudy.github_url }}</a></li>
+                        </ul>
+                        <p class="page-section">{{ casestudy.case_study_content }}</p>
                     </div>
-                {% endfor %}
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    {% endif %}
 {% include "includes/footer.html" %}
 {% endblock %}

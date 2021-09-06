@@ -139,11 +139,11 @@ header {
 }
 
 /* Change colour of bullet point code sourced from W3schools - https://www.w3schools.com/howto/howto_css_bullet_color.asp */
-.ul-hero {
+.ul-hero, .custom-ul {
     list-style: none;
 }
 
-.ul-hero li::before {
+.ul-hero, .custom-ul li::before {
     /* Unicode for arrow sourced from - https://unicode-table.com/en/203A/ */
     content: "\203A";
     color: #feb5c5; 
