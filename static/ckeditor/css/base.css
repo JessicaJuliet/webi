@@ -1,0 +1,258 @@
+/* ---------- Site-wide Styling ---------- */
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Lato', sans-serif;
+    color: #093d60;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.page-section {
+    margin-top: 50px;
+}
+
+.homepage-section {
+    margin-top: 150px;
+}
+
+.section-padding {
+    padding: 60px 0px;
+}
+
+.custom-button {
+    background-color: #093d60;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.custom-button:hover {
+    color: #feb5c5;
+}
+
+header {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.page-heading {
+    margin-top: 50px;
+    height: 80px;
+    padding: 15px 0px;
+}
+
+.heading-border {
+    width: 80px;
+    height: 4px;
+    background: #feb5c5;
+}
+
+.breadcrumb {
+    background-color: white;
+    box-shadow: none !important;
+}
+
+.breadcrumb li {
+    color: #093d60 !important;
+}
+
+.breadcrumb .active {
+    color: #093d60 !important;
+    font-weight: bold;
+}
+
+.breadcrumb a {
+    color: #093d60;
+}
+
+/* ---------- Website Header ---------- */
+
+.top-header {
+    background-color: #093d60;
+    height: 40px;
+}
+
+.top-header a {
+    color: white;
+    float: right;
+    padding-right: 30px;
+    padding-top: 7px;
+}
+
+.myaccount-dropdown a {
+    color: black;
+}
+
+.myaccount-btn {
+    color: white !important;
+}
+
+.myaccount-btn:hover {
+    font-weight: 700;
+}
+
+.top-header i {
+    font-size: 20px;
+    color: white;
+}
+
+.top-header i:hover {
+    color: #feb5c5;
+}
+
+.logo {
+    width: 150px;
+    margin-right: 125px;
+}
+
+.custom-nav {
+    /* Resource: Drop shadow generator - https://cssgenerator.org/box-shadow-css-generator.html */
+    box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.48);
+    -webkit-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.164);
+    -moz-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.48);
+}
+
+.custom-nav {
+    background: white !important;
+    height: 120px;
+}
+
+.nav-item:hover {
+    color: #feb5c5 !important;
+}
+
+.hero-image {
+    /* Image source from Pexels - https://www.pexels.com/photo/black-ball-point-pen-with-brown-spiral-notebook-733852/ */
+    background: url(/../media/hero-3.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+.hero-h1 {
+    color: #093d60;
+    padding-top: 110px;
+}
+
+/* Change colour of bullet point code sourced from W3schools - https://www.w3schools.com/howto/howto_css_bullet_color.asp */
+.ul-hero, .custom-ul {
+    list-style: none;
+}
+
+.ul-hero, .custom-ul li::before {
+    /* Unicode for arrow sourced from - https://unicode-table.com/en/203A/ */
+    content: "\203A";
+    color: #feb5c5; 
+    font-weight: bold;
+    font-size: 24px;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* ---------- Homepage ---------- */
+
+.fas {
+    color: #feb5c5; 
+}
+
+.home-quote-section {
+    text-align: right;
+}
+
+/* Resource: Code souced from - https://www.tutorialrepublic.com/codelab.php?topic=faq&file=css-overlay-one-div-over-another-div */
+
+.box-container{
+    position: relative;
+}
+
+.stacked-top {
+    width: 75%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1; 
+}
+
+.stacked-bottom {
+    width: 30%;
+    position: relative;
+    top: 65%;
+    left: 60%;
+    opacity: 0.8; 
+}
+
+.home-services {
+    background-color:#093d6005;
+}
+
+.ul-services li {
+    list-style: none;
+}
+
+.ul-services i {
+    font-size: 17px;
+    padding-right: 10px;
+    color:#093d60;
+}
+
+.ul-services li::before {
+    /* Unicode for arrow sourced from - https://unicode-table.com/en/203A/ */
+    content: "\203A";
+    color: #feb5c5; 
+    font-weight: bold;
+    font-size: 24px;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    background-color: #093d60;
+    color: white;
+}
+
+footer h4, footer a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+footer a:hover{
+    color: #feb5c5;
+}
+
+footer i {
+    font-size: 45px;
+    padding: 7px;
+}
+
+footer .logo {
+    padding-bottom: 50px;
+}
+
+/* ---------- Blog & Case Studies Pages  ---------- */
+
+.blog, .casestudies {
+    margin-bottom: 70px;
+    margin-right: 30px;
+    padding: 40px 60px 40px 40px;
+    height: 350px;
+    background-color: rgba(211, 211, 211, 0.178);
+    border-top: 5px solid #feb5c5; 
+}
+
+/* ---------- Media Queries ---------- */
+
+@media (mid-width: 992px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+
