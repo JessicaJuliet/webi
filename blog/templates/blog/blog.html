@@ -37,6 +37,7 @@
                     {% for blog in blogs %}
                         <div class="blog col-md-12 col-lg-5">
                             <h2>{{ blog.heading }}</h2>
+                            <p><em>{{ blog.published_date }}</em></p>
                             <p>{{ blog.blog_content|truncatechars:200 }}</p>
                             <a class="btn custom-button" type="button" href="{% url 'blog_post' blog.slug %}">Read More</a>
                         </div>

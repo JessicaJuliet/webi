@@ -9,6 +9,7 @@ class BlogAdmin(admin.ModelAdmin):
         'blog_image',
         'blog_image_url',
         'heading',
+        'published_date',
         'blog_content',
     )
 
