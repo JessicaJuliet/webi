@@ -38,7 +38,7 @@
                         <div class="blog col-md-12 col-lg-5">
                             <h2>{{ blog.heading }}</h2>
                             <p>{{ blog.blog_content|truncatechars:200 }}</p>
-                            <button class="btn custom-button" type="button">Read More</button>
+                            <a class="btn custom-button" type="button" href="{% url 'blog_post' blog.slug %}">Read More</a>
                         </div>
                     {% endfor %}
                 </div>
