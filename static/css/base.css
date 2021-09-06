@@ -216,6 +216,7 @@ header {
 footer {
     background-color: #093d60;
     color: white;
+    padding: 40px 0;
 }
 
 footer h4, footer a {
@@ -233,7 +234,7 @@ footer i {
 }
 
 footer .logo {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 /* ---------- Blog & Case Studies Pages  ---------- */
@@ -254,5 +255,3 @@ footer .logo {
         max-width: 80%;
     }
 }
-
-
