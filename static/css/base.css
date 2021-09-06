@@ -243,7 +243,8 @@ footer .logo {
     margin-right: 30px;
     padding: 40px 60px 40px 40px;
     height: 350px;
-    background-color: rgba(211, 211, 211, 0.103);
+    background-color: rgba(211, 211, 211, 0.178);
+    border-top: 5px solid #feb5c5; 
 }
 
 /* ---------- Media Queries ---------- */
