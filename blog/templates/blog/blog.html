@@ -1,50 +1,47 @@
 {% extends "base.html" %}
-
 {% load static %}
+
 {% block extra_title %} - Blog {% endblock %}
-
-
 {% block content %}
     {% include "includes/main-nav.html" %}
-
+    <!-- Breadcrumb Menu -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
           <li class="breadcrumb-item active" aria-current="page">Blog</li>
         </ol>
     </nav>
-
+    <!-- Page Title -->
     <div class="page-heading">
         <div class="container">
             <h1>Blog</h1>
             <div class="heading-border"></div>
         </div>
     </div>  
-        <!-- Introduction section-->
-        <section>
-            <div class="container page-section">
-                <div class="row">
-                    <p>
-                        Looking to learn more about all things digital? Check out our latest blog posts below on a range of different topics:
-                    </p>
-                </div>
+    <!-- Introduction section-->
+    <section>
+        <div class="container page-section">
+            <div class="row">
+                <p>
+                    Looking to learn more about all things digital? Check out our latest blog posts below on a range of different topics:
+                </p>
             </div>
-        </section>
-        <!-- Blogs section -->
-        <section>
-            <div class="container page-section">
-                <div class="row">
-                    {% for blog in blogs %}
-                        <div class="blog col-md-12 col-lg-5">
-                            <h2>{{ blog.heading }}</h2>
-                            <p><em>{{ blog.published_date }}</em></p>
-                            <p>{{ blog.blog_content|truncatechars:200 }}</p>
-                            <a class="btn custom-button" type="button" href="{% url 'blog_post' blog.slug %}">Read More</a>
-                        </div>
-                    {% endfor %}
-                </div>
+        </div>
+    </section>
+    <!-- Blogs section -->
+    <section>
+        <div class="container page-section">
+            <div class="row">
+                {% for blog in blogs %}
+                    <div class="blog col-md-12 col-lg-5">
+                        <h2>{{ blog.heading }}</h2>
+                        <p><em>{{ blog.published_date }}</em></p>
+                        <p>{{ blog.blog_content|truncatechars:200 }}</p>
+                        <a class="btn custom-button" type="button" href="{% url 'blog_post' blog.slug %}">Read More</a>
+                    </div>
+                {% endfor %}
             </div>
-        </section>
-
+        </div>
+    </section>
 {% include "includes/footer.html" %}
 {% endblock %}
