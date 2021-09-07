@@ -240,10 +240,9 @@ footer .logo {
 /* ---------- Blog & Case Studies Pages  ---------- */
 
 .blog, .casestudies {
-    margin-bottom: 70px;
-    margin-right: 30px;
-    padding: 40px 60px 40px 40px;
-    height: 350px;
+    margin: 30px;
+    padding: 40px;
+    min-height: 120%;
     background-color: rgba(211, 211, 211, 0.178);
     border-top: 5px solid #feb5c5; 
 }
