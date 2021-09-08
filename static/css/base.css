@@ -258,6 +258,39 @@ footer .logo {
     width: 100%;
 }
 
+/* ---------- Add-on page ---------- */
+
+.addon-type {
+    color: darkgray;
+}
+
+.addon-btn {
+    background-color: #093d60;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.addon-btn:hover {
+    color: #feb5c5;
+}
+
+.addon-name {
+    background-color: #093d60;
+    color: white;
+    padding: 7px 0px;
+    text-align: center;
+    margin: 0px;
+}
+
+.addon-image {
+    width: 100%;
+}
+
+.addon-description {
+    border: .5px solid lightgray;
+}
+
 /* ---------- Media Queries ---------- */
 
 @media (mid-width: 992px) {

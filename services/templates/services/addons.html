@@ -23,20 +23,35 @@
         <div class="container page-section">
             <div class="row">
                 <p>
-                    WEBI offers a range of add-ons to meet your development needs. These range all the way from design to development and even to marketing services. Browse through the add-ons below and selects those that best suit your business needs.
+                    WEBI offers a range of add-ons to meet your development needs. These range from design to development services and also marketing add-ons. Browse through the add-ons below and select ones that best suit your business needs. Include as many, or as little, as you want.
                 </p>
             </div>
         </div>
     </section>
     <!-- Add-ons section -->
     <section>
-        <div class="container page-section">
-            <div class="row">
-                {% for blog in blogs %}
-
-                {% endfor %}
-            </div>
-        </div>
+        {% for addon in addons %}
+            <div class="container page-section">
+                <div class="row">
+                    <div class="col-4">
+                        <h5 class="addon-name">{{ addon.name }}</h5>
+                    </div>
+                </div>
+                <div class="addon-description">
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="addon-image" src="/media/placeholder2_GrheKhO.jpg">
+                        </div>
+                        <div class="col-8">
+                            <span class="addon-type">{{ addon.category }} | {{ addon.type }}</span>
+                            <p>{{ addon.description }}</p>
+                            <strong><p>Price:</strong> {{ addon.price }}</p>
+                            <button class="btn addon-btn">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        {% endfor %}
     </section>
 {% include "includes/footer.html" %}
 {% endblock %}
