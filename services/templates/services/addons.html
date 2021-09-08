@@ -28,6 +28,20 @@
             </div>
         </div>
     </section>
+    <!-- Filter section -->
+    <!-- Resource: Filter div elements https://www.w3schools.com/howto/howto_js_filter_elements.asp -->
+    <div class="container">
+        <div class="row">
+            <div class="addon-filter">
+                <button class="filter-button active" onclick="filterSelection('all')"> Show all</button>
+                <button class="filter-button" onclick="filterSelection('cars')"> Development</button>
+                <button class="filter-button" onclick="filterSelection('animals')"> Design</button>
+                <button class="filter-button" onclick="filterSelection('fruits')"> Marketing</button>
+                <button class="filter-button" onclick="filterSelection('colors')"> Hosting</button>
+                <button class="filter-button" onclick="filterSelection('colors')"> Other</button>
+            </div>
+        </div>
+    </div>
     <!-- Add-ons section -->
     <section>
         {% for addon in addons %}

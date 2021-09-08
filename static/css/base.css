@@ -291,6 +291,25 @@ footer .logo {
     border: .5px solid lightgray;
 }
 
+.addon-filter {
+    margin: 15px 0px;
+    
+}
+
+.filter-button {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.filter-button.active {
+    background-color: #666;
+    color: white;
+  }
+
+
 /* ---------- Media Queries ---------- */
 
 @media (mid-width: 992px) {
