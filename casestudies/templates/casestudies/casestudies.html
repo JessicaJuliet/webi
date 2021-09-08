@@ -34,6 +34,9 @@
             <div class="row">
                 {% for casestudy in casestudies %}
                     <div class="casestudies col-md-12 col-lg-5">
+                        <div class="box">
+                            <img src="/media/{{ casestudy.image }}" class="casestudy-image">
+                        </div>
                         <h2>{{ casestudy.heading }}</h2>
                         <p>{{ casestudy.case_study_content|truncatechars:200 }}</p>
                         <a class="btn custom-button" type="button" href="{% url 'casestudy_content' casestudy.slug %}">Read More</a>
