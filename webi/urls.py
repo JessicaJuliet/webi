@@ -24,5 +24,6 @@ urlpatterns = [
     path('casestudies/', include('casestudies.urls')),
     path('blog/', include('blog.urls')),
     path('about/', include('about.urls')),
+    path('addons/', include('services.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 """ Static function to add MEDIA_URL to list of URLs """

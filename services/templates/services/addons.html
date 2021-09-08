@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} - Add-ons {% endblock %}
+{% block content %}
+    {% include "includes/main-nav.html" %}
+    <!-- Breadcrumb Menu -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Add-ons</li>
+        </ol>
+    </nav>
+    <!-- Page Title -->
+    <div class="page-heading">
+        <div class="container">
+            <h1>Add-ons</h1>
+            <div class="heading-border"></div>
+        </div>
+    </div>  
+    <!-- Introduction section-->
+    <section>
+        <div class="container page-section">
+            <div class="row">
+                <p>
+                    WEBI offers a range of add-ons to meet your development needs. These range all the way from design to development and even to marketing services. Browse through the add-ons below and selects those that best suit your business needs.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Add-ons section -->
+    <section>
+        <div class="container page-section">
+            <div class="row">
+                {% for blog in blogs %}
+
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% include "includes/footer.html" %}
+{% endblock %}
