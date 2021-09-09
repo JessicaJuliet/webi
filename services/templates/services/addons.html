@@ -33,12 +33,20 @@
     <div class="container">
         <div class="row">
             <div class="addon-filter">
+                <a href="{% url 'addons' %}?type=development,design,marketing,hosting,other" class="filter-button active">Show all</a>
+                <a href="{% url 'addons' %}?type=development" class="filter-button">Development</a>
+                <a href="{% url 'addons' %}?type=design" class="filter-button">Design</a>
+                <a href="{% url 'addons' %}?type=marketing" class="filter-button">Marketing</a>
+                <a href="{% url 'addons' %}?type=hosting" class="filter-button">Hosting</a>
+                <a href="{% url 'addons' %}?type=other" class="filter-button">Other</a>
+                <!--
                 <button class="filter-button active" onclick="filterSelection('all')"> Show all</button>
-                <button class="filter-button" onclick="filterSelection('cars')"> Development</button>
-                <button class="filter-button" onclick="filterSelection('animals')"> Design</button>
-                <button class="filter-button" onclick="filterSelection('fruits')"> Marketing</button>
-                <button class="filter-button" onclick="filterSelection('colors')"> Hosting</button>
-                <button class="filter-button" onclick="filterSelection('colors')"> Other</button>
+                <button class="filter-button" onclick="filterSelection('development')"> Development</button>
+                <button class="filter-button" onclick="filterSelection('design')"> Design</button>
+                <button class="filter-button" onclick="filterSelection('marketing')"> Marketing</button>
+                <button class="filter-button" onclick="filterSelection('hosting')"> Hosting</button>
+                <button class="filter-button" onclick="filterSelection('other')"> Other</button>
+                -->
             </div>
         </div>
     </div>
