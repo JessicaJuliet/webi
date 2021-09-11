@@ -312,7 +312,12 @@ footer .logo {
     outline: none;
     padding: 12px 16px;
     background-color: #f1f1f1;
-    cursor: pointer;
+    color: black;
+}
+
+.filter-button:hover {
+    color: #093d60;
+    text-decoration: none;
 }
 
 .filter-button.active {
