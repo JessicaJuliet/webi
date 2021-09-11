@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse
 from .models import Category, Bundle, Addon, Image, Type
 
 
