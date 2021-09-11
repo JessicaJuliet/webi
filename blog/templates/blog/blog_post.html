@@ -19,14 +19,14 @@
         </div>
     </div>
     <!-- Blog Content -->
-    {% if blog.heading %}
+    {% if blog.heading|safe %}
         <section>
             <div class="container page-section">
                 <div class="row">
                     <div class="col-12">
-                        <h2>{{ blog.heading }}</h2>
-                        <p><em>{{ blog.published_date }}</em></p>
-                        <p class="page-section">{{ blog.blog_content }}</p>
+                        <h2>{{ blog.heading|safe }}</h2>
+                        <p><em>{{ blog.published_date|safe }}</em></p>
+                        <p class="page-section">{{ blog.blog_content|safe }}</p>
                     </div>
                 </div>
             </div>

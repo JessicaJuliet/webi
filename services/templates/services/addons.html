@@ -65,9 +65,9 @@
                             <img class="addon-image" src="/media/placeholder2_GrheKhO.jpg">
                         </div>
                         <div class="col-8">
-                            <span class="addon-type">{{ addon.category }} | {{ addon.type }}</span>
-                            <p>{{ addon.description }}</p>
-                            <strong><p>Price:</strong> {{ addon.price }}</p>
+                            <span class="addon-type">{{ addon.category|safe }} | {{ addon.type|safe }}</span>
+                            <p>{{ addon.description|safe }}</p>
+                            <strong><p>Price:</strong> {{ addon.price|safe }}</p>
                             <button class="btn addon-btn">Add to cart</button>
                         </div>
                     </div>

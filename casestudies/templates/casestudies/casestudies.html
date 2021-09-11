@@ -37,8 +37,8 @@
                         <div class="box">
                             <img src="/media/{{ casestudy.image }}" class="casestudy-image">
                         </div>
-                        <h2>{{ casestudy.heading }}</h2>
-                        <p>{{ casestudy.case_study_content|truncatechars:200 }}</p>
+                        <h2><a href="{% url 'casestudy_content' casestudy.slug %}">{{ casestudy.heading|safe }}</a></h2>
+                        <p>{{ casestudy.case_study_content|truncatechars:200|safe }}</p>
                         <a class="btn custom-button" type="button" href="{% url 'casestudy_content' casestudy.slug %}">Read More</a>
                     </div>
                 {% endfor %}

@@ -255,9 +255,18 @@ footer .logo {
     padding-bottom: 30px;
 }
 
-
 .box {
     width: 100%;
+}
+
+.casestudies h2 a {
+    text-decoration: none;
+    color: #093d60;
+}
+
+.blog h2 a {
+    text-decoration: none;
+    color: #093d60;
 }
 
 /* ---------- Add-on page ---------- */
