@@ -1,8 +1,7 @@
 {% extends "base.html" %}
-
 {% load static %}
-{% block extra_title %} - About {% endblock %}
 
+{% block extra_title %} - About {% endblock %}
 
 {% block content %}
     {% include "includes/main-nav.html" %}
@@ -19,7 +18,26 @@
             <h1>About</h1>
             <div class="heading-border"></div>
         </div>
-    </div>  
-
+    </div>
+    <!-- Introduction section-->
+    <section>
+        <div class="container page-section">
+            <div class="row">
+                <div class="col-6">
+                    <p>
+                        My passion for website development, design and marketing led me to set up WEBI in 2021. Having worked in Marketing for over four years, I knew all to well how expensive website development projects could be. As a result, this often make website services inaccessible for small business and start-up companies as they do not have a budget big enough to meet these costly 
+                    </p>
+                </div>
+                <div class="col-6">
+                    <p>
+                        projects. I'm passionate about helping small businesses get online and through WEBI, I offer businesses a broad range of services to achieve just that. These include everything from development, design, marketing and hosting! Explore my service offerings below and check out some of my case studies from previous customers to get an idea of what WEBI is all about.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% include "includes/about_quote.html" %}
+{% include "includes/our_services.html" %}
+{% include "includes/featured_case_study.html" %}
 {% include "includes/footer.html" %}
 {% endblock %}
