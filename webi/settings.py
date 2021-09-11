@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'checkout',
     'about',
     'ckeditor',
+    'bag',
 ]
 
 MIDDLEWARE = [
