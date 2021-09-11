@@ -30,5 +30,19 @@
     </section>
     <!-- Blogs section -->
     {% include "includes/blog_card.html" %}
-{% include "includes/footer.html" %}
+        <!-- Internal Link -->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <a href="{% url 'addons' %}" class="btn">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span>Explore Website Addons</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    <!-- Footer -->
+    {% include "includes/footer.html" %}
 {% endblock %}
