@@ -325,6 +325,31 @@ footer .logo {
     color: white;
   }
 
+/* ---------- Bundles Page ---------- */
+
+.ul-bundle {
+    list-style: none;
+}
+
+/* Change colour of bullet point code sourced from W3schools - https://www.w3schools.com/howto/howto_css_bullet_color.asp */
+.custom-ul {
+    list-style: none;
+}
+
+.ul-bundle ::before {
+    /* Unicode for arrow sourced from - https://unicode-table.com/en/2713/ */
+    content: "\2713";
+    color: #feb5c5; 
+    font-weight: bold;
+    font-size: 24px;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.ul-bundle li {
+    line-height: 0px;
+}
 
 /* ---------- Media Queries ---------- */
 

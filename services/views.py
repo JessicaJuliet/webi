@@ -25,4 +25,12 @@ def addons(request):
 def bundles(request):
     """ A view to render the Bundles page """
 
-    return render(request, 'services/bundles.html')
+    bundles = Bundle.objects.all()
+    addons = Addon.objects.all()
+
+    context = {
+        'bundles': bundles,
+        'addons': addons,
+    }
+
+    return render(request, 'services/bundles.html', context)

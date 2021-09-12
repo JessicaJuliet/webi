@@ -28,7 +28,7 @@
             </div>
         </div>
     </section>
-    <!-- Filter section -->
+    <!-- Filter section 
     <div class="container" method='GET' action="{% url 'addons' %}">
         <div class="row">
             <div class="addon-filter">
@@ -40,13 +40,14 @@
             </div>
         </div>
     </div>
-    <!-- Add-ons section -->
+    -->
+    <!-- Bundles section -->
     <section>
-        {% for addon in addons %}
+        {% for bundle in bundles %}
             <div class="container page-section">
                 <div class="row">
                     <div class="col-4">
-                        <h5 class="addon-name">{{ addon.name }}</h5>
+                        <h5 class="addon-name">{{ bundle.name }}</h5>
                     </div>
                 </div>
                 <div class="addon-description">
@@ -55,9 +56,16 @@
                             <img class="addon-image" src="/media/placeholder2_GrheKhO.jpg">
                         </div>
                         <div class="col-8">
-                            <span class="addon-type">{{ addon.category|safe }} | <strong>{{ addon.type|safe }}</strong></span>
-                            <p>{{ addon.description|safe }}</p>
-                            <strong><p>Price:</strong> {{ addon.price|safe }}</p>
+                            <span class="addon-type">{{ bundle.category|safe }} | <strong>{{ bundle.name }}</strong></span>
+                            <p>{{ bundle.description|safe }}</p>
+                                {% for bundle in bundles %}                              
+                                    {% for addon in bundle.addon.all %}
+                                        <ul class="ul-bundle col-6">
+                                            <li>{{ addon.name }}</li>
+                                        </ul>
+                                    {% endfor %}
+                                {% endfor %}
+                            <strong><p>Price:</strong> {{ bundle.price|safe }}</p>
                             <button class="btn addon-btn">Add to cart</button>
                         </div>
                     </div>
