@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} - Add-ons {% endblock %}
+{% block content %}
+    {% include "includes/main-nav.html" %}
+    <!-- Breadcrumb Menu -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Bundles</li>
+        </ol>
+    </nav>
+    <!-- Page Title -->
+    <div class="page-heading">
+        <div class="container">
+            <h1>Bundles</h1>
+            <div class="heading-border"></div>
+        </div>
+    </div>  
+    <!-- Introduction section-->
+    <section>
+        <div class="container page-section">
+            <div class="row">
+                <p>
+                    WEBI offers a range of add-ons to meet your development needs. These range from design to development services and also marketing add-ons. Browse through the add-ons below and select ones that best suit your business needs. Include as many, or as little, as you want.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Filter section -->
+    <div class="container" method='GET' action="{% url 'addons' %}">
+        <div class="row">
+            <div class="addon-filter">
+                <a href="{% url 'addons' %}?type=Development,Design,Marketing,Hosting" class="filter-button active">Show all</a>
+                <a href="{% url 'addons' %}?type=Development" class="filter-button">Development</a>
+                <a href="{% url 'addons' %}?type=Design" class="filter-button">Design</a>
+                <a href="{% url 'addons' %}?type=Marketing" class="filter-button">Marketing</a>
+                <a href="{% url 'addons' %}?type=Hosting" class="filter-button">Hosting</a>
+            </div>
+        </div>
+    </div>
+    <!-- Add-ons section -->
+    <section>
+        {% for addon in addons %}
+            <div class="container page-section">
+                <div class="row">
+                    <div class="col-4">
+                        <h5 class="addon-name">{{ addon.name }}</h5>
+                    </div>
+                </div>
+                <div class="addon-description">
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="addon-image" src="/media/placeholder2_GrheKhO.jpg">
+                        </div>
+                        <div class="col-8">
+                            <span class="addon-type">{{ addon.category|safe }} | <strong>{{ addon.type|safe }}</strong></span>
+                            <p>{{ addon.description|safe }}</p>
+                            <strong><p>Price:</strong> {{ addon.price|safe }}</p>
+                            <button class="btn addon-btn">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+    <!-- Internal Link -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <br>
+                <a href="{% url 'addons' %}" class="btn">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span>Explore Website Addons</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    {% include "includes/footer.html" %}
+{% endblock %}

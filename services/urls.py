@@ -4,5 +4,6 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.addons, name='addons'),
+    path('addons', views.addons, name='addons'),
+    path('bundles', views.bundles, name='bundles'),
 ]

@@ -20,3 +20,9 @@ def addons(request):
     }
 
     return render(request, 'services/addons.html', context)
+
+
+def bundles(request):
+    """ A view to render the Bundles page """
+
+    return render(request, 'services/bundles.html')

@@ -34,10 +34,10 @@ class Bundle(models.Model):
         'category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = RichTextField()
-    price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ForeignKey(
         'Image', null=True, blank=True, on_delete=models.SET_NULL)
-    # addon = models.ForeignKey('Addon', null=True, blank=True, on_delete=models.SET_NULL)
+    addon = models.ManyToManyField('Addon')
+    price = models.DecimalField(max_digits=6, decimal_places=2)
 
     def __str__(self):
         return self.name
