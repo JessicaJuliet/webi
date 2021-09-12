@@ -298,7 +298,7 @@ footer .logo {
     width: 100%;
 }
 
-.addon-description {
+.service-description {
     border: .5px solid lightgray;
 }
 
@@ -349,6 +349,37 @@ footer .logo {
 
 .ul-bundle li {
     line-height: 0px;
+}
+
+.bundle p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bundle li {
+    padding-left: 20px;
+}
+
+.bundle-category {
+    color: darkgray;
+    padding-left: 10px;
+}
+
+.bundle-price {
+    padding-top: 15px;
+    margin: 0;
+}
+
+.bundle-btn {
+    background-color: #093d60;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.bundle-btn:hover {
+    color: #feb5c5;
 }
 
 /* ---------- Media Queries ---------- */

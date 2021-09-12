@@ -22,56 +22,43 @@
     <section>
         <div class="container page-section">
             <div class="row">
-                <p>
-                    WEBI offers a range of add-ons to meet your development needs. These range from design to development services and also marketing add-ons. Browse through the add-ons below and select ones that best suit your business needs. Include as many, or as little, as you want.
-                </p>
+                <div class="col-12">
+                    <p>
+                        Are you looking for an affordable website package for your business? Look no further than our website bundles! The bundles encorporate some of the most popular website services under one package to suit your business needs. WEBI offers <strong>four main bundles - Static Website, E-Commerce Website, Portfolio Website and a Blog Website.</strong> Browse through the bundles below and select ones that best suit your business requirements.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
-    <!-- Filter section 
-    <div class="container" method='GET' action="{% url 'addons' %}">
-        <div class="row">
-            <div class="addon-filter">
-                <a href="{% url 'addons' %}?type=Development,Design,Marketing,Hosting" class="filter-button active">Show all</a>
-                <a href="{% url 'addons' %}?type=Development" class="filter-button">Development</a>
-                <a href="{% url 'addons' %}?type=Design" class="filter-button">Design</a>
-                <a href="{% url 'addons' %}?type=Marketing" class="filter-button">Marketing</a>
-                <a href="{% url 'addons' %}?type=Hosting" class="filter-button">Hosting</a>
-            </div>
-        </div>
-    </div>
-    -->
     <!-- Bundles section -->
-    <section>
-        {% for bundle in bundles %}
-            <div class="container page-section">
-                <div class="row">
-                    <div class="col-4">
-                        <h5 class="addon-name">{{ bundle.name }}</h5>
+    <section class="container page-section">
+        <div class="row">
+            {% for bundle in bundles %}
+                <div class="col-md-5 bundle">
+                    <h5 class="addon-name">{{ bundle.name }}</h5>
+                    <img class="addon-image" src="/media/placeholder2_GrheKhO.jpg">
+                    <div class="service-description">
+                        <br>
+                        <span class="bundle-category">
+                            {{ bundle.category|safe }} | <strong>{{ bundle.name }}</strong>
+                        </span>
+                        <p>
+                            {{ bundle.description|truncatechars:150|safe }}
+                            {% for addon in bundle.addon.all %}
+                                <ul class="ul-bundle"> 
+                                    <li>{{ addon.name }}</li>
+                                </ul>
+                            {% endfor %}
+                        </p>
+                        <p class="bundle-price">
+                            <strong>Price:</strong> {{ bundle.price|safe }}
+                        </p>
+                        <button class="btn bundle-btn">Find out more</button>
                     </div>
                 </div>
-                <div class="addon-description">
-                    <div class="row">
-                        <div class="col-4">
-                            <img class="addon-image" src="/media/placeholder2_GrheKhO.jpg">
-                        </div>
-                        <div class="col-8">
-                            <span class="addon-type">{{ bundle.category|safe }} | <strong>{{ bundle.name }}</strong></span>
-                            <p>{{ bundle.description|safe }}</p>
-                                {% for bundle in bundles %}                              
-                                    {% for addon in bundle.addon.all %}
-                                        <ul class="ul-bundle col-6">
-                                            <li>{{ addon.name }}</li>
-                                        </ul>
-                                    {% endfor %}
-                                {% endfor %}
-                            <strong><p>Price:</strong> {{ bundle.price|safe }}</p>
-                            <button class="btn addon-btn">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
+                <br>
+            {% endfor %}
+        </div>
     </section>
     <!-- Internal Link -->
     <div class="container">
