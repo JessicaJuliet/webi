@@ -12,7 +12,6 @@ class CategoryAdmin(admin.ModelAdmin):
 class BundleAdmin(admin.ModelAdmin):
     list_display = (
         'category',
-        'bundle_slug',
         'name',
         'description',
         'price',

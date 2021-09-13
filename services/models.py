@@ -32,7 +32,6 @@ class Bundle(models.Model):
     """
     category = models.ForeignKey(
         'category', null=True, blank=True, on_delete=models.SET_NULL)
-    bundle_slug = models.SlugField(max_length=200, unique=True, default="bundle slug")
     name = models.CharField(max_length=254)
     description = RichTextField()
     image = models.ForeignKey(
