@@ -58,10 +58,23 @@
                             <span class="addon-type">{{ addon.category|safe }} | <strong>{{ addon.type|safe }}</strong></span>
                             <p>{{ addon.description|safe }}</p>
                             <strong><p>Price:</strong> {{ addon.price|safe }}</p>
-                            <button class="btn addon-btn">Add to cart</button>
+                            <!-- Add to cart button & quantity -->
+                            <form class="form" action="" method="POST">
+                                {% csrf_token %}
+                                <div class="form-row">
+                                    <p><strong>Quantity:</strong></p>
+                                    <span class="form-group">
+                                        <div class="input-group">
+                                            <input class="form-control qty_input addon-qty" type="number" name="quantity" value="1" min="1" max="5" data-item_id="{{ addon.id }}" id="id_qty_{{ addon.id }}">
+                                        </div>
+                                    </span>
+                                    <input type="submit" class="btn addon-btn" value="Add to Bag">
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                </div>
+                            </form>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
         {% endfor %}
     </section>

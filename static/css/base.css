@@ -280,6 +280,7 @@ footer .logo {
     color: white;
     padding: 10px 20px;
     border-radius: 10px;
+    margin-left: 40px;
 }
 
 .addon-btn:hover {
@@ -324,6 +325,12 @@ footer .logo {
     background-color: #666;
     color: white;
   }
+
+  .addon-qty {
+    margin-left: 10px;
+    border-radius: 10px;
+  }
+
 
 /* ---------- Bundles Page ---------- */
 
