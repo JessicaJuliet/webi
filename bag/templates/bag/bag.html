@@ -34,7 +34,11 @@
         <div class="row">
             <div class="col">
                 {% if bag_items %}
-                    <div class="table-responsive rounded"></div>
+                    {% for item in bag_items %}
+                        {{ item.addon.price }}
+                        {{ item.quantity }}
+                        {{ item.addon.name }}
+                    {% endfor %}
                 {% else %}
                     <p class="text-uppercase">Your bag is empty.</p>
                     <a href="{% url 'addons' %}" class="btn btn-outline-black rounded-0 btn-lg">
