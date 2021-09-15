@@ -389,6 +389,13 @@ footer .logo {
     color: #feb5c5;
 }
 
+/* ---------- Bag Page ---------- */
+
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 /* ---------- Media Queries ---------- */
 
 @media (mid-width: 992px) {
