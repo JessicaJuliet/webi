@@ -13,6 +13,7 @@ class BundleAdmin(admin.ModelAdmin):
     list_display = (
         'category',
         'name',
+        'slug',
         'description',
         'price',
     )
