@@ -65,7 +65,26 @@
                                     <p><strong>Quantity:</strong></p>
                                     <span class="form-group">
                                         <div class="input-group">
-                                            <input class="form-control qty_input addon-qty" type="number" name="quantity" value="1" min="1" max="5" data-item_id="{{ addon.id }}" id="id_qty_{{ addon.id }}">
+                                            <!-- Prepend to quantity -->
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn" 
+                                                data-item_id="{{ addon.id }}" id="decrement-qty_{{ addon.id }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-minus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <input class="form-control qty_input addon-qty" type="number" 
+                                                name="quantity" value="1" min="1" max="5" data-item_id="{{ addon.id }}" id="id_qty_{{ addon.id }}">
+                                            <!-- Append to quantity -->
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn"
+                                                data-item_id="{{ addon.id }}" id="increment-qty_{{ addon.id }}">
+                                                    <span class="icon">
+                                                        <i class="fas fa-plus"></i>
+                                                    </span>
+                                                </button>
+                                            </div>
                                         </div>
                                     </span>
                                     <input type="submit" class="btn addon-btn" value="Add to Bag">
@@ -94,4 +113,10 @@
     </div>
     <!-- Footer -->
     {% include "includes/footer.html" %}
+{% endblock %}
+
+<!-- JavaScript -->
+{% block postloadjs %}
+    {{ block.super }}
+    {% include 'includes/quantity_input_script.html' %}
 {% endblock %}
