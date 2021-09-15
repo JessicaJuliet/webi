@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from services.models import Image
 
 
 def view_bag(request):
