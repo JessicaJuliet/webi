@@ -135,8 +135,29 @@ header {
 
 .hero-h1 {
     color: #093d60;
+    font-size: 50px;
     padding-top: 110px;
 }
+
+/* Resource: Animation sourced from https://stackoverflow.com/questions/55227106/css-animation-text-sliding-left-to-right */
+
+.hero-h1-animation {
+    width: 100%;
+    overflow: hidden;
+    max-width: 500px
+  }
+  
+.hero-h1-animation {
+    animation: 0.5s slide-right forwards;
+      transform:translateX(-100%);
+  }
+  
+@keyframes slide-right {
+    to {
+      transform:translateX(0);
+    }
+  }
+
 
 /* Change colour of bullet point code sourced from W3schools - https://www.w3schools.com/howto/howto_css_bullet_color.asp */
 .ul-hero, .custom-ul {
