@@ -29,13 +29,13 @@ class Order(models.Model):
 
     def _generate_order_number(self):
         """
-        Private method to generate a random, unique order number using UUID
+        Method to generate a randomg and unique order number string using UUID
         """
         return uuid.uuid4().hex.upper()
 
     def update_total(self):
         """
-        Function to update grand total when a new line item is added,
+        Sum function to update grand total when a new line item is added,
         accounting for delivery costs
         """
         self.order_total = self.lineitems.aggregate(
@@ -46,8 +46,8 @@ class Order(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set the order number
-        if it hasn't been set already
+        Override the default save method to set an order number
+        if it doesn't have one already
         """
         if not self.order_number:
             self.order_number = self._generate_order_number()
@@ -75,7 +75,7 @@ class OrderLineItem(models.Model):
     def save(self, *args, **kwargs):
         """
         Override original save method to set the lineitem total
-        and update the order total.
+        and update the order total
         """
         self.lineitem_total = self.bundle.price * self.quantity
         super().save(*args, **kwargs)
