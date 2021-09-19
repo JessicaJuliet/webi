@@ -428,6 +428,18 @@ footer .logo {
     cursor: pointer;
 }
 
+.checkout-btn {
+    background-color: #093d60;
+    padding: 6px;
+    color: white;
+    border-radius: 10px;
+}
+
+.checkout-btn:hover {
+    color: white;
+    font-weight: 600;
+}
+
 /* ---------- Bootstrap toasts ---------- */
 
 .message-container {
