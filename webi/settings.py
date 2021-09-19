@@ -49,10 +49,11 @@ INSTALLED_APPS = [
     'services',
     'casestudies',
     'blog',
-    'checkout',
     'about',
     'ckeditor',
     'bag',
+    'checkout',
+
 
     # Other
     'crispy_forms',
