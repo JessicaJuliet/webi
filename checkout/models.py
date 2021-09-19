@@ -4,7 +4,7 @@ from django.db import models
 from django.db.models import Sum
 from django.conf import settings
 
-from services.models import Bundle, Addon
+from services.models import Addon
 
 
 class Order(models.Model):
@@ -39,7 +39,7 @@ class Order(models.Model):
         accounting for delivery costs
         """
         self.order_total = self.lineitems.aggregate(
-            Sum('lineitem_total'))['lineitem_total__sum']
+            Sum('lineitem_total'))['lineitem_total__sum'] or 0
         """ No delivery cost as it's a service provided """
         self.grand_total = self.order_total
         self.save()
@@ -61,9 +61,6 @@ class OrderLineItem(models.Model):
     order = models.ForeignKey(
         Order, null=False, blank=False,
         on_delete=models.CASCADE, related_name='lineitems')
-    bundle = models.ForeignKey(
-        Bundle, null=False, blank=False,
-        on_delete=models.CASCADE)
     addon = models.ForeignKey(
         Addon, null=False, blank=False,
         on_delete=models.CASCADE)
@@ -77,5 +74,5 @@ class OrderLineItem(models.Model):
         Override original save method to set the lineitem total
         and update the order total
         """
-        self.lineitem_total = self.bundle.price * self.quantity
+        self.lineitem_total = self.addon.price * self.quantity
         super().save(*args, **kwargs)
