@@ -30,20 +30,20 @@
     </section>
     <!-- Blogs section -->
     {% include "includes/blog_card.html" %}
-        <!-- Internal Link -->
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <br>
-                    <a href="{% url 'addons' %}" class="btn">
-                        <span>Explore Website Addons</span>
-                        <span class="icon">
-                            <i class="fas fa-chevron-right"></i>
-                        </span>
-                    </a>
-                </div>
+    <!-- Internal Link -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <br>
+                <a href="{% url 'home' %}" class="btn internal-link">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span>Back to homepage</span>
+                </a>
             </div>
         </div>
+    </div>
     <!-- Footer -->
     {% include "includes/footer.html" %}
 {% endblock %}

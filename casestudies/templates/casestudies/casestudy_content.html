@@ -8,7 +8,9 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Case Studies</li>
+            <li class="breadcrumb-item"><a href="{% url 'casestudies' %}">Case Studies</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{% if casestudy.heading %}{{casestudy.heading}}{% endif %}</a>
+            </li>
         </ol>
     </nav>
     <!-- Page Title -->
@@ -35,5 +37,20 @@
             </div>
         </section>
     {% endif %}
-{% include "includes/footer.html" %}
+    <!-- Internal Link -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <br>
+                <a href="{% url 'casestudies' %}" class="btn internal-link">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span>Back to case studies</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer-->
+    {% include "includes/footer.html" %}
 {% endblock %}

@@ -68,6 +68,17 @@ header {
     color: #093d60;
 }
 
+.internal-link {
+    background-color: #093d60;
+    color: white;
+    border-radius: 10px;
+}
+
+.internal-link:hover {
+    font-weight: 600;
+    color: white;
+}
+
 /* ---------- Website Header ---------- */
 
 .top-header {
