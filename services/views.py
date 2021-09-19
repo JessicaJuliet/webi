@@ -1,4 +1,4 @@
-from django.shortcuts import render, reverse
+from django.shortcuts import render, reverse, get_object_or_404
 from .models import Category, Bundle, Addon, Image, Type
 
 
@@ -34,3 +34,15 @@ def bundles(request):
     }
 
     return render(request, 'services/bundles.html', context)
+
+
+def bundle_details(request, slug):
+    """ A view to show individual bundles """
+
+    bundle = get_object_or_404(Bundle, slug=slug)
+
+    context = {
+        'bundle': bundle,
+    }
+
+    return render(request, 'services/bundle_details.html', context)

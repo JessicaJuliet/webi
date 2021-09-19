@@ -1,0 +1,29 @@
+<section class="container page-section">
+    <div class="row">
+        {% for bundle in bundles %}
+            <div class="col-md-5 bundle">
+                <h5 class="addon-name">{{ bundle.name }}</h5>
+                <img class="addon-image" src="/media/placeholder2_GrheKhO.jpg">
+                <div class="service-description">
+                    <br>
+                    <span class="bundle-category">
+                        {{ bundle.category|safe }} | <strong>{{ bundle.name }}</strong>
+                    </span>
+                    <p>
+                        {{ bundle.description|truncatechars:150|safe }}
+                        {% for addon in bundle.addon.all %}
+                            <ul class="ul-bundle"> 
+                                <li>{{ addon.name }}</li>
+                            </ul>
+                        {% endfor %}
+                    </p>
+                    <p class="bundle-price">
+                        <strong>Price:</strong> {{ bundle.price|safe }}
+                    </p>
+                    <a class="btn bundle-btn" type="button" href="{% url 'bundle_details' bundle.slug %}">Find out more</a>
+                </div>
+            </div>
+            <br>
+        {% endfor %}
+    </div>
+</section>

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} - {{ bundle.name }} {% endblock %}
+{% block content %}
+    {% include "includes/main-nav.html" %}
+    <!-- Breadcrumb Menu -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'bundles' %}">Bundles</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{% if bundle.name %}{{bundle.name}}{% endif %}</a>
+            </li>
+        </ol>
+    </nav>
+    <!-- Page Title -->
+    <div class="page-heading">
+        <div class="container">
+            <h1>{{ bundle.name }}</h1>
+            <div class="heading-border"></div>
+        </div>
+    </div>
+    <!-- Bundle Details -->
+    <section class="container bundle-details">
+        <div class="row">
+            <div class="col-6">
+                {{ bundle.description|safe }}
+                <h3>Add-ons included in this bundle:</h3>
+                <p>
+                    {% for addon in bundle.addon.all %}
+                        <ul class="ul-bundle"> 
+                            <li>{{ addon.name }}</li>
+                        </ul>
+                    {% endfor %}
+                </p>
+                <p class="bundle-price">
+                    <strong>Price:</strong> {{ bundle.price|safe }}
+                </p>
+            </div>
+            <div class="col-6">
+                <img src="/media/{{ bundle.image.image }}" width="80%">
+            </div>
+        </div>
+    </section>
+    <!-- Internal Link -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <br>
+                <a href="{% url 'bundles' %}" class="btn internal-link">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span>Back to Bundles</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Footer-->
+    {% include "includes/footer.html" %}
+{% endblock %}
