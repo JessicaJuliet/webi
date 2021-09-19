@@ -39,5 +39,19 @@
 {% include "includes/about_quote.html" %}
 {% include "includes/our_services.html" %}
 {% include "includes/featured_case_study.html" %}
+    <!-- Internal Link -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <br>
+                <a href="{% url 'home' %}" class="btn internal-link">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span>Back to Homepage</span>
+                </a>
+            </div>
+        </div>
+    </div>
 {% include "includes/footer.html" %}
 {% endblock %}

@@ -31,6 +31,7 @@ p {
 
 .custom-button:hover {
     color: #feb5c5;
+    font-weight: 600;
 }
 
 header {
