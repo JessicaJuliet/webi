@@ -25,6 +25,7 @@
         <div class="row">
             <div class="col-6">
                 {{ bundle.description|safe }}
+                <!-- Add-ons included in bundle -->
                 <h3>Add-ons included in this bundle:</h3>
                 <p>
                     {% for addon in bundle.addon.all %}
@@ -33,6 +34,7 @@
                         </ul>
                     {% endfor %}
                 </p>
+                <!-- Bundle Price -->
                 <p class="bundle-price">
                     <strong>Price:</strong> {{ bundle.price|safe }}
                 </p>
