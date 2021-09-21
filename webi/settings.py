@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'bag',
     'checkout',
+    'profiles',
 
 
     # Other
