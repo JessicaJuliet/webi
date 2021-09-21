@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+
+{% block extra_title %} - My Profile {% endblock %}
+{% block content %}
+    {% include "includes/main-nav.html" %}
+    <!-- Page Title -->
+    <div class="page-heading">
+        <div class="container">
+            <h1>My Profile</h1>
+            <div class="heading-border"></div>
+        </div>
+    </div>  
+{% endblock %}
