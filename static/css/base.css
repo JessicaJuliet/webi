@@ -27,6 +27,7 @@ p {
     padding: 10px 20px;
     margin-top: 20px;
     border-radius: 10px;
+    font-size: 20px;
 }
 
 .custom-button:hover {
@@ -423,7 +424,7 @@ footer .logo {
     color: #feb5c5;
 }
 
-/* ---------- Bag Page ---------- */
+/* ---------- Checkout/ Bag Pages ---------- */
 
 .update-link,
 .remove-item {
@@ -432,16 +433,32 @@ footer .logo {
 
 .checkout-btn {
     background-color: #093d60;
-    padding: 6px;
+    padding: 6px 8px;
     color: white;
     border-radius: 10px;
 }
 
 .checkout-btn:hover {
-    color: white;
+    color: #feb5c5;
     font-weight: 600;
 }
 
+.adjust-bag-link, .keep-shopping-link {
+    color: #093d60;
+    font-size: 20px;
+}
+
+.checkout-info {
+    color: black;
+}
+
+.form-check-label a {
+    color: #feb5c5 !important;
+}
+
+.form-check-label a:hover {
+    color: #093d60 !important;
+}
 /* ---------- Bootstrap toasts ---------- */
 
 .message-container {
