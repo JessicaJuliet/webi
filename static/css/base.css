@@ -40,6 +40,10 @@ header {
     padding-right: 0px !important;
 }
 
+.header-container {
+    padding-top: 200px;
+}
+
 .page-heading {
     margin-top: 50px;
     height: 80px;
