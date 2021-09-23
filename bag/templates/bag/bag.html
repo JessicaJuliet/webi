@@ -90,14 +90,14 @@
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'addons' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                    <a href="{% url 'addons' %}" class="btn secondary-link">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
-                                        <span class="text-uppercase keep-shopping-link">Keep Shopping</span>
+                                        <span>Keep Shopping</span>
                                     </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-lg checkout-btn">
-                                        <span class="text-uppercase">Secure Checkout</span>
+                                    <a href="{% url 'checkout' %}" class="btn btn-lg custom-button">
+                                        <span>Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
                                         </span>
@@ -108,11 +108,11 @@
                     </div>
                 {% else %}
                     <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'addons' %}" class="btn btn-lg">
+                    <a href="{% url 'addons' %}" class="btn btn-lg secondary-link">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="text-uppercase keep-shopping-link">Keep Shopping</span>
+                        <span>Keep Shopping</span>
                     </a>
                 {% endif %}
             </div>
