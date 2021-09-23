@@ -21,18 +21,18 @@ p {
     padding: 60px 0px;
 }
 
-.custom-button {
-    background-color: #093d60;
-    color: white;
-    padding: 10px 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    font-size: 20px;
+.primaryAction, .custom-button {
+    background-color: #093d60 !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    margin-top: 20px !important;
+    border-radius: 10px !important;
+    font-size: 20px !important;
 }
 
-.custom-button:hover {
-    color: #feb5c5;
-    font-weight: 600;
+.primaryAction:hover, .custom-button:hover {
+    color: #feb5c5 !important;
+    font-weight: 600 !important;
 }
 
 header {
@@ -583,6 +583,20 @@ footer .logo {
 
 .allauth-form-inner-content p a {
 	color: #093d60;
+}
+
+.secondary-link {
+    border-color: #093d60;
+    color: #093d60;
+    padding: 10px 20px !important;
+    margin-top: 20px !important;
+    border-radius: 10px !important;
+    font-size: 20px !important;
+}
+
+.secondary-link:hover {
+    font-weight: 600;
+    color: #093d60;
 }
 
 /* ---------- Media Queries ---------- */
