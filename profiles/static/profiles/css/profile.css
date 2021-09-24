@@ -1,0 +1,9 @@
+/* Style form input fields on Profile page */
+
+#profile-update-form .form-control {
+    color: #000;
+}
+
+.profile-form-input::placeholder {
+    color: #aab7c4;
+}
