@@ -28,11 +28,13 @@
                 <div class="col-12 col-lg-6">
                     <p class="text-muted">Order History</p>
                     {{ orders }}
-
                 </div>
             </div>
         </div>
     </div> 
+{% endblock %}
 
-
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
