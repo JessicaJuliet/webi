@@ -199,12 +199,21 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-7 text-right mb-5">
-                <a href="{% url 'addons' %}" class="btn secondary-link">
-                    <span>Keep Shopping</span>
-                    <span class="icon">
-                        <i class="fas fa-chevron-right"></i>
-                    </span>
-                </a>
+                {% if from_profile %}
+                    <a href="{% url 'profile' %}" class="btn secondary-link">
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span>Back to Profile</span>
+                    </a>
+                {% else %}
+                    <a href="{% url 'addons' %}" class="btn secondary-link">
+                        <span>Keep Shopping</span>
+                        <span class="icon">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </a>
+                {% endif %}
             </div>
         </div>
     </div>
