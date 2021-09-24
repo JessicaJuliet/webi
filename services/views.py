@@ -53,7 +53,7 @@ def bundle_details(request, slug):
 def add_product(request):
     """ Add a product to the store """
     form = ProductForm()
-    template = 'products/add_product.html'
+    template = 'services/add_product.html'
     context = {
         'form': form,
     }
