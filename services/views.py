@@ -1,6 +1,8 @@
 from django.shortcuts import render, reverse, get_object_or_404
 from .models import Category, Bundle, Addon, Image, Type
 
+from .forms import ProductForm
+
 
 def addons(request):
     """ A view to return the Add-ons page and filter addons by type """
@@ -46,3 +48,15 @@ def bundle_details(request, slug):
     }
 
     return render(request, 'services/bundle_details.html', context)
+
+
+def add_product(request):
+    """ Add a product to the store """
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
