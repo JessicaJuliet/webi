@@ -38,7 +38,11 @@
                 </p>
             </div>
             <div class="col-6">
-                <img src="/media/{{ service.image.image }}" width="80%">
+                {% if service.image %}
+                    <img src="/media/{{ service.image.image }}" width="80%" alt="{{ item.service.name }}">
+                {% else %}
+                    <img class="card-img-top img-fluid service-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.service.name }}">
+                {% endif %}
             </div>
         </div>
     </section>

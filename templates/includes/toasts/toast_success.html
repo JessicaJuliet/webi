@@ -21,7 +21,11 @@
                 {% for item in bag_items %}
                     <div class="row">
                         <div class="col-3 my-1">
-                            <img class="w-100" src="{{ item.addon.image.image.url }}">
+                            {% if item.addon.image %}
+                            <img class="card-img-top img-fluid service-image" src="{{ item.addon.image.image.url }}" alt="{{ item.addon.name }}">
+                            {% else %}
+                            <img class="card-img-top img-fluid service-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.addon.name }}">
+                            {% endif %}
                         </div>
                         <div class="col-9">
                             <p class="my-0"><strong>{{ item.addon.name }}</strong></p>
