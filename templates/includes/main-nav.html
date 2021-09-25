@@ -12,7 +12,7 @@
         <ul class="dropdown-menu account-dropdown" aria-labelledby="dropdownMenuLink">
             {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
-                    <li><a class="dropdown-item" href="#">Service Management</a></li>
+                    <li><a class="dropdown-item" href="{% url 'add_service' %}">Service Management</a></li>
                 {% endif %}
                 <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
                 <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
