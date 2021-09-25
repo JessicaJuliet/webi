@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import Category, Addon, Image, Type
 from .forms import ProductForm
@@ -37,8 +38,13 @@ def service_detail(request, service_id):
     return render(request, 'services/service_detail.html', context)
 
 
+@login_required
 def add_service(request):
     """ Add a service to the WEBI store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -58,8 +64,12 @@ def add_service(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_service(request, service_id):
     """ Edit a service in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
 
     service = get_object_or_404(Addon, pk=service_id)
 
@@ -83,8 +93,14 @@ def edit_service(request, service_id):
 
     return render(request, template, context)
 
+
+@login_required
 def delete_service(request, service_id):
     """ Delete a service from the WEBI store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+        
     service = get_object_or_404(Addon, pk=service_id)
     service.delete()
     messages.success(request, 'Service deleted!')
