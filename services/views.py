@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from .models import Category, Addon, Image, Type
 
+from .models import Category, Addon, Image, Type
 from .forms import ProductForm
 
 
@@ -53,6 +53,32 @@ def add_service(request):
     template = 'services/add_service.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def edit_service(request, service_id):
+    """ Edit a service in the store """
+
+    service = get_object_or_404(Addon, pk=service_id)
+    
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=service)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated service!')
+            return redirect(reverse('service_detail', args=[service.id]))
+        else:
+            messages.error(request, 'Failed to update service. Please ensure the form is valid.')
+    else:
+        form = ProductForm(instance=service)
+        messages.info(request, f'You are editing {service.name}')
+
+    template = 'services/edit_service.html'
+    context = {
+        'form': form,
+        'service': service,
     }
 
     return render(request, template, context)
