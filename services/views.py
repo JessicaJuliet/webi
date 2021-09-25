@@ -4,7 +4,7 @@ from .models import Category, Bundle, Addon, Image, Type
 from .forms import ProductForm
 
 
-def addons(request):
+def all_services(request):
     """ A view to return the Add-ons page and filter addons by type """
 
     addons = Addon.objects.all()
@@ -21,7 +21,7 @@ def addons(request):
         'current_types': type,
     }
 
-    return render(request, 'services/addons.html', context)
+    return render(request, 'services/services.html', context)
 
 
 def bundles(request):

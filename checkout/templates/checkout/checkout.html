@@ -33,7 +33,7 @@
                 {% for item in bag_items %}
                 <div class="row">
                     <div class="col-2 mb-1">
-                        <a href="{% url 'addons' %}">
+                        <a href="{% url 'services' %}">
                             {% if item.addon.image %}
                                 <img class="w-100" src="{{ item.addon.image.image.url }}" alt="{{ addon.name }}">
                             {% else %}

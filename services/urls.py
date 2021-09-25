@@ -4,8 +4,14 @@ from . import views
 
 
 urlpatterns = [
-    path('addons/', views.addons, name='addons'),
+    path('', views.all_services, name='services'),
     path('bundles/', views.bundles, name='bundles'),
     path('<slug:slug>/', views.bundle_details, name='bundle_details'),
-    path('add/', views.add_product, name='add_product'),
+    path('add', views.add_product, name='add_product'),
 ]
+
+
+"""   path('addons/', views.addons, name='addons'),
+    path('bundles/', views.bundles, name='bundles'),
+    path('<slug:slug>/', views.bundle_details, name='bundle_details'),
+    path('add', views.add_product, name='add_product'),"""
