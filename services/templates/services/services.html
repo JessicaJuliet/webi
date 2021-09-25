@@ -52,7 +52,15 @@
                 <div class="service-description">
                     <div class="row">
                         <div class="col-4">
-                            <img class="addon-image" src="/media/placeholder2_GrheKhO.jpg">
+                            {% if addon.image %}
+                            <a href="{% url 'service_detail' addon.id %}">
+                                <img class="card-img-top img-fluid service-image" src="{{ addon.image.image.url }}" alt="{{ addon.name }}">
+                            </a>
+                            {% else %}
+                            <a href="{% url 'service_detail' addon.id %}">
+                                <img class="img-fluid service-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ addon.name }}">
+                            </a>
+                            {% endif %}
                         </div>
                         <div class="col-8">
                             <span class="addon-type">{{ addon.category|safe }} | <strong>{{ addon.type|safe }}</strong></span>
