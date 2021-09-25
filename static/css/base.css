@@ -22,7 +22,7 @@ p {
 }
 
 .primaryAction, .custom-button {
-    background-color: #093d60 !important;
+    background-color: #093d60;
     color: white !important;
     padding: 5px 20px !important;
     margin-top: 20px !important;
@@ -599,6 +599,17 @@ footer .logo {
 	color: #093d60;
 }
 
+/* ---------- Add Service Page  ---------- */
+
+.form-control {
+    background-color: white !important;
+    color: black !important;
+}
+
+.add-service {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
 /* ---------- Media Queries ---------- */
 

@@ -63,7 +63,7 @@
                             {% endif %}
                         </div>
                         <div class="col-8">
-                            <span class="addon-type">{{ addon.category|safe }} | <strong>{{ addon.type|safe }}</strong></span>
+                            <span class="addon-type">Service | <strong>{{ addon.type|safe }}</strong></span>
                             <p>{{ addon.description|safe }}</p>
                             <strong><p>Price:</strong> {{ addon.price|safe }}</p>
                             <!-- Add to cart button & quantity -->
@@ -110,11 +110,11 @@
         <div class="row">
             <div class="col-12">
                 <br>
-                <a href="{% url 'bundles' %}" class="btn secondary-link">
-                    <span>Explore Website Bundles</span>
+                <a href="{% url 'home' %}" class="btn secondary-link">
                     <span class="icon">
-                        <i class="fas fa-chevron-right"></i>
+                        <i class="fas fa-chevron-left"></i>
                     </span>
+                    <span>Back to Home</span>
                 </a>
             </div>
         </div>

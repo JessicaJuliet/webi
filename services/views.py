@@ -36,39 +36,12 @@ def service_detail(request, service_id):
     return render(request, 'services/service_detail.html', context)
 
 
-def bundles(request):
-    """ A view to render the Bundles page """
-
-    bundles = Bundle.objects.all()
-    addons = Addon.objects.all()
-
-    context = {
-        'bundles': bundles,
-        'addons': addons,
-    }
-
-    return render(request, 'services/bundles.html', context)
-
-
-def bundle_details(request, slug):
-    """ A view to show individual bundles """
-
-    bundle = get_object_or_404(Bundle, slug=slug)
-
-    context = {
-        'bundle': bundle,
-    }
-
-    return render(request, 'services/bundle_details.html', context)
-
-
-def add_product(request):
-    """ Add a product to the store """
+def add_service(request):
+    """ Add a service to the store """
     form = ProductForm()
-    template = 'services/add_product.html'
+    template = 'services/add_service.html'
     context = {
         'form': form,
     }
 
     return render(request, template, context)
-

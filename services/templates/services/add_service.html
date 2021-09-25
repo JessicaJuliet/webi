@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block extra_title %} - Service Management {% endblock %}
+{% block content %}
+    {% include "includes/main-nav.html" %}
+    <!-- Page Title -->
+    <div class="page-heading">
+        <div class="container">
+            <div class="col-12 col-md-6">
+                <h1>Service Management</h1>
+                <div class="heading-border"></div>
+            </div>
+            <div class="row add-service">
+                <div class="col-12 col-md-6">
+                    <h5 class="text-muted">Add a Product</h5>
+                    <form method="POST" action="{% url 'add_service' %}" class="form add-service-form mb-2" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form | crispy }}
+                        <div class="text-right">
+                            <a class="btn secondary-link" href="{% url 'services' %}">Cancel</a>
+                            <button class="btn custom-button" type="submit">Add Service</button>
+                        </div>
+                    </form>
+                </div>      
+            </div>
+        </div>
+    </div>  
+
+{% endblock %}
+
