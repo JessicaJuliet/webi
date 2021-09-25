@@ -6,7 +6,7 @@ from .forms import ProductForm
 
 
 def all_services(request):
-    """ A view to return the Add-ons page and filter addons by type """
+    """ A view to return the Services page and filter services by type """
 
     addons = Addon.objects.all()
     types = None
@@ -42,9 +42,9 @@ def add_service(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            service = form.save()
             messages.success(request, 'Successfully added service!')
-            return redirect(reverse('add_service'))
+            return redirect(reverse('service_detail', args=[service.id]))
         else:
             messages.error(request, 'Failed to add service. Please ensure the form is valid.')
     else:
@@ -62,7 +62,7 @@ def edit_service(request, service_id):
     """ Edit a service in the store """
 
     service = get_object_or_404(Addon, pk=service_id)
-    
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=service)
         if form.is_valid():
@@ -82,3 +82,10 @@ def edit_service(request, service_id):
     }
 
     return render(request, template, context)
+
+def delete_service(request, service_id):
+    """ Delete a service from the WEBI store """
+    service = get_object_or_404(Addon, pk=service_id)
+    service.delete()
+    messages.success(request, 'Service deleted!')
+    return redirect(reverse('services'))
