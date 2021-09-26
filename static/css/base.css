@@ -10,7 +10,7 @@ p {
 }
 
 .page-section {
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .homepage-section {
@@ -213,30 +213,10 @@ header {
     color: #feb5c5; 
 }
 
-.home-quote-section {
-    text-align: right;
-}
-
 /* Resource: Code souced from - https://www.tutorialrepublic.com/codelab.php?topic=faq&file=css-overlay-one-div-over-another-div */
 
 .box-container{
     position: relative;
-}
-
-.stacked-top {
-    width: 75%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 1; 
-}
-
-.stacked-bottom {
-    width: 30%;
-    position: relative;
-    top: 65%;
-    left: 60%;
-    opacity: 0.8; 
 }
 
 .home-services {
@@ -288,6 +268,12 @@ footer i {
 
 footer .logo {
     padding-bottom: 30px;
+}
+
+/* ---------- About Page ---------- */
+
+.about-quote {
+    text-align: right;
 }
 
 /* ---------- Blog & Case Studies Pages  ---------- */
@@ -616,5 +602,16 @@ footer .logo {
 @media (mid-width: 992px) {
     .container {
         max-width: 80%;
+    }
+}
+
+/* About Page */
+
+@media (max-width: 766px) {
+    .about-image {
+        padding-bottom: 50px;
+    }
+    .about-quote {
+        text-align: center;
     }
 }

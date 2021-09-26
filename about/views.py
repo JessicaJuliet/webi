@@ -3,7 +3,8 @@ from casestudies.models import Casestudy
 
 
 def about(request):
-    """ A view to return the about page """
+    """ A function to render the About page """
+    # Import Casestudy model content
     casestudies = Casestudy.objects.all()
     context = {
         'casestudies': casestudies,
