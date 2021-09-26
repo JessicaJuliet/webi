@@ -13,6 +13,12 @@ p {
     margin-top: 80px;
 }
 
+.intro-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
 .homepage-section {
     margin-top: 150px;
 }
@@ -39,7 +45,7 @@ p {
     border-color: #093d60;
     color: #093d60;
     padding: 5px 20px !important;
-    margin-top: 20px !important;
+    margin-top: 10px !important;
     border-radius: 10px !important;
     font-size: 20px !important;
 }
@@ -309,41 +315,13 @@ footer .logo {
     color: #093d60;
 }
 
-/* ---------- Add-on page ---------- */
+/* ---------- Service Pages ---------- */
 
-.addon-type {
-    color: darkgray;
+.services-intro a {
+    color: #093d60; 
 }
 
-.addon-btn {
-    background-color: #093d60;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin-left: 40px;
-}
-
-.addon-btn:hover {
-    color: #feb5c5;
-}
-
-.addon-name {
-    background-color: #093d60;
-    color: white;
-    padding: 7px 0px;
-    text-align: center;
-    margin: 0px;
-}
-
-.service-image {
-    width: 100%;
-}
-
-.service-description {
-    border: .5px solid lightgray;
-}
-
-.addon-filter {
+.service-filter {
     margin: 15px 0px;
     
 }
@@ -364,69 +342,58 @@ footer .logo {
 .filter-button.active {
     background-color: #666;
     color: white;
-  }
-
-  .addon-qty {
-    margin-left: 10px;
-    border-radius: 10px;
-  }
-
-
-/* ---------- Bundles Page ---------- */
-
-.ul-bundle {
-    list-style: none;
 }
 
-/* Change colour of bullet point code sourced from W3schools - https://www.w3schools.com/howto/howto_css_bullet_color.asp */
-.custom-ul {
-    list-style: none;
-}
-
-.ul-bundle ::before {
-    /* Unicode for arrow sourced from - https://unicode-table.com/en/2713/ */
-    content: "\2713";
-    color: #feb5c5; 
-    font-weight: bold;
-    font-size: 24px;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
-
-.ul-bundle li {
-    line-height: 0px;
-}
-
-.bundle p {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.bundle li {
-    padding-left: 20px;
-}
-
-.bundle-category {
+.service-type {
     color: darkgray;
-    padding-left: 10px;
 }
 
-.bundle-price {
-    padding-top: 15px;
-    margin: 0;
-}
-
-.bundle-btn {
+.service-btn {
     background-color: #093d60;
     color: white;
     padding: 10px 20px;
-    margin: 10px;
+    border-radius: 10px;
+    margin-left: 40px;
+}
+
+.service-btn:hover {
+    color: #feb5c5;
+}
+
+.service-name {
+    background-color: #093d60;
+    color: white;
+    padding: 7px 0px;
+    text-align: center;
+    margin: 0px;
+}
+
+.service-image {
+    width: 100%;
+}
+
+.service-description {
+    border: .5px solid lightgray;
+}
+
+
+.service-qty {
+    margin-left: 10px;
     border-radius: 10px;
 }
 
-.bundle-btn:hover {
+.service-custom-button {
+    background-color: #093d60;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service-custom-button:hover {
     color: #feb5c5;
+    font-weight: 600;
 }
 
 /* ---------- Checkout/ Bag Pages ---------- */
@@ -614,5 +581,35 @@ footer .logo {
     }
     .about-quote {
         text-align: center;
+    }
+}
+
+/* Services Page */
+
+@media (max-width: 991px) {
+    .service-image {
+        width: 100%; 
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 767px) {
+    .service-image {
+        height: 200px;
+    }
+
+    .type {
+        padding-left: 15px;
+    }
+
+    .service-content p {
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+    .service-custom-button {
+        margin-left: 15px;
     }
 }

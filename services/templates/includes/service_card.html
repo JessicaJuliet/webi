@@ -1,0 +1,50 @@
+<section>
+    {% for service in services %}
+        <div class="container page-section">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-lg-4">
+                    <!-- Service name -->
+                    <h5 class="service-name">{{ service.name }}</h5>
+                </div>
+            </div>
+            <!-- Service description -->
+            <div class="service-description">
+                <div class="row">
+                    <div class="col-xs-6 col-md-6 col-lg-4">
+                        <!-- Service image -->
+                        {% if service.image %}
+                            <a href="{% url 'service_detail' service.id %}">
+                                <img class="card-img-top img-fluid service-image" src="{{ service.image.image.url }}" alt="{{ service.name }}">
+                            </a>
+                        {% else %}
+                            <a href="{% url 'service_detail' service.id %}">
+                                <img class="img-fluid service-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ service.name }}">
+                            </a>
+                        {% endif %}
+                        <!-- Edit/delete for super user buttons-->
+                        {% if request.user.is_superuser %}
+                            <small>
+                                <a href="{% url 'edit_service' service.id %}">Edit</a> | 
+                                <a class="text-danger" href="{% url 'delete_service' service.id %}">Delete</a>
+                            </small>
+                        {% endif %}
+                    </div>
+                    <div class="col-xs-6 col-md-6 col-lg-8 service-content">
+                        <!-- Service type -->
+                        <span class="service-type type">Service | <strong>{{ service.type|safe }}</strong></span>
+                        <!-- Service description -->
+                        <p>{{ service.description|truncatechars:150|safe }}</p>
+                        <!-- Service price -->
+                        <strong><p>Price:</strong> {{ service.price|safe }}</p>
+                        <a href="{% url 'service_detail' service.id %}" class="btn service-custom-button">
+                            <span>Find Out More</span>
+                            <span class="icon">
+                                <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    {% endfor %}
+</section>

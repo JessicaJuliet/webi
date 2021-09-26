@@ -1,13 +1,15 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from .models import Category, Addon, Image, Type
+
 from .forms import ProductForm
 
 
 def all_services(request):
-    """ A view to return the Services page and filter services by type """
+    """ A function to return the Services page and filter services by type """
 
     services = Addon.objects.all()
     type = None
@@ -27,7 +29,7 @@ def all_services(request):
 
 
 def service_detail(request, service_id):
-    """ A view to show individual service details """
+    """ A function to render individual service details """
 
     service = get_object_or_404(Addon, pk=service_id)
 
@@ -40,16 +42,17 @@ def service_detail(request, service_id):
 
 @login_required
 def add_service(request):
-    """ Add a service to the WEBI store """
+    """ A function to allow superusers to add a service to the website """
+
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, you do not have sufficient privileges to do that.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             service = form.save()
-            messages.success(request, 'Successfully added service!')
+            messages.success(request, 'Successfully added service.')
             return redirect(reverse('service_detail', args=[service.id]))
         else:
             messages.error(request, 'Failed to add service. Please ensure the form is valid.')
@@ -66,9 +69,10 @@ def add_service(request):
 
 @login_required
 def edit_service(request, service_id):
-    """ Edit a service in the store """
+    """ A function to allow superusers to edit a service on the website """
+
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, you do not have sufficient privileges to do that.')
         return redirect(reverse('home'))
 
     service = get_object_or_404(Addon, pk=service_id)
@@ -77,7 +81,7 @@ def edit_service(request, service_id):
         form = ProductForm(request.POST, request.FILES, instance=service)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated service!')
+            messages.success(request, 'Successfully updated service.')
             return redirect(reverse('service_detail', args=[service.id]))
         else:
             messages.error(request, 'Failed to update service. Please ensure the form is valid.')
@@ -96,12 +100,14 @@ def edit_service(request, service_id):
 
 @login_required
 def delete_service(request, service_id):
-    """ Delete a service from the WEBI store """
+    """ A function to allow superusers to delete a service from the website """
+
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
+        messages.error(request, 'Sorry, you do not have sufficient privileges to do that.')
         return redirect(reverse('home'))
-        
+
     service = get_object_or_404(Addon, pk=service_id)
     service.delete()
     messages.success(request, 'Service deleted!')
+
     return redirect(reverse('services'))

@@ -13,7 +13,7 @@
             </li>
         </ol>
     </nav>
-    <!-- Page Title -->
+    <!-- Page Heading -->
     <div class="page-heading">
         <div class="container">
             <h1>{{ service.name }}</h1>
@@ -21,21 +21,25 @@
         </div>
     </div>
     <!-- Service Details -->
-    <section class="container bundle-details">
+    <section class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-xs-12 col-md-12 col-lg-6 intro-section">
+                <!-- Service type -->
+                <span class="service-type">Service | <strong>{{ service.type|safe }}</strong></span>
+                <br>
+                <br>
+                <!-- Service description -->
                 {{ service.description|safe }}
-                <h3></h3>
+                <!-- Service price -->
                 <p>
-                    {% for service in services %}
-                        <ul class="ul-bundle"> 
-                            <li>{{ service.name }}</li>
-                        </ul>
-                    {% endfor %}
-                </p>
-                <p class="bundle-price">
                     <strong>Price:</strong> {{ service.price|safe }}
+                    <br>
                 </p>
+                <!-- Service form -->
+                <div>
+                    {% include "includes/service_form.html" %}
+                </div>
+                <!-- Super user add/edit buttons -->
                 {% if request.user.is_superuser %}
                     <small class="ml-3">
                         <a href="{% url 'edit_service' service.id %}">Edit</a> | 
@@ -43,7 +47,8 @@
                     </small>
                 {% endif %}
             </div>
-            <div class="col-6">
+            <!-- Service image -->
+            <div class="col-xs-12 col-md-12 col-lg-6">
                 {% if service.image %}
                     <img src="/media/{{ service.image.image }}" width="80%" alt="{{ item.service.name }}">
                 {% else %}
@@ -53,19 +58,12 @@
         </div>
     </section>
     <!-- Internal Link -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <br>
-                <a href="{% url 'services' %}" class="btn secondary-link">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span>Back to All Services</span>
-                </a>
-            </div>
-        </div>
-    </div>
+    {% include "includes/back_to_services_link.html" %}
     <!-- Footer-->
     {% include "includes/footer.html" %}
+{% endblock %}
+<!-- JavaScript-->
+{% block postloadjs %}
+    {{ block.super }}
+    {% include 'includes/quantity_input_script.html' %}
 {% endblock %}

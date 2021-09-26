@@ -2,15 +2,11 @@
 {% load static %}
 
 {% block extra_title %} - Services {% endblock %}
+
 {% block content %}
     {% include "includes/main-nav.html" %}
     <!-- Breadcrumb Menu -->
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Services</li>
-        </ol>
-    </nav>
+    {% include "includes/breadcrumbs.html" %}
     <!-- Page Title -->
     <div class="page-heading">
         <div class="container">
@@ -19,116 +15,16 @@
         </div>
     </div>  
     <!-- Introduction section-->
-    <section>
-        <div class="container page-section">
-            <div class="row">
-                <p>
-                    WEBI offers a range of add-ons to meet your development needs. These range from design to development services and also marketing add-ons. Browse through the add-ons below and select ones that best suit your business needs. Include as many, or as little, as you want.
-                </p>
-            </div>
-        </div>
-    </section>
-    <!-- Filter section -->
-    <div class="container" method='GET' action="{% url 'services' %}">
-        <div class="row">
-            <div class="addon-filter">
-                <a href="{% url 'services' %}?type=Development,Design,Marketing,Hosting" class="filter-button active">Show all</a>
-                <a href="{% url 'services' %}?type=Development" class="filter-button">Development</a>
-                <a href="{% url 'services' %}?type=Design" class="filter-button">Design</a>
-                <a href="{% url 'services' %}?type=Marketing" class="filter-button">Marketing</a>
-                <a href="{% url 'services' %}?type=Hosting" class="filter-button">Hosting</a>
-            </div>
-        </div>
-    </div>
-    <!-- Add-ons section -->
-    <section>
-        {% for service in services %}
-            <div class="container page-section">
-                <div class="row">
-                    <div class="col-4">
-                        <h5 class="addon-name">{{ service.name }}</h5>
-                    </div>
-                </div>
-                <div class="service-description">
-                    <div class="row">
-                        <div class="col-4">
-                            {% if service.image %}
-                            <a href="{% url 'service_detail' service.id %}">
-                                <img class="card-img-top img-fluid service-image" src="{{ service.image.image.url }}" alt="{{ service.name }}">
-                            </a>
-                            {% else %}
-                            <a href="{% url 'service_detail' service.id %}">
-                                <img class="img-fluid service-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ service.name }}">
-                            </a>
-                            {% endif %}
-                            {% if request.user.is_superuser %}
-                            <small class="ml-3">
-                                <a href="{% url 'edit_service' service.id %}">Edit</a> | 
-                                <a class="text-danger" href="{% url 'delete_service' service.id %}">Delete</a>
-                            </small>
-                            {% endif %}
-                        </div>
-                        <div class="col-8">
-                            <span class="addon-type">Service | <strong>{{ service.type|safe }}</strong></span>
-                            <p>{{ service.description|safe }}</p>
-                            <strong><p>Price:</strong> {{ service.price|safe }}</p>
-                            <!-- Add to cart button & quantity -->
-                            <form class="form" action="{% url 'add_to_bag' service.id %}" method="POST">
-                                {% csrf_token %}
-                                <div class="form-row">
-                                    <p><strong>Quantity:</strong></p>
-                                    <span class="form-group">
-                                        <div class="input-group">
-                                            <!-- Prepend to quantity -->
-                                            <div class="input-group-prepend">
-                                                <button class="decrement-qty btn" 
-                                                data-item_id="{{ service.id }}" id="decrement-qty_{{ service.id }}">
-                                                    <span class="icon">
-                                                        <i class="fas fa-minus"></i>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                            <input class="form-control qty_input addon-qty" type="number" 
-                                                name="quantity" value="1" min="1" max="5" data-item_id="{{ service.id }}" id="id_qty_{{ service.id }}">
-                                            <!-- Append to quantity -->
-                                            <div class="input-group-append">
-                                                <button class="increment-qty btn"
-                                                data-item_id="{{ service.id }}" id="increment-qty_{{ service.id }}">
-                                                    <span class="icon">
-                                                        <i class="fas fa-plus"></i>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </span>
-                                    <input type="submit" class="btn addon-btn" value="Add to Bag">
-                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-        {% endfor %}
-    </section>
+    {% include "includes/service_intro.html" %}
+    <!-- Service Filter -->
+    {% include "includes/service_filter.html" %}
+    <!-- Services Section -->
+    {% include "includes/service_card.html" %}
     <!-- Internal Link -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <br>
-                <a href="{% url 'home' %}" class="btn secondary-link">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span>Back to Home</span>
-                </a>
-            </div>
-        </div>
-    </div>
+    {% include "includes/back_to_homepage_link.html" %}
     <!-- Footer -->
     {% include "includes/footer.html" %}
 {% endblock %}
-
 <!-- JavaScript -->
 {% block postloadjs %}
     {{ block.super }}
