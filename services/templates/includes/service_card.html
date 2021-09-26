@@ -21,13 +21,6 @@
                                 <img class="img-fluid service-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ service.name }}">
                             </a>
                         {% endif %}
-                        <!-- Edit/delete for super user buttons-->
-                        {% if request.user.is_superuser %}
-                            <small>
-                                <a href="{% url 'edit_service' service.id %}">Edit</a> | 
-                                <a class="text-danger" href="{% url 'delete_service' service.id %}">Delete</a>
-                            </small>
-                        {% endif %}
                     </div>
                     <div class="col-xs-6 col-md-6 col-lg-8 service-content">
                         <!-- Service type -->
@@ -42,6 +35,15 @@
                                 <i class="fas fa-chevron-right"></i>
                             </span>
                         </a>
+                        <!-- Super user add/edit buttons -->
+                        <div>
+                            {% if request.user.is_superuser %}
+                            <small>
+                                <a href="{% url 'edit_service' service.id %}">Edit</a> | 
+                                <a class="text-danger" href="{% url 'delete_service' service.id %}">Delete</a>
+                            </small>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
             </div> 

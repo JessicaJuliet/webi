@@ -18,7 +18,7 @@
             </div>
             <!-- Super user add/edit buttons -->
             {% if request.user.is_superuser %}
-                <small class="ml-3">
+                <small>
                     <a href="{% url 'edit_service' service.id %}">Edit</a> | 
                     <a class="text-danger" href="{% url 'delete_service' service.id %}">Delete</a>
                 </small>

@@ -28,7 +28,7 @@ p {
 }
 
 .primaryAction, .custom-button {
-    background-color: #093d60;
+    background-color: #093d60 !important;
     color: white !important;
     padding: 5px 20px !important;
     margin-top: 10px !important;
