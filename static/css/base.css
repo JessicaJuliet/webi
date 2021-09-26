@@ -397,6 +397,20 @@ footer .logo {
     font-weight: 600;
 }
 
+.admin-edit {
+    color: #093d60;
+}
+
+.admin-delete {
+    color: #feb5c5;
+}
+
+.edit-delete-background {
+    background-color: rgba(230, 230, 230, 0.397);
+    padding: 7px;
+    border-radius: 10px;
+}
+
 /* ---------- Checkout/ Bag Pages ---------- */
 
 .update-link,
