@@ -2,17 +2,11 @@
 {% load static %}
 
 {% block extra_title %} - {{ blog.title }} {% endblock %}
+
 {% block content %}
     {% include "includes/main-nav.html" %}
     <!-- Breadcrumb Menu -->
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-            <li class="breadcrumb-item"><a href="{% url 'blog' %}">Blog</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{% if blog.heading %}{{blog.heading}}{% endif %}</a>
-            </li>
-        </ol>
-    </nav>
+    {% include "includes/blog_post_breadcrumbs.html" %}
     <!-- Page Title -->
     <div class="page-heading">
         <div class="container">
@@ -21,33 +15,9 @@
         </div>
     </div>
     <!-- Blog Content -->
-    {% if blog.heading %}
-        <section>
-            <div class="container page-section">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>{{ blog.heading|safe }}</h2>
-                        <p><em>{{ blog.published_date|safe }}</em></p>
-                        <p class="page-section">{{ blog.blog_content|safe }}</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    {% endif %}
+    {% include "includes/blog_post_content.html" %}
     <!-- Internal Link -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <br>
-                <a href="{% url 'blog' %}" class="btn secondary-link">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span>Back to Blog</span>
-                </a>
-            </div>
-        </div>
-    </div>
+    {% include "includes/back_to_blog_link.html" %}
     <!-- Footer-->
     {% include "includes/footer.html" %}
 {% endblock %}

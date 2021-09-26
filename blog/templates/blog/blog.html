@@ -2,48 +2,22 @@
 {% load static %}
 
 {% block extra_title %} - Blog {% endblock %}
+
 {% block content %}
     {% include "includes/main-nav.html" %}
-    <!-- Breadcrumb Menu -->
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Blog</li>
-        </ol>
-    </nav>
-    <!-- Page Title -->
+    <!-- Breadcrumbs menu -->
+    {% include "includes/breadcrumbs.html" %}
+    <!-- Page Heading -->
     <div class="page-heading">
         <div class="container">
             <h1>Blog</h1>
             <div class="heading-border"></div>
         </div>
     </div>  
-    <!-- Introduction section-->
-    <section>
-        <div class="container page-section">
-            <div class="row">
-                <p>
-                    Looking to learn more about all things digital? Check out our latest blog posts below on a range of different topics:
-                </p>
-            </div>
-        </div>
-    </section>
     <!-- Blogs section -->
     {% include "includes/blog_card.html" %}
     <!-- Internal Link -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <br>
-                <a href="{% url 'home' %}" class="btn secondary-link">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span>Back to Homepage</span>
-                </a>
-            </div>
-        </div>
-    </div>
+    {% include "includes/back_to_homepage_link.html" %}
     <!-- Footer -->
     {% include "includes/footer.html" %}
 {% endblock %}

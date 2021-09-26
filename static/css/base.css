@@ -276,14 +276,15 @@ footer .logo {
     text-align: right;
 }
 
-/* ---------- Blog & Case Studies Pages  ---------- */
+/* ---------- Blog & Case Study Pages  ---------- */
 
-.blog, .casestudies {
+.blog-card, .casestudies {
     margin: 30px;
     padding: 40px;
     min-height: 120%;
     background-color: rgba(211, 211, 211, 0.178);
-    border-top: 5px solid #feb5c5; 
+    border-top: 5px solid #feb5c5;
+    border-radius: 10px;
 }
 
 .blog-image, .casestudy-image {
@@ -303,7 +304,7 @@ footer .logo {
     color: #093d60;
 }
 
-.blog h2 a {
+.blog-card h2 a {
     text-decoration: none;
     color: #093d60;
 }

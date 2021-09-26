@@ -2,15 +2,18 @@
     <div class="container page-section">
         <div class="row">
             {% for blog in blogs %}
-                <div class="blog col-md-12 col-lg-5">
+                <div class="blog-card col-xs-12 col-md-5">
+                    <!-- Blog image -->
                     <div class="box">
                         <img src="/media/{{ blog.blog_image}}" class="blog-image">
                     </div>
+                    <!-- Blog snippet content -->
                     <h2>
                         <a href="{% url 'blog_post' blog.slug %}">{{ blog.heading|safe }}</a>
                     </h2>
                     <p><em>{{ blog.published_date|safe }}</em></p>
                     <p>{{ blog.blog_content|truncatechars:200|safe }}</p>
+                    <!-- Link to blog post -->
                     <a class="btn custom-button" type="button" href="{% url 'blog_post' blog.slug %}">Read More</a>
                 </div>
             {% endfor %}
