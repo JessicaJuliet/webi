@@ -5,14 +5,7 @@
 {% block content %}
     {% include "includes/main-nav.html" %}
     <!-- Breadcrumb Menu -->
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-            <li class="breadcrumb-item"><a href="{% url 'services' %}">Services</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{% if service.name %}{{service.name}}{% endif %}</a>
-            </li>
-        </ol>
-    </nav>
+    {% include "includes/service_detail_breadcrumbs.html" %}
     <!-- Page Heading -->
     <div class="page-heading">
         <div class="container">
@@ -21,42 +14,7 @@
         </div>
     </div>
     <!-- Service Details -->
-    <section class="container">
-        <div class="row">
-            <div class="col-xs-12 col-md-12 col-lg-6 intro-section">
-                <!-- Service type -->
-                <span class="service-type">Service | <strong>{{ service.type|safe }}</strong></span>
-                <br>
-                <br>
-                <!-- Service description -->
-                {{ service.description|safe }}
-                <!-- Service price -->
-                <p>
-                    <strong>Price:</strong> {{ service.price|safe }}
-                    <br>
-                </p>
-                <!-- Service form -->
-                <div>
-                    {% include "includes/service_form.html" %}
-                </div>
-                <!-- Super user add/edit buttons -->
-                {% if request.user.is_superuser %}
-                    <small class="ml-3">
-                        <a href="{% url 'edit_service' service.id %}">Edit</a> | 
-                        <a class="text-danger" href="{% url 'delete_service' service.id %}">Delete</a>
-                    </small>
-                {% endif %}
-            </div>
-            <!-- Service image -->
-            <div class="col-xs-12 col-md-12 col-lg-6">
-                {% if service.image %}
-                    <img src="/media/{{ service.image.image }}" width="80%" alt="{{ item.service.name }}">
-                {% else %}
-                    <img class="card-img-top img-fluid service-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.service.name }}">
-                {% endif %}
-            </div>
-        </div>
-    </section>
+    {% include "includes/service_detail_card.html" %}
     <!-- Internal Link -->
     {% include "includes/back_to_services_link.html" %}
     <!-- Footer-->

@@ -1,0 +1,36 @@
+<section class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-6 intro-section">
+            <!-- Service type -->
+            <span class="service-type">Service | <strong>{{ service.type|safe }}</strong></span>
+            <br>
+            <br>
+            <!-- Service description -->
+            {{ service.description|safe }}
+            <!-- Service price -->
+            <p>
+                <strong>Price:</strong> {{ service.price|safe }}
+                <br>
+            </p>
+            <!-- Service form -->
+            <div>
+                {% include "includes/service_form.html" %}
+            </div>
+            <!-- Super user add/edit buttons -->
+            {% if request.user.is_superuser %}
+                <small class="ml-3">
+                    <a href="{% url 'edit_service' service.id %}">Edit</a> | 
+                    <a class="text-danger" href="{% url 'delete_service' service.id %}">Delete</a>
+                </small>
+            {% endif %}
+        </div>
+        <!-- Service image -->
+        <div class="col-xs-12 col-md-12 col-lg-6">
+            {% if service.image %}
+                <img src="/media/{{ service.image.image }}" width="80%" alt="{{ item.service.name }}">
+            {% else %}
+                <img class="card-img-top img-fluid service-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.service.name }}">
+            {% endif %}
+        </div>
+    </div>
+</section>
