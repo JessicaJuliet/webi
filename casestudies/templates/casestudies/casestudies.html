@@ -2,16 +2,12 @@
 {% load static %}
 
 {% block extra_title %} - Case Studies {% endblock %}
+
 {% block content %}
     {% include "includes/main-nav.html" %}
     <!-- Breadcrumb Menu -->
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Case Studies</li>
-        </ol>
-    </nav>
-    <!-- Page Title -->
+    {% include "includes/breadcrumbs.html" %}
+    <!-- Page Heading -->
     <div class="page-heading">
         <div class="container">
             <h1>Case Studies</h1>
@@ -19,38 +15,11 @@
         </div>
     </div>
     <!-- Introduction section-->
-    <section>
-        <div class="container page-section">
-            <div class="row">
-                <div class="col-6">
-                    <P>
-                        Are you considering freelance website design or development for your business? Explore the case studies below which demonstrate some of my previous work for clients across a broad selection of industries.
-                    </P>
-                </div>
-                <div class="col-6">
-                    <P>
-                        I've built websites ranging from static single page sites all the way up to more complex and large multi-page websites. Furthermore, all clients were offered bespoke website design as part of their package.
-                    </P>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include "includes/intro_content.html" %}
     <!-- Case studies section -->
     {% include "includes/casestudy_card.html" %}
     <!-- Internal Link -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <br>
-                <a href="{% url 'home' %}" class="btn secondary-link">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span>Back to Homepage</span>
-                </a>
-            </div>
-        </div>
-    </div>
+    {% include "includes/back_to_homepage_link.html" %}
     <!-- Footer -->
     {% include "includes/footer.html" %}
 {% endblock %}

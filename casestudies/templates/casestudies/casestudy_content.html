@@ -2,55 +2,22 @@
 {% load static %}
 
 {% block extra_title %} - {{ casestudy.title }} {% endblock %}
+
 {% block content %}
     {% include "includes/main-nav.html" %}
     <!-- Breadcrumb Menu -->
-    <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-            <li class="breadcrumb-item"><a href="{% url 'casestudies' %}">Case Studies</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{% if casestudy.heading %}{{casestudy.heading}}{% endif %}</a>
-            </li>
-        </ol>
-    </nav>
-    <!-- Page Title -->
+    {% include "includes/case_study_content_breadcrumbs.html" %}
+    <!-- Page Heading -->
     <div class="page-heading">
         <div class="container">
             <h1>Case Studies</h1>
             <div class="heading-border"></div>
         </div>
     </div>
-    <!-- Case Study Section-->
-    {% if casestudy.heading %}
-        <section>
-            <div class="container page-section">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>{{ casestudy.heading|safe }}</h2>
-                        <ul class="custom-ul page-section">
-                            <li><strong>Website: </strong><a href="{{ casestudy.website_url }}" target="_blank">{{ casestudy.website_url|safe }}</a></li>
-                            <li><strong>GitHub: </strong><a href="{{ casestudy.website_url }}" target="_blank">{{ casestudy.github_url|safe }}</a></li>
-                        </ul>
-                        <p class="page-section">{{ casestudy.case_study_content|safe }}</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    {% endif %}
+    <!-- Case Study Post Section-->
+    {% include "includes/case_study_post.html" %}
     <!-- Internal Link -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <br>
-                <a href="{% url 'casestudies' %}" class="btn secondary-link">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span>Back to Case Studies</span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- Footer-->
+    {% include "includes/back_to_case_studies_link.html" %}
+    <!-- Footer -->
     {% include "includes/footer.html" %}
 {% endblock %}

@@ -3,11 +3,17 @@
         <div class="row">
             {% for casestudy in casestudies %}
                 <div class="casestudies col-md-12 col-lg-5">
+                    <!-- Case study image -->
                     <div class="box">
                         <img src="/media/{{ casestudy.image }}" class="casestudy-image">
                     </div>
-                    <h2><a href="{% url 'casestudy_content' casestudy.slug %}">{{ casestudy.heading|safe }}</a></h2>
+                    <!-- Case study heading -->
+                    <h2>
+                        <a href="{% url 'casestudy_content' casestudy.slug %}">{{ casestudy.heading|safe }}</a>
+                    </h2>
+                    <!-- Case study content-->
                     <p>{{ casestudy.case_study_content|truncatechars:200|safe }}</p>
+                    <!-- Link to view case study -->
                     <a class="btn custom-button" type="button" href="{% url 'casestudy_content' casestudy.slug %}">Read More</a>
                 </div>
             {% endfor %}

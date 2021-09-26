@@ -15,6 +15,5 @@ class CasestudyAdmin(admin.ModelAdmin):
         'case_study_content'
     )
 
-
 # Register Models
 admin.site.register(Casestudy, CasestudyAdmin)

@@ -1,0 +1,8 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'casestudies' %}">Case Studies</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{% if casestudy.heading %}{{casestudy.heading}}{% endif %}</a>
+        </li>
+    </ol>
+</nav>

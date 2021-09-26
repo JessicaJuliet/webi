@@ -3,10 +3,9 @@ from .models import Casestudy
 
 
 def casestudies(request):
-    """ A view to return the case studies page """
+    """ A function to render the Case Studies page"""
 
     casestudies = Casestudy.objects.all()
-
     context = {
         'casestudies': casestudies,
     }
@@ -15,10 +14,9 @@ def casestudies(request):
 
 
 def casestudy_content(request, slug):
-    """ A view to show individual case study pages """
+    """ A function to render individual Case Study pages """
 
     casestudy = get_object_or_404(Casestudy, slug=slug)
-
     context = {
         'casestudy': casestudy,
     }

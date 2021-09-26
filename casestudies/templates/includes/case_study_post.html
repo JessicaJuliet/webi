@@ -1,0 +1,19 @@
+{% if casestudy.heading %}
+    <section>
+        <div class="container page-section">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Case study heading -->
+                    <h2>{{ casestudy.heading|safe }}</h2>
+                    <!-- Case study URLs -->
+                    <ul class="custom-ul">
+                        <li><strong>Website: </strong><a href="{{ casestudy.website_url }}" target="_blank">{{ casestudy.website_url|safe }}</a></li>
+                        <li><strong>GitHub: </strong><a href="{{ casestudy.website_url }}" target="_blank">{{ casestudy.github_url|safe }}</a></li>
+                    </ul>
+                    <!-- Case study content -->
+                    <p>{{ casestudy.case_study_content|safe }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endif %}
