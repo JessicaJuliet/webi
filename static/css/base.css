@@ -31,7 +31,7 @@ p {
     background-color: #093d60;
     color: white !important;
     padding: 5px 20px !important;
-    margin-top: 20px !important;
+    margin-top: 10px !important;
     border-radius: 10px !important;
     font-size: 20px !important;
 }
@@ -137,8 +137,9 @@ header {
     color: white;
 }
 
-.top-header i:hover {
-    color: #feb5c5;
+.basket-total:hover {
+    font-weight: 700;
+    text-decoration: none;
 }
 
 .logo {
