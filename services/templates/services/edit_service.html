@@ -17,7 +17,7 @@
                     <br>
                     <br>
                     <h5 class="text-muted">Edit a Service</h5>
-                    <form method="POST" action="{% url 'edit_service' service.id %}" class="form add-edit-service-form mb-2" enctype="multipart/form-data">
+                    <form method="POST" action="{% url 'edit_service' service.id %}" class="form add-edit-service-form" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ form | crispy }}
                         <div class="text-right">
@@ -28,5 +28,5 @@
                 </div>      
             </div>
         </div>
-    </div>  
+    </div>
 {% endblock %}

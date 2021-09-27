@@ -579,7 +579,7 @@ footer .logo {
     color: black !important;
 }
 
-.add-edit-service-form {
+.add-edit-service-form, .profile-form {
     padding-bottom: 100px;
     padding-top: 20px;
 }
