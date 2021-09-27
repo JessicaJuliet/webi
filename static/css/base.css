@@ -578,9 +578,9 @@ footer .logo {
     color: black !important;
 }
 
-.add-service {
-    padding-top: 50px;
-    padding-bottom: 50px;
+.add-edit-service-form {
+    padding-bottom: 100px;
+    padding-top: 20px;
 }
 
 /* ---------- Media Queries ---------- */

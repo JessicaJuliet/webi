@@ -14,8 +14,10 @@
             </div>
             <div class="row add-service">
                 <div class="col-12 col-md-6">
+                    <br>
+                    <br>
                     <h5 class="text-muted">Add a Service</h5>
-                    <form method="POST" action="{% url 'add_service' %}" class="form add-service-form mb-2" enctype="multipart/form-data">
+                    <form method="POST" action="{% url 'add_service' %}" class="form add-edit-service-form mb-2" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ form | crispy }}
                         <div class="text-right">
