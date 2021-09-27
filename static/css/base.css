@@ -3,6 +3,7 @@
 h1, h2, h3, h4, h5 {
     font-family: 'Lato', sans-serif;
     color: #093d60;
+    font-weight: 700;
 }
 
 p {
@@ -571,7 +572,7 @@ footer .logo {
 	color: #093d60;
 }
 
-/* ---------- Add Service Page  ---------- */
+/* ---------- Add/edit Service Page  ---------- */
 
 .form-control {
     background-color: white !important;
