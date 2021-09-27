@@ -23,7 +23,7 @@
                     <li><a class="dropdown-item" href="{% url 'add_service' %}">Service Management</a></li>
                 {% endif %}
                 <li><a class="dropdown-item" href="{% url 'profile' %}">My Profile</a></li>
-                <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign Out</a></li>
             {% else %}
                 <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
                 <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
