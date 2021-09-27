@@ -258,6 +258,10 @@ footer {
     background-color: #093d60;
     color: white;
     padding: 40px 0;
+    /*-- Resource: Footer push to boottom https://www.codegrepper.com/code-examples/css/how+can+we+fix+footer+at+bottom+bootstrap> */
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 footer h4, footer a {
