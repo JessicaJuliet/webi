@@ -316,7 +316,7 @@ footer .logo {
     color: #093d60;
 }
 
-/* ---------- Service Pages ---------- */
+/* ---------- Services Pages ---------- */
 
 .services-intro a {
     color: #093d60; 
@@ -371,6 +371,7 @@ footer .logo {
 
 .service-image {
     width: 100%;
+    height: 100%;
 }
 
 .service-description {
@@ -397,18 +398,20 @@ footer .logo {
     font-weight: 600;
 }
 
-.admin-edit {
+.admin-edit, .admin-delete {
     color: #093d60;
-}
-
-.admin-delete {
-    color: #feb5c5;
 }
 
 .edit-delete-background {
     background-color: rgba(230, 230, 230, 0.397);
     padding: 7px;
     border-radius: 10px;
+}
+
+.edit-delete-background i, .fa-credit-card {
+    color: #093d60;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /* ---------- Checkout/ Bag Pages ---------- */
@@ -613,18 +616,20 @@ footer .logo {
     .service-image {
         height: 200px;
     }
-
     .type {
         padding-left: 15px;
     }
-
     .service-content p {
         padding-left: 15px;
         padding-right: 15px;
-
     }
-
     .service-custom-button {
         margin-left: 15px;
+    }
+    .edit-delete-background {
+        margin-left: 15px;
+    }
+    .service-image {
+        padding-bottom: 10px;
     }
 }

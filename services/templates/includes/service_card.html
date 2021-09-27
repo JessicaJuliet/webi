@@ -31,7 +31,7 @@
                         <p>
                             <!-- Resource: Font Awesome icon https://fontawesome.com/v5.15/icons/credit-card?style=solid-->
                             <i class="fas fa-credit-card"></i>
-                            <strong> Price:</strong> {{ service.price|safe }}
+                            <strong> Price:</strong> ${{ service.price|safe }}
                         </p>
                         <div>
                             <a href="{% url 'service_detail' service.id %}" class="btn service-custom-button">
@@ -45,8 +45,14 @@
                         <div>
                             {% if request.user.is_superuser %}
                             <small class="edit-delete-background">
-                                <a href="{% url 'edit_service' service.id %}" class="admin-edit">Edit</a> | 
-                                <a class="admin-delete" href="{% url 'delete_service' service.id %}">Delete</a>
+                                <!-- Resource: Delete icon from Font Awesome - https://fontawesome.com/v5.15/icons/pen-square?style=solid -->
+                                <a href="{% url 'edit_service' service.id %}" class="admin-edit">
+                                    <i class="fas fa-pen-square"></i> Edit | 
+                                </a>
+                                <!-- Resource: Delete icon from Font Awesome - https://fontawesome.com/v5.15/icons/minus-square?style=solid -->
+                                <a class="admin-delete" href="{% url 'delete_service' service.id %}">
+                                    <i class="fas fa-minus-square"></i> Delete
+                                </a>
                             </small>
                             {% endif %}
                         </div>

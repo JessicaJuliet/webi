@@ -19,10 +19,16 @@
             </div>
             <!-- Super user add/edit buttons -->
             {% if request.user.is_superuser %}
-                <small class="edit-delete-background">
-                    <a href="{% url 'edit_service' service.id %}" class="admin-edit">Edit</a> | 
-                    <a class="admin-delete" href="{% url 'delete_service' service.id %}">Delete</a>
-                </small>
+            <small class="edit-delete-background">
+                <!-- Resource: Delete icon from Font Awesome - https://fontawesome.com/v5.15/icons/pen-square?style=solid -->
+                <a href="{% url 'edit_service' service.id %}" class="admin-edit">
+                    <i class="fas fa-pen-square"></i> Edit | 
+                </a>
+                <!-- Resource: Delete icon from Font Awesome - https://fontawesome.com/v5.15/icons/minus-square?style=solid -->
+                <a class="admin-delete" href="{% url 'delete_service' service.id %}">
+                    <i class="fas fa-minus-square"></i> Delete
+                </a>
+            </small>
             {% endif %}
         </div>
         <!-- Service image -->
