@@ -20,5 +20,5 @@ def blog_post(request, slug):
     context = {
         'blog': blog,
     }
-    
+
     return render(request, 'blog/blog_post.html', context)

@@ -21,7 +21,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
-                <p class="text-muted">Order Summary ({{ addon_count }})</p>
+                <p class="text-muted">Order Summary ({{ service_count }})</p>
                 <div class="row">
                     <div class="col-7 offset-2">
                         <p class="mb-1 mt-0 small text-muted">Item</p>
@@ -34,20 +34,20 @@
                 <div class="row">
                     <div class="col-2 mb-1">
                         <a href="{% url 'services' %}">
-                            {% if item.addon.image %}
-                                <img class="w-100" src="{{ item.addon.image.image.url }}" alt="{{ addon.name }}">
+                            {% if item.service.image %}
+                                <img class="w-100" src="{{ item.service.image.image.url }}" alt="{{ service.name }}">
                             {% else %}
-                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ addon.name }}">
+                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ service.name }}">
                             {% endif %}
                         </a>
                     </div>
                     <div class="col-7">
-                        <p class="my-0"><strong>{{ item.addon.name }}</strong></p>
-                        <!--<p class="my-0 small">Size: {% if item.addon.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>-->
+                        <p class="my-0"><strong>{{ item.service.name }}</strong></p>
+                        <!--<p class="my-0 small">Size: {% if item.service.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>-->
                         <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                     </div>
                     <div class="col-3 text-right">
-                        <p class="my-0 small text-muted">${{ item.addon.price | calc_subtotal:item.quantity }}</p>
+                        <p class="my-0 small text-muted">${{ item.service.price | calc_subtotal:item.quantity }}</p>
                     </div>
                 </div>
             {% endfor %}

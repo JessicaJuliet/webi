@@ -1,25 +1,25 @@
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
-from services.models import Addon
+from services.models import Service
 
 
 def bag_contents(request):
 
     bag_items = []
     total = 0
-    addon_count = 0
+    service_count = 0
     bag = request.session.get('bag', {})
 
     for item_id, quantity in bag.items():
 
-        addon = get_object_or_404(Addon, pk=item_id)
-        total += quantity * addon.price
-        addon_count += quantity
+        service = get_object_or_404(Service, pk=item_id)
+        total += quantity * service.price
+        service_count += quantity
         bag_items.append({
             'item_id': item_id,
             'quantity': quantity,
-            'addon': addon,
+            'service': service,
         })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
@@ -34,7 +34,7 @@ def bag_contents(request):
     context = {
         'bag_items': bag_items,
         'total': total,
-        'addon_count': addon_count,
+        'service_count': service_count,
         'delivery': delivery,
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,

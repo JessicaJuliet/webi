@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-from .models import Category, Addon, Image, Type
+from .models import Category, Service, Image, Type
 
 from .forms import ProductForm
 
@@ -11,7 +11,7 @@ from .forms import ProductForm
 def all_services(request):
     """ A function to return the Services page and filter services by type """
 
-    services = Addon.objects.all()
+    services = Service.objects.all()
     type = None
 
     if request.GET:
@@ -31,7 +31,7 @@ def all_services(request):
 def service_detail(request, service_id):
     """ A function to render individual service details """
 
-    service = get_object_or_404(Addon, pk=service_id)
+    service = get_object_or_404(Service, pk=service_id)
 
     context = {
         'service': service,
@@ -75,7 +75,7 @@ def edit_service(request, service_id):
         messages.error(request, 'Sorry, you do not have sufficient privileges to do that.')
         return redirect(reverse('home'))
 
-    service = get_object_or_404(Addon, pk=service_id)
+    service = get_object_or_404(Service, pk=service_id)
 
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=service)
@@ -106,7 +106,7 @@ def delete_service(request, service_id):
         messages.error(request, 'Sorry, you do not have sufficient privileges to do that.')
         return redirect(reverse('home'))
 
-    service = get_object_or_404(Addon, pk=service_id)
+    service = get_object_or_404(Service, pk=service_id)
     service.delete()
     messages.success(request, 'Service deleted!')
 

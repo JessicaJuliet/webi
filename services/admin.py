@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Bundle, Addon, Image, Type
+from .models import Category, Service, Image, Type
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -9,19 +9,7 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
-class BundleAdmin(admin.ModelAdmin):
-    list_display = (
-        'category',
-        'name',
-        'slug',
-        'description',
-        'price',
-    )
-
-    ordering = ('name',)
-
-
-class AddonAdmin(admin.ModelAdmin):
+class ServiceAdmin(admin.ModelAdmin):
     list_display = (
         'category',
         'type',
@@ -50,8 +38,7 @@ class TypeAdmin(admin.ModelAdmin):
 
 
 # Register Models
-admin.site.register(Bundle, BundleAdmin)
-admin.site.register(Addon, AddonAdmin)
 admin.site.register(Image, ImageAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Type, TypeAdmin)
+admin.site.register(Service, ServiceAdmin)

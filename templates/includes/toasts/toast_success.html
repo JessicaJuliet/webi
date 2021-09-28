@@ -16,19 +16,19 @@
             </div>
         </div>
         {% if grand_total and not on_profile_page %}
-            <p class="logo-font bg-white text-black py-1">Your Bag ({{ addon_count }})</p>
+            <p class="logo-font bg-white text-black py-1">Your Bag ({{ service_count }})</p>
             <div class="bag-notification-wrapper">
                 {% for item in bag_items %}
                     <div class="row">
                         <div class="col-3 my-1">
-                            {% if item.addon.image %}
-                            <img class="card-img-top img-fluid service-image" src="{{ item.addon.image.image.url }}" alt="{{ item.addon.name }}">
+                            {% if item.service.image %}
+                            <img class="card-img-top img-fluid service-image" src="{{ item.service.image.image.url }}" alt="{{ item.service.name }}">
                             {% else %}
-                            <img class="card-img-top img-fluid service-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.addon.name }}">
+                            <img class="card-img-top img-fluid service-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.service.name }}">
                             {% endif %}
                         </div>
                         <div class="col-9">
-                            <p class="my-0"><strong>{{ item.addon.name }}</strong></p>
+                            <p class="my-0"><strong>{{ item.service.name }}</strong></p>
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
                     </div>

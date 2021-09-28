@@ -26,27 +26,9 @@ class Category(models.Model):
         return self.friendly_name
 
 
-class Bundle(models.Model):
+class Service(models.Model):
     """
-    Bundles model to display bundles information
-    """
-    category = models.ForeignKey(
-        'category', null=True, blank=True, on_delete=models.SET_NULL)
-    slug = models.SlugField(max_length=200, unique=True, null=True, blank=True)
-    name = models.CharField(max_length=254)
-    description = RichTextField()
-    image = models.ForeignKey(
-        'Image', null=True, blank=True, on_delete=models.SET_NULL)
-    addon = models.ManyToManyField('Addon')
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-
-    def __str__(self):
-        return self.name
-
-
-class Addon(models.Model):
-    """
-    Addons model to display add-ons information
+    Services model to display add-ons information
     """
     category = models.ForeignKey(
         'category', null=True, blank=True, on_delete=models.SET_NULL)

@@ -1,8 +1,10 @@
 {% extends "base.html" %}
+
 {% load static %}
 {% load bag_tools %}
 
 {% block extra_title %} - Bag {% endblock %}
+
 {% block content %}
     {% include "includes/main-nav.html" %}
     <!-- Page Title -->
@@ -31,17 +33,17 @@
                             {% for item in bag_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        {% if item.addon.image %}
-                                        <img class="img-fluid rounded" src="{{ item.addon.image.image.url }}" alt="{{ item.addon.name }}">
+                                        {% if item.service.image %}
+                                        <img class="img-fluid rounded" src="{{ item.service.image.image.url }}" alt="{{ item.service.name }}">
                                         {% else %}
-                                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.addon.name }}">
+                                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.service.name }}">
                                         {% endif %}
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0"><strong>{{ item.addon.name }}</strong></p>
+                                        <p class="my-0"><strong>{{ item.service.name }}</strong></p>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.addon.price }}</p>
+                                        <p class="my-0">${{ item.service.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
                                         <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
@@ -76,7 +78,7 @@
                                     </td>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">${{ item.addon.price | calc_subtotal:item.quantity  }}</p>
+                                        <p class="my-0">${{ item.service.price | calc_subtotal:item.quantity  }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}

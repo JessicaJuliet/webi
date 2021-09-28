@@ -5,7 +5,7 @@ from django.conf import settings
 
 
 from .models import Order, OrderLineItem
-from services.models import Addon
+from services.models import Service
 from profiles.models import UserProfile
 
 import json
@@ -121,11 +121,11 @@ class StripeWH_Handler:
                     stripe_pid=pid,
                 )
                 for item_id, item_data in json.loads(bag).items():
-                    addon = Addon.objects.get(id=item_id)
+                    service = Service.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
-                            addon=addon,
+                            service=service,
                             quantity=item_data,
                         )
                         order_line_item.save()
@@ -133,7 +133,7 @@ class StripeWH_Handler:
                         for size, quantity in item_data['items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
-                                addon=addon,
+                                service=service,
                                 quantity=quantity,
                                 product_size=size,
                             )
