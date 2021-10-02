@@ -226,12 +226,36 @@ header {
 
 /* Resource: Code souced from - https://www.tutorialrepublic.com/codelab.php?topic=faq&file=css-overlay-one-div-over-another-div */
 
-.box-container{
+.box-container {
     position: relative;
 }
 
 .home-services {
-    background-color:#093d6005;
+    background-color:#093d60;
+    color: white;
+}
+
+.home-services h2 {
+    color: white;
+}
+
+.home-services h4 {
+    color: white;
+}
+
+.services-button {
+    background-color: white;
+    padding: 5px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.services-button:hover {
+    font-weight: 600;
 }
 
 .ul-services li {
@@ -287,9 +311,7 @@ footer .logo {
 
 /* ---------- About Page ---------- */
 
-.about-quote {
-    text-align: right;
-}
+
 
 /* ---------- Blog & Case Study Pages  ---------- */
 
@@ -297,7 +319,7 @@ footer .logo {
     margin: 30px;
     padding: 40px;
     min-height: 120%;
-    background-color: rgba(211, 211, 211, 0.178);
+    background-color: #fafafa;
     border-top: 5px solid #feb5c5;
     border-radius: 10px;
 }
@@ -604,6 +626,18 @@ footer .logo {
     }
 }
 
+/* Homepage */
+
+@media (max-width: 767px) {
+    .ul-services {
+        display: none;
+    }
+
+    .home-services {
+        text-align: center;
+    }
+}
+
 /* About Page */
 
 @media (max-width: 766px) {
@@ -646,3 +680,4 @@ footer .logo {
         padding-bottom: 10px;
     }
 }
+
