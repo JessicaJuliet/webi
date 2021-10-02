@@ -1,0 +1,25 @@
+{% load static %}
+
+{% block extra_title %} - Error 404 {% endblock %}
+
+{% block content %}
+    <!-- Page Heading -->
+    <div class="page-heading">
+        <div class="container">
+            <h1>Error 404</h1>
+            <div class="heading-border"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Oops!</h2> 
+                <span>Sorry we couldn't find that page.</span>
+            </div>
+        </div>
+    </div>
+    <!-- Internal Link -->
+    {% include "includes/back_to_homepage_link.html" %}
+    <!-- Footer -->
+    {% include "includes/footer.html" %}
+{% endblock %}
