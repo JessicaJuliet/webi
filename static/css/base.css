@@ -305,7 +305,7 @@ footer .logo {
 .blog-image, .casestudy-image {
     /* Resource: Crop image without losing aspect ratio - https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit */
     width: 100%; 
-    height: 190px;
+    height: 240px;
     object-fit: cover;
     padding-bottom: 30px;
 }
