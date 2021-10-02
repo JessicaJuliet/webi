@@ -157,7 +157,7 @@ header {
 
 .custom-nav {
     background: white !important;
-    height: 120px;
+    min-height: 120px;
 }
 
 .nav-item:hover {
