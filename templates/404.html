@@ -14,12 +14,35 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <span><h2>Oops!</h2> Sorry we couldn't find that page.</span>
+                <h2>Oops!</h2> 
+                <p>
+                    Sorry we couldn't find that page! But perhaps we can tempt you to explore our services instead?
+                </p>
             </div>
         </div>
     </div>
-    <!-- Internal Link -->
-    {% include "includes/back_to_homepage_link.html" %}
+    <!-- Explore services -->
+    <div class="container">
+        <span class="row">
+            <span>
+                <a href="{% url 'home' %}" class="btn secondary-button">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span>Home</span>
+                </a>
+            </span>
+            <span>
+                <a href="{% url 'services' %}" class="btn custom-button">
+                    <span>Explore Services</span>
+                    <span class="icon">
+                        <i class="fas fa-chevron-right"></i>
+                    </span>
+                </a>
+            </span>
+        </span>
+    </div>
+    <!-- Back to home -->
     <!-- Footer -->
     {% include "includes/footer.html" %}
 {% endblock %}

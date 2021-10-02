@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} - Error 500 {% endblock %}
+
+{% block content %}
+    <!-- Page Heading -->
+    <div class="page-heading">
+        <div class="container">
+            <h1>Error 500</h1>
+            <div class="heading-border"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Oops!</h2> Sorry we couldn't find what you were looking for.
+            </div>
+        </div>
+    </div>
+    <!-- Internal Link -->
+    {% include "includes/back_to_homepage_link.html" %}
+    <!-- Footer -->
+    {% include "includes/footer.html" %}
+{% endblock %}
