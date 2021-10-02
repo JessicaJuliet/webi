@@ -5,8 +5,8 @@
                 <div class="casestudies col-md-12 col-lg-5">
                     <!-- Case study image -->
                     <div class="box">
-                        <!--<img src="/media/{{ casestudy.image }}" class="casestudy-image">-->
-                        <img src="{{ MEDIA_URL }}{{ casestudy.image }}" class="casestudy-image">
+                        <!-- Resource: Images sourced from Pexels & Unsplash -->
+                        <img src="{{ MEDIA_URL }}{{ casestudy.image }}" alt="{{ casestudy.heading }}" class="casestudy-image">
                     </div>
                     <!-- Case study heading -->
                     <h2>

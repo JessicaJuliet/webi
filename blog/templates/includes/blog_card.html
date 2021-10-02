@@ -5,7 +5,8 @@
                 <div class="blog-card col-xs-12 col-md-5">
                     <!-- Blog image -->
                     <div class="box">
-                        <img src="{{ MEDIA_URL }}{{ blog.blog_image }}" class="blog-image">
+                        <!-- Resource: Images sourced from Pexels & Unsplash -->
+                        <img src="{{ MEDIA_URL }}{{ blog.blog_image }}" alt="{{ blog.heading }}" class="blog-image">
                     </div>
                     <!-- Blog snippet content -->
                     <h2>

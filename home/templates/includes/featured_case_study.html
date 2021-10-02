@@ -10,7 +10,8 @@
                     <div class="casestudies col-md-12 col-lg-5">
                         <!-- Case study image -->
                         <div class="box">
-                            <img src="{{ MEDIA_URL }}{{ casestudy.image }}" class="casestudy-image">
+                            <!-- Images created by website owner -->
+                            <img src="{{ MEDIA_URL }}{{ casestudy.image }}" alt="{{ casestudy.heading }}"class="casestudy-image">
                         </div>
                         <h2><a href="{% url 'casestudy_content' casestudy.slug %}">{{ casestudy.heading|safe }}</a></h2>
                         <p>{{ casestudy.case_study_content|truncatechars:200|safe }}</p>
