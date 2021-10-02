@@ -1,11 +1,11 @@
 {% if blog.heading %}
 <section>
-    <div class="container page-section">
+    <div class="container intro-section">
         <div class="row">
             <div class="col-12">
                 <h2>{{ blog.heading|safe }}</h2>
                 <p><em>{{ blog.published_date|safe }}</em></p>
-                <p class="page-section">{{ blog.blog_content|safe }}</p>
+                <p>{{ blog.blog_content|safe }}</p>
             </div>
         </div>
     </div>

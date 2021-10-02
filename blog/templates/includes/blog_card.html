@@ -1,11 +1,11 @@
 <section>
-    <div class="container page-section">
+    <div class="container intro-section">
         <div class="row">
             {% for blog in blogs %}
                 <div class="blog-card col-xs-12 col-md-5">
                     <!-- Blog image -->
                     <div class="box">
-                        <img src="/media/{{ blog.blog_image}}" class="blog-image">
+                        <img src="{{ MEDIA_URL }}{{ blog.blog_image }}" class="blog-image">
                     </div>
                     <!-- Blog snippet content -->
                     <h2>
