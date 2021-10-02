@@ -12,8 +12,12 @@
                     <h2>
                         <a href="{% url 'blog_post' blog.slug %}">{{ blog.heading|safe }}</a>
                     </h2>
+                    <!-- Published date-->
                     <p><em>{{ blog.published_date|safe }}</em></p>
-                    <p>{{ blog.blog_content|truncatechars:200|safe }}</p>
+                    <!-- Blog content -->
+                    <div class="blog_content">
+                        {{ blog.blog_content|truncatechars:200|safe }}
+                    </div>
                     <!-- Link to blog post -->
                     <a class="btn custom-button" type="button" href="{% url 'blog_post' blog.slug %}">Read More</a>
                 </div>

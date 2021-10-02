@@ -3,9 +3,14 @@
     <div class="container intro-section">
         <div class="row">
             <div class="col-12">
+                <!-- Blog heading -->
                 <h2>{{ blog.heading|safe }}</h2>
+                <!-- Published date-->
                 <p><em>{{ blog.published_date|safe }}</em></p>
-                <p>{{ blog.blog_content|safe }}</p>
+                <!-- Blog content -->
+                <div class="blog_content">
+                    {{ blog.blog_content|safe }}
+                </div>
             </div>
         </div>
     </div>

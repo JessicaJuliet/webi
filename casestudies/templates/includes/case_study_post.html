@@ -11,7 +11,9 @@
                         <li><strong>GitHub: </strong><a href="{{ casestudy.website_url }}" target="_blank">{{ casestudy.github_url|safe }}</a></li>
                     </ul>
                     <!-- Case study content -->
-                    <p>{{ casestudy.case_study_content|safe }}</p>
+                    <div class="case_study_content">
+                        {{ casestudy.case_study_content|safe }}
+                    </div>
                 </div>
             </div>
         </div>
