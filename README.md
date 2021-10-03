@@ -51,7 +51,7 @@ Visit WEBI at [https://webi-development.herokuapp.com](https://webi-development.
 | USER STORY ID                  | AS A       | I WANT TO BE ABLE TO                                        | SO THAT I CAN                                                                 |
 |--------------------------------|------------|-------------------------------------------------------------|-------------------------------------------------------------------------------|
 | Viewing and Navigation         |            |                                                             |                                                                               |
-| 1                              | Prospect   | View a list of services/ products available                 | Select a service/ product to buy                                              |
+| 1                              | Prospect   | View a list of services available                 | Select a service to buy                                              |
 | 2                              | Prospect   | View specific categories of services                        | Easily find a service suited to my needs                                      |
 | 3                              | Prospect   | View individual service details                             | Identify the service price, description and suitability                       |
 | 4                              | Prospect   | Easily view the total of my purchases                       | Ensure total cost falls within my budget                                      |
@@ -73,10 +73,10 @@ Visit WEBI at [https://webi-development.herokuapp.com](https://webi-development.
 | 17                             | Prospect   | Feel my personal and payment information is safe and secure | Feel comfortable in providing my payment information to make a purchase       |
 | 18                             | Prospect   | View my order confirmation after checkout                   | Ensure I have made the correct purchase                                       |
 | 19                             | Prospect   | View the progress of my order                               | I know when I can expect it to be ready                                       |
-| Admin and Store Management     |            |                                                             |                                                                               |
-| 20                             | Management | Add a service/ product                                      | Add new items to my store                                                     |
-| 21                             | Management | Edit/update a service/ product                              | Ammend service/ product decriptions, price and images                         |
-| 22                             | Management | Delete a product                                            | Remove any services which are no longer being sold                            |
+| Admin and Store Owner     |            |                                                             |                                                                               |
+| 20                             | Management | Add a service                                      | Add new items to my store                                                     |
+| 21                             | Management | Edit/update a service                              | Ammend service/ product decriptions, price and images                         |
+| 22                             | Management | Delete a service                                            | Remove any services which are no longer being sold                            |
 | 23                             | Management | Edit/ update the status of an order                         | Update clients of their order progress                                        |
 
 
@@ -84,7 +84,7 @@ Visit WEBI at [https://webi-development.herokuapp.com](https://webi-development.
 
 Before designing this website, I explored similar sites online to get an idea of the look and feel of websites in the industry. One company which really stood out to me was <a href="https://www.webstudio.ie/" target="_blank">WebStudio</a>. I drew great inpsiration from this website both strucutrally for my database and design-wise. 
 
-<img src="readme-files/readme-images/webstudio.png">
+<img src="readme-files/images/webstudio.png">
 
 ### Colour Scheme
 
@@ -96,12 +96,12 @@ I researched colour schemes on Google and used Adobe's colour picker to choose t
 | Pink | #feb5c5 |
 
 ### Typography
-The fonts chosen for this website are Lato for headings and Roboto for the paragraph text. These are both sans serif fonts and I imported them into the CSS file from Google Fonts.
+The fonts chosen for this website are Lato for headings and Roboto for the paragraph text. These are both sans serif fonts and I imported them into the CSS file from [Google Fonts](https://fonts.google.com/).
 
 ### Logo
 I created the logo using Adobe Illustrator. I wanted a modern, clean and sans serif font for the logo and decided on Roboto Regular for this. The colours chosen were a combination of the blue and pink listed in the colour scheme above. The image below demonstrates how the logo should be used against dark and light backgrounds:
 
-<img src="readme-files/readme-images/webi-logo.png">
+<img src="readme-files/images/webi-logo.png">
 
 [Back to top](#webi)
 
