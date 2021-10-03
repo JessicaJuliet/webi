@@ -27,9 +27,9 @@ Visit WEBI at [https://webi-development.herokuapp.com](https://webi-development.
     * [Wireframes](#wireframes)
     * [Structural Evolution](#strucutral-evolution)
     * [Data Schema](#data-schema)
-* Features
-    * Existing Features
-    * Features to be Implemented
+* [Features](#features)
+    * [Existing Features](#existing-features)
+    * [Features to be Implemented](#features-to-be-implemented)
 * [Technologies Used](#technologies-used)
     * [Languages](#languages)
     * [Libraries and Frameworks](#libraries-and-frameworks)
@@ -75,10 +75,10 @@ Visit WEBI at [https://webi-development.herokuapp.com](https://webi-development.
 | 18                             | Prospect   | View my order confirmation after checkout                   | Ensure I have made the correct purchase                                       |
 | 19                             | Prospect   | View the progress of my order                               | I know when I can expect it to be ready                                       |
 | **Admin and Store Owner**     |            |                                                             |                                                                               |
-| 20                             | Management | Add a service                                      | Add new items to my store                                                     |
-| 21                             | Management | Edit/update a service                              | Ammend service/ product decriptions, price and images                         |
-| 22                             | Management | Delete a service                                            | Remove any services which are no longer being sold                            |
-| 23                             | Management | Edit/ update the status of an order                         | Update clients of their order progress                                        |
+| 20                             | Admin/ Store Owner | Add a service                                      | Add new items to my store                                                     |
+| 21                             | Admin/ Store Owner | Edit/update a service                              | Ammend service/ product decriptions, price and images                         |
+| 22                             | Admin/ Store Owner | Delete a service                                            | Remove any services which are no longer being sold                            |
+| 23                             | Admin/ Store Owner | Edit/ update the status of an order                         | Update clients of their order progress                                        |
 
 
 ### Design Inspiration
@@ -261,6 +261,64 @@ The new Services model does not offer the user Bundles, however users are free t
 [Back to top](#webi)
 
 --- 
+
+## Features
+
+In this section I will map out all of the existing features, and features left to be implemented, and match these with the [User Stories](#user-stories) previously outlined above. 
+
+### Existing Features
+
+#### Viewing and Navigation
+
+**[User Story ID's 1-6]**
+
+* WEBI provides users a multi-page site with an intuitive design which allows users to navigate smoothly between pages
+* On the Services page, users are presented with a clear list of service types to choose from at the start so they can filter the results to match their needs or view all
+* Users can click to 'find out more' about a service of interest which brings them to a more detailed servicedescription page
+* On the main navigation menu, users can go to the Blog or Case Studies page which display a list of available blogs and case studies to read
+* On the Blog and Case Studies pages, users can click to read more to get the full length version of the posts
+* Users can easily view the total of their purchases in their basket or on the navigation menu in the top right beside the basket icon
+
+#### Registration and User Accounts
+**[User Story ID's 7-11]**
+
+* Users can easily navigate to register for an account via the drop down 'My Account' menu
+* For users with an existing account, they can sign in via the drop down 'My Account' menu and once signed in, a Sign Out button will appear for them in the dropdown menu also
+* Users will receive Toast notifications upon signing and and signing out
+* Logged in users will have access to a personal profile which displays their order history
+
+Due to time constraints, User Story ID 9 and 10 were not implemented and the 'progress' part of User ID 11; however, they have been moved to the upcoming Features To Be Added below.
+
+#### Sorting and Searching
+**[User Story ID's 12-13]**
+* Users are able to filter the category 'Service' by Type on the Services page
+* Users are presented with a clear list of service types to choose from at the start so they can filter the results to match their needs or view all
+* Users can change between different filter options to see the available services for that specific filter
+
+#### Purchasing and Checkout
+**[User Story ID's 14-19]**
+* Users can easily access their bag by clicking on the basket icon in the top right corner on the navigation menu
+* Users are presented with a view of all of the services they've added to their basket on the bag page
+* Users can easily add or delete the services in their bag but clicking on the -/+ icons
+* When users have finished a purchase, they are presented with a clear overview of their order afterwards
+* The 'Secure Checkout' button ensures that users feel comfortable to provide payment information
+
+Due to time constraints, User Story ID 19 was not implemented. This has been included in the upcoming Features To Be Added below.
+
+#### Admin and Store Owner
+**[User Story ID's 20-23]**
+* The store owner or admin can easily edit, add or remove an existing service from the store by navigating to the 'Service Management' page in the 'My Account' drop down menu
+
+Due to time constraints, User Story ID 23 was not implemented. This has been included in the upcoming Features To Be Added below.
+
+### Features Left To Be Implemented
+
+
+
+[Back to top](#webi)
+
+--- 
+
 ## Technologies Used
 
 ### Languages
