@@ -274,17 +274,17 @@ In this section I will map out all of the existing features, and features left t
 
 * WEBI provides users a multi-page site with an intuitive design which allows users to navigate smoothly between pages
 * On the Services page, users are presented with a clear list of service types to choose from at the start so they can filter the results to match their needs or view all
-* Users can click to 'find out more' about a service of interest which brings them to a more detailed servicedescription page
+* Users can click to 'find out more' about a service of interest which brings them to a more detailed service description page
 * On the main navigation menu, users can go to the Blog or Case Studies page which display a list of available blogs and case studies to read
 * On the Blog and Case Studies pages, users can click to read more to get the full length version of the posts
-* Users can easily view the total of their purchases in their basket or on the navigation menu in the top right beside the basket icon
+* Users can easily view the total of their purchases in their bag or on the navigation menu in the top right beside the basket icon
 
 #### Registration and User Accounts
 **[User Story ID's 7-11]**
 
 * Users can easily navigate to register for an account via the drop down 'My Account' menu
 * For users with an existing account, they can sign in via the drop down 'My Account' menu and once signed in, a Sign Out button will appear for them in the dropdown menu also
-* Users will receive Toast notifications upon signing and and signing out
+* Users will receive notifications upon sucessfully signing in and signing out
 * Logged in users will have access to a personal profile which displays their order history
 
 Due to time constraints, User Story ID 9 and 10 were not implemented and the 'progress' part of User ID 11; however, they have been moved to the upcoming Features To Be Added below.
@@ -299,7 +299,7 @@ Due to time constraints, User Story ID 9 and 10 were not implemented and the 'pr
 **[User Story ID's 14-19]**
 * Users can easily access their bag by clicking on the basket icon in the top right corner on the navigation menu
 * Users are presented with a view of all of the services they've added to their basket on the bag page
-* Users can easily add or delete the services in their bag but clicking on the -/+ icons
+* Users can easily add or delete the services in their bag by clicking on the -/+ icons
 * When users have finished a purchase, they are presented with a clear overview of their order afterwards
 * The 'Secure Checkout' button ensures that users feel comfortable to provide payment information
 
@@ -308,12 +308,22 @@ Due to time constraints, User Story ID 19 was not implemented. This has been inc
 #### Admin and Store Owner
 **[User Story ID's 20-23]**
 * The store owner or admin can easily edit, add or remove an existing service from the store by navigating to the 'Service Management' page in the 'My Account' drop down menu
+* Super Admins can edit the store via the Admin panel
 
 Due to time constraints, User Story ID 23 was not implemented. This has been included in the upcoming Features To Be Added below.
 
 ### Features Left To Be Implemented
 
+* Implement a Forgot Password functionality for the user
+* Send users a personalised email after completing the registrationg process
+* Allow users to see the progress of their order
+* Provide Admins/ Store Owners with the funcitonality to edit/update the status of an order
+* Implement website Bundles/ Packages to group related services for the user
+* Improve Product Management functionality to allow admins to upload a new service image and format the text
 
+**Styling Fixes**
+Some minor styling fixes are still to be implemented:
+* Wrap text around blog post images
 
 [Back to top](#webi)
 
