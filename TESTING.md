@@ -11,6 +11,7 @@ Manual tests were carried out across all user stories and features:
 #### Test Case 1.1
 
 **Description:** Verify the Services page displays a list of all available services to the user on entry
+
 **steps:**
 1. Open CHrome and navigate to the deployed website
 2. Click the Services link in the navbar
@@ -28,6 +29,7 @@ Manual tests were carried out across all user stories and features:
 #### Test Case 2.1 
 
 **Description:** Verify the Services page displays a filter to the user allowing them to filter by service type
+
 **steps:**
 1. Open Chrome and navigate to the deployed website
 2. Click the Services link in the navbar
@@ -42,16 +44,17 @@ Manual tests were carried out across all user stories and features:
 **Pass/Fail:** Pass
 
 **Issues and Fixes during testing of deployed website**
-* Issue: Filter menu on mobile displays on two lines and overlaps
-* Fix: Add display inline-block to filter button and include margin
-* Issue: Filter colour doesn't change on click to display active filter
-* Fix: JavaScript was required to change the button colour on click. Due to time constraints, the 'Active' colour was removed so all links display the same colour. This has been added to future styling changes to be added. 
+* **Issue:** Filter menu on mobile displays on two lines and overlaps
+* **Fix:** Add display inline-block to filter button and include margin
+* **Issue:** Filter colour doesn't change on click to display active filter
+* **Fix:** JavaScript was required to change the button colour on click. Due to time constraints, the 'Active' colour was removed so all links display the same colour. This has been added to future styling changes to be added. 
 
 > USER STORY ID 3 - As a prospect, I want to be able to view individual service details so that I can identify the service price, description and suitablility
 
 #### Test Case 3.1
 
 **Description:** Ensure that the 'find out more' service button provides the user with a more detailed service description
+
 **steps:**
 1. Open Chrome and navigate to the deployed website
 2. Click the Services link in the navbar
@@ -70,6 +73,7 @@ Manual tests were carried out across all user stories and features:
 #### Test Case 4.1
 
 **Description:** Verify that a logged in and logged out user can see the total of the items added to their bag
+
 **steps:**
 1. Open Chrome and navigate to the deployed website
 2. Navigate to the services page
@@ -100,7 +104,9 @@ Manual tests were carried out across all user stories and features:
 6. Repeat on mobile
 
 **Expected Result:** The user can open and read blog posts
+
 **Actual Result:** The user can open and read blog posts
+
 **Pass/Fail:** Pass
 
 > USER STORY ID 6 - As a prospect, I want to be able to review case studies so that I can trust the quality of the freelancing services on offer
@@ -118,10 +124,97 @@ Manual tests were carried out across all user stories and features:
 
 **Expected Result:** The user can open and read case study posts
 
-**Actual Result:** The user can open and read case study posts
+**Expected Result:**  The user can open and read case study posts
 
 **Pass/Fail:** Pass
 
 **Issues and Fixes during testing of deployed website**
-**Issue:** The case studies heading was further down the page than other styling on the website
-**Fix:** Apply the appropriate class to the case study to give it correct margin
+
+* **Issue:** The case studies heading was further down the page than other styling on the website
+* **Fix:** Apply the appropriate class to the case study to give it correct margin
+
+--- 
+
+### Registration and User Accounts
+
+> [USER STORY ID - 7] As a client, I want to be able to easily register for an account so that I can setup my own personal area on the website to see my order history and profile
+
+#### Test Case 7.1
+
+**Description:** The user can create an account and see their purchase history
+**Steps:**
+1. Open Chrome and navigate to the deployed website
+2. Navigate to the 'My Account' dropdown button and select 'Register'
+3. Fill in registration details and create an account
+4. Navigate to services and add a service to the bage
+5. Complete checkout
+6. Navigate to 'My Profile' in the 'My Account' dropdown menu
+7. View previous order history
+8. Repeate on mobile
+
+**Expected Result:** The user can easily create an account and see a summary of the past orders
+
+**Expected Result:** The user can easily create an account and see a summary of the past orders
+
+**Pass/Fail:** Pass
+
+> [USER STORY ID - 8] As a client, I want to be able to easily login or logout so that I can access my personal account information
+
+#### Test Case 8.1
+
+**Description:** A user needs to be logged in to see their profile
+**Steps:**
+1. Open Chrome and navigate to the deployed website
+2. Select the 'My Account' drop down to ensure the 'My Profile' button doesn't appear when not logged in
+3. Click the Login button
+4. Enter login details and navigate back to the 'My Account' dropdown menu
+5. Click the 'My Profile' link
+6. Navigate back to the 'My Account' drop down and click to sign out
+7. Repeat on mobile
+
+**Expected Result:** Users can easily log in and out. Only logged in users can see their profile
+
+**Expected Result:** Users can easily log in and out. Only logged in users can see their profile
+
+**Pass/Fail:** Pass
+
+> [USER STORY ID -9] As a client, I want to be able to easily recover my password if I forget it so that I can recover access to my account
+
+**This Feature has been added into the 'Features To Be Implemented' section.**
+
+> [USER STORY ID - 10] As a client, I want to be able to receive an email confirmation after registering so that I can verify that my account registration was successful
+
+**This Feature has been added into the 'Features To Be Implemented' section.**
+
+> [USER STORY ID  - 11] As a client, I want to be able to have a personalised user profile so that I can view my personal order history and progress
+
+#### Test Case 11.1
+
+**Description:** Logged in users can navigate to the 'My Profile' sectiona and udpate any of their personal details
+
+**Steps:**
+1. Open Chrome and navigate to the deployed website
+2. Navigated to the 'My Account' dropdown and click to sign in
+3. Once signed in, navigate to the 'My Profile' link on the 'My Account' dropdown
+4. Update saved personal details
+5. Click to 'Update Information'
+6. Go to the homepage and then navigate back the profile
+7. Ensure the details have been successfully changes
+8. Repeat on mobile
+
+**Expected Result:** Users with an account can update their profile details
+
+**Expected Result:** Users with an account can update their profile details
+
+**Pass/Fail:** Pass
+
+**The progress aspect of this feature has been added into the 'Features To Be Implemented' section.**
+
+---
+
+
+**Description:**
+**Steps:**
+**Expected Result:**
+**Expected Result:** 
+**Pass/Fail:**
