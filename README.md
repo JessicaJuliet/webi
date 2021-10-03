@@ -443,6 +443,8 @@ The following steps are required to run this locally:
 
 ### Acknowledgements
 
-A bit thank you to my mentor, and the Code Institute's tutors, for encouraging and guiding me throughout the development of this project.
+* A huge thank you to my mentor Simen for his support, encouragement and motivation which he provided me with throughout this entire project and for which I'm extremely grateful
+* Thank you to the Code Institute's mentors for helping me to resolve some of the most complicated bugs
+* Thank you to all of the supportive members of the Code Institute's Slack channel who helped me when the goings got tough!
 
 [Back to top](#webi)
