@@ -35,7 +35,7 @@ Manual tests were carried out across all user stories and features:
 2. Click the Services link in the navbar
 3. View service filter and test each link
 4. Ensure each filter link displays the correct services
-4. Repeat on mobile
+5. Repeat on mobile
 
 **Expected Result:** Users can view a filter at the top of services page allowing them to filter by service type
 
@@ -212,9 +212,44 @@ Manual tests were carried out across all user stories and features:
 
 ---
 
+### Sorting and Searching
+
+> [USER STORY ID - 12] As a prospect, I want to be able to sort the list of available services quickly to find a service that meets my requirements
+
+#### Test Case 12.1
+
+**Description:** Verify that users can sort services by type
+
+**Steps:**
+1. Open Chrome and navigate to the deployed website
+2. Click the Services link in the navbar
+3. View service filter and test each link
+4. Ensure each filter link displays the correct services
+5. Repeat on mobile
+
+**Expected Result:** Users can filter services by type filter on Services page
+
+**Expected Result:** Users can filter services by type filter on Services page
+
+**Pass/Fail:** Pass
+
+> [USER STORY ID - 13] As a prospect, I want to be able to sort services by a specific category so that I can narrow down services to those of interest
+
+**As outlined in the README under Features, User Story ID 13 no longer applies.**
+
+
+
+
+
+
+--- 
 
 **Description:**
+
 **Steps:**
+
 **Expected Result:**
+
 **Expected Result:** 
+
 **Pass/Fail:**

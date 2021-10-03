@@ -66,7 +66,7 @@ Visit WEBI at [https://webi-development.herokuapp.com](https://webi-development.
 | 11                             | Client     | Have a personalised user profile                            | View my personal order history and progress                                   |
 | **Sorting and Searching**          |            |                                                             |                                                                               |
 | 12                             | Prospect   | Sort the list of all available services                     | Quickly find a service that meets my requirements                             |
-| 13                             | Prospect   | Sort services by a specific category                        | Narrow down services to those of interest                                     |
+| 13                             | Prospect   | Sort services by a specific type                        | Narrow down services to those of interest                                     |
 | **Purchasing and Checkout**        |            |                                                             |                                                                               |
 | 14                             | Prospect   | View items in my bag to be purchased                        | See what the total cost of items in my basket are                             |
 | 15                             | Prospect   | Adjust the quantity of individual items in my bag           | Make changes to items in my basket before checking out                        |
@@ -294,6 +294,8 @@ Due to time constraints, User Story ID 9 and 10 were not implemented and the 'pr
 * Users are able to filter the category 'Service' by Type on the Services page
 * Users are presented with a clear list of service types to choose from at the start so they can filter the results to match their needs or view all
 * Users can change between different filter options to see the available services for that specific filter
+
+User story 13 no longer applies as the website is not devided into Bundles and Addons. Instead Services is the only category which can be narrowed down by type.
 
 #### Purchasing and Checkout
 **[User Story ID's 14-19]**
