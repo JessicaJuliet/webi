@@ -6,7 +6,7 @@
 
 Welcome to WEBI - an e-commerce website where I offer my freelance marketing, design and web development services. I decided to create WEBI to help small businesses and startup companies, who often have a small budget, to avail of affordable website services.
 
-WEBI is a multi-page e-commerce web application which not only offers services to its users, but also informative blog posts and case studies. Its initial vision was to offer website services which comprised of website 'Bundles' and 'Add-ons', but as the project evolved this led to simply an umbrella 'Services' offering. This evolution is mapped out further in the README document. 
+WEBI is a multi-page e-commerce web application which not only offers services to its users, but also informative blog posts and case studies. Its initial vision was to offer website services which comprised of website 'Bundles' and 'Add-ons', but as the project evolved this led to simply an umbrella 'Services' offering. This evolution is mapped out further in the README document under the [Structural Evolution](#strucutral-evolution) section. 
 
 **IMPORTANT: Please note, this project is for educational purposes only.**
 
@@ -25,6 +25,7 @@ Visit WEBI at [https://webi-development.herokuapp.com](https://webi-development.
     * [Logo](#logo)
 * [Website Structure](#website-structure)
     * [Wireframes](#wireframes)
+    * [Structural Evolution](#strucutral-evolution)
     * [Data Schema](#data-schema)
 * Features
     * Existing Features
@@ -50,30 +51,30 @@ Visit WEBI at [https://webi-development.herokuapp.com](https://webi-development.
 
 | USER STORY ID                  | AS A       | I WANT TO BE ABLE TO                                        | SO THAT I CAN                                                                 |
 |--------------------------------|------------|-------------------------------------------------------------|-------------------------------------------------------------------------------|
-| Viewing and Navigation         |            |                                                             |                                                                               |
+| **Viewing and Navigation**         |            |                                                             |                                                                               |
 | 1                              | Prospect   | View a list of services available                 | Select a service to buy                                              |
 | 2                              | Prospect   | View specific categories of services                        | Easily find a service suited to my needs                                      |
 | 3                              | Prospect   | View individual service details                             | Identify the service price, description and suitability                       |
 | 4                              | Prospect   | Easily view the total of my purchases                       | Ensure total cost falls within my budget                                      |
 | 5                              | Prospect   | Read blogs                                                  | Expand my knowledge on design and development                                 |
 | 6                              | Prospect   | Review case studies                                         | Trust the quality of the freelancing services on offer                        |
-| Registration and User Accounts |            |                                                             |                                                                               |
+| **Registration and User Accounts** |            |                                                             |                                                                               |
 | 7                              | Client     | Easily register for an account                              | Setup my own personal area on the website to see my order history and profile |
 | 8                              | Client     | Easily login or logout                                      | Access my personal account information                                        |
 | 9                              | Client     | Easily recover my password if I forget it                   | Recover access to my account                                                  |
 | 10                             | Client     | Receive an email confirmation after registering             | Verify that my account registration was successful                            |
 | 11                             | Client     | Have a personalised user profile                            | View my personal order history and progress                                   |
-| Sorting and Searching          |            |                                                             |                                                                               |
+| **Sorting and Searching**          |            |                                                             |                                                                               |
 | 12                             | Prospect   | Sort the list of all available services                     | Quickly find a service that meets my requirements                             |
 | 13                             | Prospect   | Sort services by a specific category                        | Narrow down services to those of interest                                     |
-| Purchasing and Checkout        |            |                                                             |                                                                               |
+| **Purchasing and Checkout**        |            |                                                             |                                                                               |
 | 14                             | Prospect   | View items in my bag to be purchased                        | See what the total cost of items in my basket are                             |
 | 15                             | Prospect   | Adjust the quantity of individual items in my bag           | Make changes to items in my basket before checking out                        |
 | 16                             | Prospect   | Easily enter my payment information                         | Purchase my desired services                                                  |
 | 17                             | Prospect   | Feel my personal and payment information is safe and secure | Feel comfortable in providing my payment information to make a purchase       |
 | 18                             | Prospect   | View my order confirmation after checkout                   | Ensure I have made the correct purchase                                       |
 | 19                             | Prospect   | View the progress of my order                               | I know when I can expect it to be ready                                       |
-| Admin and Store Owner     |            |                                                             |                                                                               |
+| **Admin and Store Owner**     |            |                                                             |                                                                               |
 | 20                             | Management | Add a service                                      | Add new items to my store                                                     |
 | 21                             | Management | Edit/update a service                              | Ammend service/ product decriptions, price and images                         |
 | 22                             | Management | Delete a service                                            | Remove any services which are no longer being sold                            |
@@ -120,6 +121,17 @@ I created wireframes for this web application using balsamiq:
 | [Add-ons](readme-files/wireframes/addons-desktop.png) | [Add-ons](readme-files/wireframes/addons-mobile.png) | [Add-ons](readme-files/wireframes/addons-tablet.png) |
 | [About](readme-files/wireframes/about-desktop.png) | [About](readme-files/wireframes/about-mobile.png) | [About](readme-files/wireframes/about-tablet.png) |
 | [Blog](readme-files/wireframes/blog-desktop.png) | [Blog](readme-files/wireframes/blog-mobile.png) | [Blog](readme-files/wireframes/blog-tablet.png)  |
+
+
+### Strucutral Evolution
+
+From the wireframes above, you can see that WEBI originally started out selling both 'Bundles' and 'Add-ons' to potential customers. Bundles offered a collection of Add-ons to purchase as a package. 
+
+These Bundles consisted of services such as an E-commerce store Bundle, a Static store Bundle and a Portolio Bundle. This meant that business owners who did not have a website, could purchase a package which delivered a website build, design, website pages etc. The Add-ons were additional services which could be included as part of a Bundle, or separately, if users required something more e.g. a logo design or a landing page etc.
+
+The initial build of this website was setup to include the above and this can be demonstrated by the wireframes created and the models listed below under the 'Services App'. However, setting up the website bag, checkout and Stripe payments to house two separate Services models made for a complex build. Given the time constraints to launch the initial build of the web app, a decision was made to narrow the scope down into one Services model.
+
+The new Services model does not offer the user Bundles, however users are free to purchase as many services as they wish to make up their own package. The result of this was a more straightforward website build and it ensured it was completed within the time constraints. Furthermore, the design of the new Services model closely matches that on the initial 'Add-ons' page and thus a new wireframe was not created for this. 
 
 ### Data Schema
 
