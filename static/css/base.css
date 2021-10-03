@@ -10,6 +10,11 @@ h1, h2, h3, h4, h5 {
     height: 160px;
 }
 
+body {
+    /* Resource: http://web-accessibility.carnegiemuseums.org/design/color/ */
+    color:#323a45;
+}
+
 p {
     font-family: 'Roboto', sans-serif;
 }
