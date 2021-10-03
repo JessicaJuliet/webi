@@ -237,9 +237,124 @@ Manual tests were carried out across all user stories and features:
 
 **As outlined in the README under Features, User Story ID 13 no longer applies.**
 
+---
 
+### Purchasing and Checkout
 
+> [USER STORY ID - 14] As a prospect, I want to be able to view itmes in my bag to be purchased so that I can see what the total cost of items in my basket are
 
+#### Test Case 14.1
+
+**Description:** Confirm that users can see the total cost of items in the bag and on the navigation menu
+
+**Steps:**
+1. Open Chrome and navigate to the deployed website
+2. Navigate to the services page
+3. Add items to basket
+4. Check that the nav bar displays correct the bag total
+5. Navigate to the bag page and check that the grand total matches
+6. Repeat for logged in users
+7. Repeat on mobile
+
+**Expected Result:** Users can see services grand total value in nav bar and bag
+
+**Expected Result:** Users can see services grand total value in nav bar and bag
+
+**Pass/Fail:** Pass
+
+> [USER STORY ID - 15] As a prospect, I want to be able to adjust the quanitity of individual items in my bag so that I can make changes to items in my basket before checking out
+
+#### Test Case 15.1
+
+**Description:** Verify that users are able to ammend (add & remove) their bag items 
+
+**Steps:**
+1. Open Chrome and navigate to the deployed website
+2. Navigate to the Services page and add a few services to the bag
+3. Navigate to the checkout page
+4. Click the -/+ links to decrease and increase the service quantities
+5. Click to delete a service
+6. Repeat on mobile
+
+**Expected Result:** Users can increase or decreate the quantity of items in their bag with the -/+ icons
+
+**Expected Result:** Users can increase or decreate the quantity of items in their bag with the -/+ icons
+
+**Pass/Fail:** Pass
+
+> [USER STORY ID - 16] As a prospect, I want to be able to easily enter my payment information so that I can purchase my desired services
+
+#### Test Case 16.1
+
+**Description:** Verify that users can proceed to checkout page and update their payment details
+
+**Steps:**
+1. Open Chrome and navigate to the deployed website
+2. Navigate to the servicecs page and add a few services to the bag
+3. Navigate to the bag page and click to proceed to secure checkout
+4. Input payment details
+5. Complete order
+6. Repeat on mobile
+
+**Expected Result:** Users can input address and card details easily
+
+**Expected Result:** Users can input address and card details easily
+
+**Pass/Fail:** Pass
+
+> [USER STORY ID - 17] As a prospect, I want to feel my personal and payment information is safe and secure so that I can feel comfortable in providing my payment information to make a purchase
+
+#### Test Case 17.1
+
+**Description:** Ensure that the correct terminology is used in the bag app and checkout page to ensure users' feels secure
+
+**Steps:**
+1. Open Chrome and navigate to the deployed website
+2. Navigate to Services page and add a service to the bag
+3. Check that the notification window says 'Go to secure checkout'
+4. Navigate to the Checkout page and check that the button says 'Secure Checkout'
+5. Repeat on mobile
+
+**Expected Result:** The word 'Secure' is used on the checkout button
+
+**Expected Result:** The word 'Secure' is used on the checkout button
+
+**Pass/Fail:** Pass
+
+> [USER STORY ID - 18] As a prospect, I want to be able to view my order confirmation after checkout so that I can ensure I have made the correct purchase
+
+#### Test Case 18.1
+
+**Description:** Confirm that users can access their previous order history in their 'My Profile' section
+
+**Steps:**
+1. Open Chrome and navigate to the deployed website
+2. Log into a user account which has made a purchase
+3. Navigate to the 'My Account' menu and select 'My Profile'
+4. View the previous order history
+5. Repeat on mobile
+
+**Expected Result:** Users can view previous orders in their profile
+
+**Expected Result:** Users can view previous orders in their profile
+
+**Pass/Fail:** Pass
+
+> [USER STORY ID - 19] As a prospect, I want to view the progress of my order so that I know when I can expect it to be ready
+
+**As outlined in the README under Features, User Story ID 19 has been moved to Features To Be Added.**
+
+--- 
+
+**Description:**
+
+**Steps:**
+
+**Expected Result:**
+
+**Expected Result:** 
+
+**Pass/Fail:**
 
 
 --- 
