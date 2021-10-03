@@ -4,11 +4,13 @@
 
 ## Purpose
 
-Welcome to WEBI - an e-commerce website where I offer my freelance marketing, design and web development services. I decided to create WEBI to help small businesses and startup companies, who often have a small budget for digital, to avail of affordable website services.
+Welcome to WEBI - an e-commerce website where I offer my freelance marketing, design and web development services. I decided to create WEBI to help small businesses and startup companies, who often have a small budget, to avail of affordable website services.
 
-**Please note, this project is for educational purposes only.**
+WEBI is a multi-page e-commerce web application which not only offers services to its users, but also informative blog posts and case studies. Its initial vision was to offer website services which comprised of website 'Bundles' and 'Add-ons', but as the project evolved this led to simply an umbrella 'Services' offering. This evolution is mapped out further in the README document. 
 
-[Visit WEBI](https://webi-development.herokuapp.com/)
+**IMPORTANT: Please note, this project is for educational purposes only.**
+
+Visit WEBI at [https://webi-development.herokuapp.com](https://webi-development.herokuapp.com/)
 
 ---
 
