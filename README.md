@@ -333,7 +333,7 @@ Some minor styling fixes are still to be implemented:
 
 ## Testing
 
-The testing results of this website can be found in the [TESTING.md file](/workspace/webi/TESTING.md).
+The testing results of this website can be found in the [TESTING.md file](TESTING.md).
 
 [Back to top](#webi)
 

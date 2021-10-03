@@ -1,8 +1,8 @@
 # Testing
 
-## Manual Testing
+Extensive automated and manual tests were carried out across all user stories and features. The results are documented below:
 
-Manual tests were carried out across all user stories and features:
+## Manual Testing
 
 ### Viewing and Navigation
 
@@ -421,4 +421,19 @@ Manual tests were carried out across all user stories and features:
 > As an Admin/ Store Owner, I want to be able to edit/ update the status of an order so that I can update clients of their order progress
 
 **As outlined in the README under Features, User Story ID 22 has been moved to Features To Be Added.**
+
 --- 
+
+## Automated Testing
+
+### Website Accessibility
+
+WEBI received a health score of 96% on [Web Accessibility.com](https://www.webaccessibility.com/):
+
+![Web Accessibility Test](readme-files/images/web-accessibility.png)
+
+### CSS Validation Check
+
+The website's CSS passed the W3C CSS Validation checker:
+
+![W3C CSS Validation Check](readme-files/images/css-validation.png)
