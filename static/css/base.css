@@ -6,6 +6,10 @@ h1, h2, h3, h4, h5 {
     font-weight: 700;
 }
 
+.correct-header {
+    height: 160px;
+}
+
 p {
     font-family: 'Roboto', sans-serif;
 }
