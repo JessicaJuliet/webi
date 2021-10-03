@@ -135,14 +135,43 @@ The new Services model does not offer the user Bundles, however users are free t
 
 ### Data Schema
 
-#### Services App
+#### Current Services App
+
+**Type Model**
+
+| Name | Database Key | Field Type | Type Validation |
+|------|--------------|------------|-----------------|
+| name | Name         | CharField  | max_length=254  |
 
 **Category Model**
+
 | Name          | Database Key  | Field Type | Type Validation                       |
 |---------------|---------------|------------|---------------------------------------|
 | Name          | name          | CharField  | max_length=254                        |
 | Friendly Name | friendly_name | CharField  | max_length=254, null=True, blank=True |
-| Type          | type          | CharField  | max_length=254, null=True, blank=True |
+
+**Images Model**
+
+| Name      | Database Key | Field Type | Type Validation                        |
+|-----------|--------------|------------|----------------------------------------|
+| name      | Name         | CharField  | max_length=254                         |
+| Image     | image        | ImageField | null=True, blank=True                  |
+| Image URL | image_url    | URLField   | max_length=1024, null=True, blank=True |
+
+**Services Model**
+
+| Name        | Database Key | Field Type            | Type Validation                                  |
+|-------------|--------------|-----------------------|--------------------------------------------------|
+| Category    | category     | ForeignKey 'Category' | null=True, blank=True, on_delete=models.SET_NULL |
+| Type        | type         | ForeignKey 'Type'     | null=True, blank=True, on_delete=models.SET_NULL |
+| Name        | name         | CharField             | max_length=254                                   |
+| Description | description  | RichTextField         | n/a                                              |
+| Price       | price        | DecimalField          | max_digits=6, decimal_places=2                   |
+| Image       | image        | ForeignKey 'Image'    | null=True, blank=True, on_delete=models.SET_NULL |
+
+
+#### OLD Services App Models
+
 
 **Bundle Model**
 | Name        | Database Key | Field Type            | Type Validation                                  |
@@ -150,7 +179,7 @@ The new Services model does not offer the user Bundles, however users are free t
 | Category    | category     | ForeignKey 'Category' | null=True, blank=True, on_delete=models.SET_NULL |
 | Service ID  | service_id   | CharField             | max_length=254, null=True, blank=True            |
 | Name        | name         | CharField             | max_length=254                                   |
-| Description | description  | TextField             | max_length=350                                   |
+| Description | description  | RichTextField         | max_length=350                                   |
 | Price       | price        | DecimalField          | max_digits=6, decimal_places=2                   |
 
 **Addon Model**
@@ -159,75 +188,75 @@ The new Services model does not offer the user Bundles, however users are free t
 | Category    | category     | ForeignKey 'Category' | null=True, blank=True, on_delete=models.SET_NULL |
 | Add-on ID   | addon_id     | CharField             | max_length=254, null=True, blank=True            |
 | Name        | name         | CharField             | max_length=254                                   |
-| Description | description  | TextField             | max_length=350                                   |
+| Description | description  | RichTextField         | max_length=350                                   |
 | Price       | price        | DecimalField          | max_digits=6, decimal_places=2                   |
-
-
-**Images Model**
-| Name      | Database Key | Field Type | Type Validation                        |
-|-----------|--------------|------------|----------------------------------------|
-| name      | Name         | CharField  | max_length=254                         |
-| Image     | image        | ImageField | null=True, blank=True                  |
-| Image URL | image_url    | ImageField | max_length=1024, null=True, blank=True |
 
 
 #### Checkout App
 
 **Order Model**
 
-| Name           | Database Key   | Field Type               | Type Validation                                                         |
-|----------------|----------------|--------------------------|-------------------------------------------------------------------------|
-| Order Number   | order_number   | CharField                | max_length=32, null=False, editable=False                               |
-| User Profile   | user_profile   | ForeignKey 'UserProfile' | on_delete=models.SET_NULL, null=True, blank=True, related_name='orders' |
-| Full Name      | full_name      | CharField                | max_length=50, null=False, blank=False                                  |
-| Email          | email          | EmailField               | max_length=254, null=False, blank=False                                 |
-| Phone Number   | phone_number   | CharField                | max_length=20, null=False, blank=False                                  |
-| Street Address | street_address | CharField                | max_length=80, null=False, blank=False                                  |
-| Country        | country        | CharField                | max_length=40, null=False, blank=False                                  |
-| County         | county         | CharField                | max_length=80, null=True, blank=True                                    |
-| Town or City   | town_or_city   | CharField                | max_length=40, null=False, blank=False                                  |
-| Postcode       | postcode       | CharField                | max_length=20, null=True, blank=True                                    |
-| Date           | date           | "DateTimeField           | auto_now_add=True                                                       |
-| Order Total    | order_total    | DecimalField             | max_digits=10, decimal_places=2, null=False, default=0                  |
-| Grand Total    | grand_total    | DecimalField             | max_digits=10, decimal_places=2, null=False, default=0                  |
-| Stripe PID     | stripe_pid     | CharField                | max_length=254, null=False, blank=False, default=''                     |
+| Name             | Database Key    | Field Type               | Type Validation                                                         |
+|------------------|-----------------|--------------------------|-------------------------------------------------------------------------|
+| Order Number     | order_number    | CharField                | max_length=32, null=False, editable=False                               |
+| User Profile     | user_profile    | ForeignKey 'UserProfile' | on_delete=models.SET_NULL, null=True, blank=True, related_name='orders' |
+| Full Name        | full_name       | CharField                | max_length=50, null=False, blank=False                                  |
+| Email            | email           | EmailField               | max_length=254, null=False, blank=False                                 |
+| Phone Number     | phone_number    | CharField                | max_length=20, null=False, blank=False                                  |
+| Country          | country         | CountryField             | blank_label='Country *', null=False, blank=False                        |
+| Postcode         | postcode        | CharField                | max_length=20, null=True, blank=True                                    |
+| Town or City     | town_or_city    | CharField                | max_length=40, null=False, blank=False                                  |
+| Street Address 1 | street_address1 | CharField                | max_length=80, null=False, blank=False                                  |
+| Street Address 2 | street_address2 | CharField                | max_length=80, null=True, blank=True                                    |
+| County           | county          | CharField                | max_length=80, null=True, blank=True                                    |
+| Date             | date            | DateTimeField            | auto_now_add=True                                                       |
+| Order Total      | order_total     | DecimalField             | max_digits=10, decimal_places=2, null=False, default=0                  |
+| Grand Total      | grand_total     | DecimalField             | max_digits=10, decimal_places=2, null=False, default=0                  |
+| Original Bag     | original_bag    | TextField                | null=False, blank=False, default=''                                     |
+| Stripe PID       | stripe_pid      | CharField                | max_length=254, null=False, blank=False, default=''                     |
 
 
 **OrderLineItem Model**
 
-| Name            | Database Key   | Field Type          | Type Validation                                                             |
-|-----------------|----------------|---------------------|-----------------------------------------------------------------------------|
-| Order           | order          | ForeignKey 'Order'  | null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems' |
-| Bundle          | bundle         | ForeignKey 'Bundle' | null=False, blank=False, on_delete=models.CASCADE                           |
-| Addon           | addon          | ForeignKey 'Addon'  | null=False, blank=False, on_delete=models.CASCADE                           |
-| Quantity        | quantity       | IntegerField        | null=False, blank=False, default=0                                          |
-| Line Item Total | lineitem_total | DecimalField        | max_digits=6, decimal_places=2, null=False, blank=False, editable=False     |
+| Name            | Database Key   | Field Type           | Type Validation                                                             |
+|-----------------|----------------|----------------------|-----------------------------------------------------------------------------|
+| Order           | order          | ForeignKey 'Order'   | null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems' |
+| Service         | services       | ForeignKey 'Service' | null=False, blank=False, on_delete=models.CASCADE                           |
+| Quantity        | quantity       | IntegerField         | null=False, blank=False, default=0                                          |
+| Line Item Total | lineitem_total | DecimalField         | max_digits=6, decimal_places=2, null=False, blank=False, editable=False     |
 
 
 #### Case Study App
 
-| Name               | Database Key       | Field Type | Type Validation                                  |
-|--------------------|--------------------|------------|--------------------------------------------------|
-| Title              | title              | CharField  | max_length=50                                    |
-| slug               | slug               | SlugField  | max_length=200, unique=True                      |
-| Header Image       | header_image       | ImageField | null=True, blank=True, on_delete=models.SET_NULL |
-| Study Subheading 1 | study_subheading_1 | CharField  | max_length=50                                    |
-| Study Content 1    | study_content_1    | TextField  | validators=[MinLengthValidator(200)]             |
-| Study Subheading 2 | study_subheading_2 | CharField  | max_length=50                                    |
-| Study Content 2    | study_content_2    | TextField  | validators=[MinLengthValidator(200)]             |
+**Case Study Model**
+
+| Name               | Database Key       | Field Type    | Type Validation                        |
+|--------------------|--------------------|---------------|----------------------------------------|
+| Title              | title              | CharField     | max_length=50                          |
+| slug               | slug               | SlugField     | max_length=200, unique=True            |
+| Image              | image              | ImageField    | null=True, blank=True                  |
+| Image URL          | image_url          | URLField      | max_length=1024, null=True, blank=True |
+| Featured           | featured           | BooleanField  | default=False                          |
+| Website URL        | webite_url         | URLField      | max_length=1024                        |
+| GitHub URL         | github_url         | URLField      | max_length=1024                        |
+| Heading            | heading            | CharField     | max_length=200, default='Heading'      |
+| Case Study Content | case_study_content | RichTextField | default='Case study content'           |
 
 
 #### Blog App
 
-| Name               | Database Key       | Field Type | Type Validation                                  |
-|--------------------|--------------------|------------|--------------------------------------------------|
-| Title              | title              | CharField  | max_length=50                                    |
-| slug               | slug               | SlugField  | max_length=200, unique=True                      |
-| Header Image       | header_image       | ImageField | null=True, blank=True, on_delete=models.SET_NULL |
-| Blog Subheading 1  | blog_subheading_1  | CharField  | max_length=50                                    |
-| Blog Content 1     | blog_content_1     | TextField  | validators=[MinLengthValidator(200)]             |
-| Blog Subheading 2  | blog_subheading_2  | CharField  | max_length=50                                    |
-| Blog Content 2     | blog_content_2     | TextField  | validators=[MinLengthValidator(200)]             |
+**Blog Model**
+
+| Name           | Database Key   | Field Type    | Type Validation                        |
+|----------------|----------------|---------------|----------------------------------------|
+| Title          | title          | CharField     | max_length=50                          |
+| slug           | slug           | SlugField     | max_length=200, unique=True            |
+| Blog Image     | blog_image     | ImageField    | null=True, blank=True                  |
+| Blog Image URL | blog_image_url | URLField      | max_length=1024, null=True, blank=True |
+| Heading        | heading        | CharField     | max_length=200                         |
+| Published Date | published_date | DateField     | max_length=200                         |
+| Blog Content   | blog_content   | RichTextField | default='Blog content'                 |
+
 
 [Back to top](#webi)
 
