@@ -178,13 +178,13 @@ Manual tests were carried out across all user stories and features:
 
 **Pass/Fail:** Pass
 
-> [USER STORY ID -9] As a client, I want to be able to easily recover my password if I forget it so that I can recover access to my account
+> [USER STORY ID 9] As a client, I want to be able to easily recover my password if I forget it so that I can recover access to my account
 
-**This Feature has been added into the 'Features To Be Implemented' section.**
+**As outlined in the README under Features, User Story ID 9 has been moved to Features To Be Added.**
 
 > [USER STORY ID - 10] As a client, I want to be able to receive an email confirmation after registering so that I can verify that my account registration was successful
 
-**This Feature has been added into the 'Features To Be Implemented' section.**
+**As outlined in the README under Features, User Story ID 10 has been moved to Features To Be Added.**
 
 > [USER STORY ID  - 11] As a client, I want to be able to have a personalised user profile so that I can view my personal order history and progress
 
@@ -208,7 +208,7 @@ Manual tests were carried out across all user stories and features:
 
 **Pass/Fail:** Pass
 
-**The progress aspect of this feature has been added into the 'Features To Be Implemented' section.**
+**As outlined in the README under Features, the progress element of User Story ID 11 has been moved to Features To Be Added.**
 
 ---
 
@@ -346,25 +346,79 @@ Manual tests were carried out across all user stories and features:
 
 --- 
 
+### Admin and Store Owner
+
+> [USER STORY ID - 20] As an Admin/ Store Owner, I want to be able to add a service so that I can add new items to my store
+
+#### Test Case 20.1
+
 **Description:**
 
 **Steps:**
+1. Open Chrome and navigate to the deployed website
+2. Navigate to the Services page
+3. Navigate to the 'My Account' dropdown and click to sign in as an "admin user"
+4. Once signed in navigate to the 'Service Management' page in the 'My Account' dropdown
+5. Add the neccessarry details to add a service and click to add service
+6. Navigate to the services page to ensure the service appears
+7. Repeat on mobile
 
-**Expected Result:**
+**Expected Result:** Admin users can add a new service to the store via the 'Service Management' page
 
-**Expected Result:** 
+**Expected Result:** Admin users can add a new service to the store via the 'Service Management' page
 
-**Pass/Fail:**
+**Pass/Fail:** Pass
 
+> [USER STORY ID - 21] As an Admin/ Store Owner, I want to be able to edit/ update a service so that I can ammend service descriptions, prices and images
 
+#### Test Case 21.1
+
+**Description:** Users with Admin access have the ability to edit/ update an existing service  
+
+**Steps:**
+1. Open Chrome and navigate to the deployed website
+2. Navigate to the Services page
+3. Navigate to the 'My Account' dropdown and click to sign in as an "admin user"
+4. Once signed in navigate to the Services page
+5. Scroll down to the services and click to edit a service
+6. Edit service details and click to update the service
+7. Navigate back to the Services page and ensure the new changes have applied
+8. Repeat on mobile
+
+**Expected Result:** Admin users can make changes to existing services on the 'Service Management' page
+
+**Expected Result:** Admin users can make changes to existing services on the 'Service Management' page
+
+**Pass/Fail:** Pass
+
+> [USER STORY ID - 22] As an Admin/ Store Owner, I want to be able to delete a service so that I can remove any services which are no longer being sold
+
+#### Test Case 22.1
+
+**Description:** Admin users and the store owner can easily delete services either via the admin panel or on the services page itself and those without admin access cannot
+
+**Steps:**
+1. Open Chrome and navigate to the deployed website
+2. Navigate to the Services page
+3. Ensure that edit/delete buttons to not appear for user not logged in
+4. Click to 'Find out more' about the service
+5. Ensure that edit/delete buttons to not appear for user not logged in
+6. Navigate to the 'My Account' dropdown and click to sign in as a "regular user"
+7. Once signed in navigate back to the Services page and repeat steps 2-5
+8. Navigate to the 'My Account' dropdown and sign out
+9. Then sign in as an admin
+10. Navigate to the Services page and service detail page and ensure that edit/delete buttons appear
+11. Click 'delete' to remove a service
+12. Navigate back to the services page to ensure the product is deleted
+13. Repeat on mobile
+
+**Expected Result:** Only users with special privledges can delete products from the store
+
+**Expected Result:** Only users with special privledges can delete products from the store
+
+**Pass/Fail:** PASS
+
+> As an Admin/ Store Owner, I want to be able to edit/ update the status of an order so that I can update clients of their order progress
+
+**As outlined in the README under Features, User Story ID 22 has been moved to Features To Be Added.**
 --- 
-
-**Description:**
-
-**Steps:**
-
-**Expected Result:**
-
-**Expected Result:** 
-
-**Pass/Fail:**
