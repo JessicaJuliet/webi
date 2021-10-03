@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_title %} - Error 500 {% endblock %}
+{% block extra_title %} - Error 500 Internal Server Error{% endblock %}
 
 {% block content %}
     <div class="correct-header">
@@ -9,19 +9,42 @@
     <!-- Page Heading -->
     <div class="page-heading">
         <div class="container">
-            <h1>Error 500</h1>
+            <h1>Error 500 - Internal Server Error</h1>
             <div class="heading-border"></div>
         </div>
     </div>
-    <div class="container">
+    <div class="container intro-section">
         <div class="row">
-            <div class="col-12">
-                <h2>Oops!</h2> Sorry we couldn't find what you were looking for.
+            <div class="col-sm-12 col-md-6">
+                <h2>Oops!</h2> 
+                <p>
+                    Looks like something broke! Head back to safety.
+                </p>
             </div>
         </div>
     </div>
-    <!-- Internal Link -->
-    {% include "includes/back_to_homepage_link.html" %}
+    <!-- Explore services -->
+    <div class="container">
+        <span class="row">
+            <span>
+                <a href="{% url 'home' %}" class="btn secondary-link ml-5">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span>Home</span>
+                </a>
+            </span>
+            <span>
+                <a href="{% url 'services' %}" class="btn custom-button">
+                    <span>Explore Services</span>
+                    <span class="icon">
+                        <i class="fas fa-chevron-right"></i>
+                    </span>
+                </a>
+            </span>
+        </span>
+    </div>
+    <!-- Back to home -->
     <!-- Footer -->
     {% include "includes/footer.html" %}
 {% endblock %}
