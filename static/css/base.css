@@ -367,7 +367,6 @@ footer .logo {
 
 .service-filter {
     margin: 15px 0px;
-    
 }
 
 .filter-button {
@@ -376,6 +375,8 @@ footer .logo {
     padding: 12px 16px;
     background-color: #f1f1f1;
     color: black;
+    margin-bottom: 10px !important;
+    display: inline-block;
 }
 
 .filter-button:hover {
@@ -681,7 +682,6 @@ footer .logo {
         display: none;
     }
 }
-
 
 @media (max-width: 767px) {
     .service-image {

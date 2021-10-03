@@ -34,7 +34,7 @@ Visit WEBI at [https://webi-development.herokuapp.com](https://webi-development.
     * [Languages](#languages)
     * [Libraries and Frameworks](#libraries-and-frameworks)
     * [Tools](#tools)
-* Testing
+* [Testing](#testing)
 * [Deployment](#deployment)
     * [Project Creation](#project-creation)
     * [Heroku Deployment](#heroku-deployment)
@@ -53,7 +53,7 @@ Visit WEBI at [https://webi-development.herokuapp.com](https://webi-development.
 |--------------------------------|------------|-------------------------------------------------------------|-------------------------------------------------------------------------------|
 | **Viewing and Navigation**         |            |                                                             |                                                                               |
 | 1                              | Prospect   | View a list of services available                 | Select a service to buy                                              |
-| 2                              | Prospect   | View specific categories of services                        | Easily find a service suited to my needs                                      |
+| 2                              | Prospect   | View specific types of services                        | Easily find a service suited to my needs                                      |
 | 3                              | Prospect   | View individual service details                             | Identify the service price, description and suitability                       |
 | 4                              | Prospect   | Easily view the total of my purchases                       | Ensure total cost falls within my budget                                      |
 | 5                              | Prospect   | Read blogs                                                  | Expand my knowledge on design and development                                 |
@@ -324,6 +324,14 @@ Due to time constraints, User Story ID 23 was not implemented. This has been inc
 **Styling Fixes**
 Some minor styling fixes are still to be implemented:
 * Wrap text around blog post images
+
+[Back to top](#webi)
+
+--- 
+
+## Testing
+
+The testing results of this website can be found in the [TESTING.md file](/workspace/webi/TESTING.md).
 
 [Back to top](#webi)
 
