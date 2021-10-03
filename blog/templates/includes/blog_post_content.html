@@ -8,9 +8,16 @@
                 <!-- Published date-->
                 <p><em>{{ blog.published_date|safe }}</em></p>
                 <!-- Blog content -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
                 <div class="blog_content">
                     {{ blog.blog_content|safe }}
                 </div>
+            </div>
+            <div class="col-md-6">
+                <img class="blog-post-image" src="{{ MEDIA_URL}}{{ blog.blog_image }}">
             </div>
         </div>
     </div>

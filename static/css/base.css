@@ -332,6 +332,10 @@ footer .logo {
     padding-bottom: 30px;
 }
 
+.blog-post-image {
+    width: 100%;
+}
+
 .box {
     width: 100%;
 }
@@ -650,6 +654,14 @@ footer .logo {
     }
 }
 
+/* Blog page */
+
+@media (max-width: 766px) {
+    .blog-post-image {
+        display: none;
+    }
+}
+
 /* Services Page */
 
 @media (max-width: 991px) {
@@ -659,6 +671,13 @@ footer .logo {
         object-fit: cover;
     }
 }
+
+@media (max-width: 766px) {
+    .service-detail-image  {
+        display: none;
+    }
+}
+
 
 @media (max-width: 767px) {
     .service-image {
