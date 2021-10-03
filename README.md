@@ -1,16 +1,20 @@
 # WEBI
 
-<img href="">
+![WEBI Mock Up](readme-files/images/webi-mockup.png)
 
 ## Purpose
-### Introduction
 
-Small companies and startups often have a small budget for website development services. I decided to create **WEBI** to offer my design and development freelancing skills to small companies who wish to build a professional face for their brand online but are restricted by budget. In addition, my freelancing services span beyond just design and development, and include marketing and hosting services also.
+Welcome to WEBI - an e-commerce website where I offer my freelance marketing, design and web development services. I decided to create WEBI to help small businesses and startup companies, who often have a small budget for digital, to avail of affordable website services.
+
+**Please note, this project is for educational purposes only.**
+
+[Visit WEBI](https://webi-development.herokuapp.com/)
+
+---
 
 ## Table of Contents
 
 * [Purpose](#Purpose)
-    * [Introduction](#Introduction)
 * [User Experience Design](#user-experience-design)
     * [User Stories](#user-stories)
     * [Design Inspiration](#design-inspiration)
