@@ -429,7 +429,12 @@ footer .logo {
 
 .service-description {
     background-color: #fafafa9a;
+    /* Resource: https://getcssscan.com/css-box-shadow-examples */
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.service-content p {
+    padding-right: 15px;
 }
 
 .service-qty {
