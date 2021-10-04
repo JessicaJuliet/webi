@@ -407,7 +407,6 @@ footer .logo {
     color: white;
     padding: 10px 20px;
     border-radius: 10px;
-    margin-left: 40px;
 }
 
 .service-btn:hover {
@@ -435,11 +434,6 @@ footer .logo {
 
 .service-content p {
     padding-right: 15px;
-}
-
-.service-qty {
-    margin-left: 10px;
-    border-radius: 10px;
 }
 
 .service-custom-button {
@@ -470,6 +464,11 @@ footer .logo {
     color: #093d60;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.decrement-qty, .increment-qty {
+    background-color: #093d60;
+    color: white;
 }
 
 /* ---------- Checkout/ Bag Pages ---------- */
@@ -713,6 +712,9 @@ footer .logo {
     }
     .service-image {
         padding-bottom: 10px;
+    }
+    .hero-h1 {
+        padding-top: 50px;
     }
 }
 
