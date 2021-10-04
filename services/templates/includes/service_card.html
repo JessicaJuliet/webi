@@ -24,7 +24,7 @@
                     </div>
                     <div class="col-xs-6 col-md-6 col-lg-8 service-content">
                         <!-- Service type -->
-                        <span class="service-type type">Service | <strong>{{ service.type|safe }}</strong></span>
+                        <span class="service-type type">{{ service.category|safe }} | <strong>{{ service.type|safe }}</strong></span>
                         <!-- Service description -->
                         <p>{{ service.description|truncatechars:150|safe }}</p>
                         <!-- Service price -->

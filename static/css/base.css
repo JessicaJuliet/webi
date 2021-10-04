@@ -428,10 +428,9 @@ footer .logo {
 }
 
 .service-description {
-    border: .3px solid #e2e2e2;
-    background-color: #fafafa41;
+    background-color: #fafafa9a;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
-
 
 .service-qty {
     margin-left: 10px;
