@@ -316,7 +316,6 @@ Due to time constraints, User Story ID 23 was not implemented. This has been inc
 
 ### Features Left To Be Implemented
 
-* Implement a Forgot Password functionality for the user
 * Send users a personalised email after completing the registrationg process
 * Allow users to see the progress of their order
 * Provide Admins/ Store Owners with the funcitonality to edit/update the status of an order

@@ -424,7 +424,8 @@ footer .logo {
 }
 
 .service-description {
-    border: .5px solid lightgray;
+    border: .3px solid #e2e2e2;
+    background-color: #fafafa41;
 }
 
 
@@ -655,12 +656,9 @@ footer .logo {
 /* About Page */
 
 @media (max-width: 766px) {
-    .about-image {
-        padding-bottom: 50px;
-    }
     .about-quote {
         text-align: center;
-        padding-bottom: 30px;
+        padding-bottom: 50px;
     }
 }
 
