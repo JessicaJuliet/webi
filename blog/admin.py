@@ -13,5 +13,6 @@ class BlogAdmin(admin.ModelAdmin):
         'blog_content',
     )
 
+
 # Register Models
 admin.site.register(Blog, BlogAdmin)

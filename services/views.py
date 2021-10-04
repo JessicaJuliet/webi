@@ -45,7 +45,8 @@ def add_service(request):
     """ A function to allow superusers to add a service to the website """
 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you do not have sufficient privileges to do that.')
+        messages.error(request, 'Sorry, you do not have sufficient privileges \
+                                to do that.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -55,7 +56,8 @@ def add_service(request):
             messages.success(request, 'Successfully added service.')
             return redirect(reverse('service_detail', args=[service.id]))
         else:
-            messages.error(request, 'Failed to add service. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add service. Please ensure the \
+                                    form is valid.')
     else:
         form = ProductForm()
 
@@ -72,7 +74,8 @@ def edit_service(request, service_id):
     """ A function to allow superusers to edit a service on the website """
 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you do not have sufficient privileges to do that.')
+        messages.error(request, 'Sorry, you do not have sufficient privileges \
+                                to do that.')
         return redirect(reverse('home'))
 
     service = get_object_or_404(Service, pk=service_id)
@@ -84,7 +87,8 @@ def edit_service(request, service_id):
             messages.success(request, 'Successfully updated service.')
             return redirect(reverse('service_detail', args=[service.id]))
         else:
-            messages.error(request, 'Failed to update service. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update service. \
+                                    Please ensure the form is valid.')
     else:
         form = ProductForm(instance=service)
         messages.info(request, f'You are editing {service.name}')
@@ -103,7 +107,8 @@ def delete_service(request, service_id):
     """ A function to allow superusers to delete a service from the website """
 
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, you do not have sufficient privileges to do that.')
+        messages.error(request, 'Sorry, you do not have sufficient \
+                                 privileges to do that.')
         return redirect(reverse('home'))
 
     service = get_object_or_404(Service, pk=service_id)

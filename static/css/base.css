@@ -381,6 +381,7 @@ footer .logo {
     margin-right: 1px;
     background-color: #f1f1f1;
     color: #093d60;
+    font-weight: 500;
     margin-bottom: 10px !important;
     display: inline-block;
     /* Resource: https://getcssscan.com/css-box-shadow-examples */
