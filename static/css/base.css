@@ -506,6 +506,21 @@ footer .logo {
 .form-check-label a:hover {
     color: #093d60 !important;
 }
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
 /* ---------- Bootstrap toasts ---------- */
 
 .message-container {
