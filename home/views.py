@@ -1,5 +1,6 @@
 from django.shortcuts import render
-# Resource: https://stackoverflow.com/questions/31406662/django-unable-to-import-model-from-another-app
+# Resource:
+# https://stackoverflow.com/questions/31406662/django-unable-to-import-model-from-another-app
 from casestudies.models import Casestudy
 
 # Create your views here.

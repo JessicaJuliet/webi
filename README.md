@@ -323,9 +323,11 @@ Due to time constraints, User Story ID 23 was not implemented. This has been inc
 * Improve Services Management functionality to allow admins to upload a new service image and format the text (e.g. bold text & bullet points)
 
 **Styling Fixes**
-Some minor styling fixes are still to be implemented:
-* Wrap text around blog post images
+Below I have outlined the styling fixes which are still to be implemented in a future udpate:
 * The 'Description' box on the Services Management page for Admin users is appearing lesser in width than the other form input fields. A fix couldn't be found for this minor issue prior to the app launch and will be addressed in a future release
+* Wrap text around blog post images
+* Implement JavaScript on the nav bar to update the text to bold when users change page location
+* Implement JavaScript on the services filter menu so it changes colour when users change between service types
 
 [Back to top](#webi)
 
