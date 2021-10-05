@@ -22,7 +22,7 @@
                 <div class="col-12 col-lg-6">
                     <br>
                     <br>
-                    <h5 class="text-muted">Default Delivery Information</h5>
+                    <h5 class="text-muted">Default Billing Information</h5>
                     <form action="{% url 'profile' %}" method="POST" id="profile-update-form" class="profile-form">
                         {% csrf_token %}
                         {{ form|crispy }}
@@ -56,9 +56,6 @@
                                             <ul class="list-unstyled">
                                                 {% for item in order.lineitems.all %}
                                                     <li class="small">
-                                                        <!--{% if item.product.has_sizes %}
-                                                            Size {{ item.product.size|upper }}
-                                                        {% endif %}-->
                                                         {{ item.service.name }} x{{ item.quantity }}
                                                     </li>
                                                 {% endfor %}

@@ -316,8 +316,9 @@ Due to time constraints, User Story ID 19 was not implemented. This has been inc
 
 Due to time constraints, User Story ID 23 was not implemented. This has been included in the upcoming features to be added below.
 
-### Features Left To Be Implemented
+### Features To Be Implemented
 
+* The website delivery cost functionality was set up with the plan of changing it to a discount should an order reach a certain value. However due to time constraints this was not implemented. Note is taken that 'Delivery Costs' doesn't apply to services and this is to be implemented with priority on the next update.
 * Allow users to see the progress of their order
 * Provide Admins/ Store Owners with the funcitonality to edit/update the status of an order
 * Implement website Bundles/ Packages to group related services for the user
