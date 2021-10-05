@@ -4,6 +4,7 @@
 ## Table of Contents
 * [Manual Testing](#manual-testing)
     * [Gitpod Branches](#gitpod-branches)
+    * [Webhooks](#webhooks)
 * [Automated Testing](#automated-testing)
     * [Website Accessibility](#website-accessibility)
     * [CSS Validation](#css-validation-check)
@@ -449,6 +450,9 @@ Extensive automated and manual tests were carried out across the entire website 
 
 Please note that additional branches were used during the creation of this project and they were purposefully left in so that the accessor could see that branches have been used. Ordinarily, these would be removed as they are stale branches.
 
+### Webhooks
+
+Stripe Webhooks were impelemented for this proejct. During testing it was noted that the 'payment_intent.succeeded' webhook was returning a 'Test webhook error: 500'. The details of this error were recorded during Development mode to resolve for an updated release of the web application.
 
 [Back to Top](#table-of-contents)
 

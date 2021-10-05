@@ -39,6 +39,8 @@ Visit WEBI at [https://webi-development.herokuapp.com](https://webi-development.
     * [Project Creation](#project-creation)
     * [Heroku Deployment](#heroku-deployment)
     * [Local Deployment](#local-deployment)
+    * [Hosting Files via AWS](#hosting-files-via-aws)
+    * [Sending Emails Through Gmail](#sending-emails-through-gmail)
 * [Credits](#credits)
     * Code
     * [Acknowledgements](#acknowledgements)
@@ -335,7 +337,7 @@ Below I have outlined the styling fixes which are still to be implemented in a f
 
 ## Testing
 
-The testing results of this website can be found in the [TESTING.md file](TESTING.md).
+The testing of this website can be found in the [TESTING.md file](TESTING.md).
 
 [Back to top](#webi)
 
@@ -354,6 +356,7 @@ The testing results of this website can be found in the [TESTING.md file](TESTIN
 * [Bootstrap](https://getbootstrap.com/) was used as the front-end framework
 * [Google Fonts](https://fonts.google.com/) was used to find, sample and import fonts for the logo and website
 * [Font Awesome](https://fontawesome.com/) was used for icons across the website
+* [CKEditor](https://ckeditor.com/) was used to set up a Rich Text Editor in the Heroku admin panel
 
 ### Tools
 * [Git](https://git-scm.com/) was used as the version control software to add, commit and push code to the GitHub repository
@@ -362,12 +365,17 @@ The testing results of this website can be found in the [TESTING.md file](TESTIN
 * [Heroku](https://dashboard.heroku.com/) was used to run the application in the cloud
 * [W3C Markup validator](https://validator.w3.org/) was used regularly to check for any errors in the HTML on the site
 * [W3C CSS validator](https://jigsaw.w3.org/css-validator/) was used regularly to check for any errors in the CSS on the site
+* [Web Accessibility](https://www.webaccessibility.com/) was used to test the website's accessibility to people with disabilities
 * [Adobe Illustrator](https://www.adobe.com/ie/products/illustrator.html) was used to create the logo and high fidelity mock ups
 * [TinyPNG](https://tinypng.com/) was used to reduce the size of all the images on the website
 * [balsamiq](https://balsamiq.com/wireframes/) was used to create low-fidelity wireframes of the website
 * [JSHint](https://jshint.com/) was used to test the JavaScript code for errors
 * [PEP8 Online](http://pep8online.com/) was used to check for PEP8 compliance
 * [TableConvert](https://tableconvert.com/) was used to convert csv data to markdown tables
+* [Temp mail](https://temp-mail.org/en/) was used to create a temporary email address to test the sign up page
+* [AWS](https://s3.console.aws.amazon.com/) was used to host static files
+* [STRIPE](https://stripe.com/ie) was used to setup the website payment functionality
+* [Gmail](https://gmail.com) was used to send emails with Django
 
 [Back to top](#webi)
 
@@ -401,35 +409,6 @@ In Django a SECRET_KEY is automatically included in the settings.py file. This w
 3. Check the server still runs
 4. Push to GitHub
 
-### Heroku Deployment
-1. Setup Heroku App
-    * Go to Heroku.com
-    * Click to create new app
-    * Name the app and select region
-    * Then scroll 'Add-ons' and provision a new 'Heroku Postgress' database
-    * Install dj_database_url and psycopg_2 in Gitpod:
-
-    > pip3 install dj_database_url
-
-    > pip3 install psycopg2-binary
-
-    * Freeze requirements to ensure Heroku installs all our app requirements when deployed:
-    > pip3 freeze > requirements.txt
-
-2. Setup Database
-    * Import dj_database_url in settings.py
-    * Replace default database with a call to dj_database_url with the database URL from Heroku
-    * Run migrations:
-    > pythong3 manage.py migrate
-    * Import product data
-    > python3 manage.py loaddata categories
-    > python3 manage.py loaddata services
-    * Remove Heroku database config before committing
-
-
-### Amazon AWS Setup
-
-
 ### Local Deployment
 
 The following steps are required to run this locally:
@@ -440,6 +419,79 @@ The following steps are required to run this locally:
 4. If usings the Git URL, open a new terminal in your IDE and type the 'git clone' command in the CLI and paste the copied URL
 5. A clone of this project will be created locally on your machine
 6. Alternatively, if you download the ZIP, unpackage locally and open in your IDE
+
+### Heroku Deployment
+1. Create Heroku App
+    * Go to Heroku.com
+    * Click to create new app
+    * Name the app and select region closest to you
+    * Then on the Resources tab, provision a new 'Heroku Postgress' database
+    * In Gitpod, install dj_database_url and psycopg_2 using the following commands:
+
+    > pip3 install dj_database_url
+
+    > pip3 install psycopg2-binary
+
+    * Freeze requirements to ensure Heroku installs all our app requirements when deployed:
+    > pip3 freeze > requirements.txt
+
+2. Setup Database
+    * Import dj_database_url in settings.py
+
+    > import dj_database_url
+
+    * Comment out the default Database configuration in settings.py and replace with a call to dj_database_url with the database URL from Heroku (can retrieve from Heroku settings tab)
+
+    > DATABASES = {
+        'default': dj_database_url.parse('postgress_url')
+    }
+
+    * Run migrations:
+    > pythong3 manage.py migrate
+    * Import service data
+    > python3 manage.py loaddata categories
+    > python3 manage.py loaddata types
+    > python3 manage.py loaddata images
+    > python3 manage.py loaddata services
+    * Remove Heroku database config before committing
+
+3. Create a superuser
+* To create a super user to log in with use:
+
+> python3 manage.py createsuperuser
+
+4. Commit changes
+* Remove Heroku database config and uncomment original so the Database URL doesn't end up in version control
+* Commit changes"
+> git add .
+> git commit -m "commit message"
+> git push
+
+### Hosting Files Via AWS
+
+In order to host static files and images with AWS, you will need to create an AWS account. After that, you are required to create the following in AWS: 
+
+* AWS S3 Bucket
+* Bucket Policy
+* Group Access Policy
+* A User
+
+Further information on this process can be found on [Amazon AWS](https://docs.aws.amazon.com/AmazonS3/latest/userguide/GetStartedWithS3.html). After the above has been completed, you are required to connect Django to S3. More detailed information on connecting Django to S3 can be found [here](https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html).
+
+### Sending Emails Through Gmail
+
+Sending automatic emails with Django was carried out using the following steps:
+
+1. Setup a Gmail account (or use an existing one if you already have one)
+2. Login to your account and go to the account settings
+3. Click 'Accounts and Import' and then 'Other Google Account Settings'
+4. Navigate to the Security tab and turn on 2-step verification
+5. Select a verification method
+6. Go to 'App Passwords' under the 'Signing in to Google' heading
+7. Select 'Mail' for the app and select 'Other' for device type and type in Django
+8. Copy the 16 character password in Heroku 
+9. Navigate to Heroku and put it under EMAIL_HOST_PASS config variable
+10. Then, put the Gmail e-mail under the EMAIL_HOST_USER config var
 
 [Back to top](#webi)
 
@@ -452,11 +504,14 @@ The following steps are required to run this locally:
 * Django CKEditor:
     * [Stack Overflow](https://stackoverflow.com/questions/34149541/is-there-any-way-to-change-the-default-text-editor-for-textfield-django-in-admin)
     * [Github Django CKEditor](https://github.com/django-ckeditor/django-ckeditor)
+* Bootstrap Navbar - https://getbootstrap.com/docs/4.0/components/navbar/
+* CSS box shadows - https://getcssscan.com/css-box-shadow-examples
+* The Code Institute's 'Boutique Ado' run through project helped to guide this project's code
 
 ### Acknowledgements
 
-* A huge thank you to my mentor Simen for his support, encouragement and motivation which he provided me with throughout this entire project and for which I'm extremely grateful
+* A huge thank you to my mentor Simen for his support, encouragement and motivation which he provided me with throughout this entire project
 * Thank you to the Code Institute's mentors for helping me to resolve some of the most complicated bugs
-* Thank you to all of the supportive members of the Code Institute's Slack channel who helped me when the goings got tough!
+* Thank you to all of the supportive members of the Code Institute's Slack channel who helped me when the bugs got tough!
 
 [Back to top](#webi)
