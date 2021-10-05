@@ -734,3 +734,11 @@ footer .logo {
     }
 }
 
+/* Website buttons */
+
+@media (max-width: 443px) {
+    .custom-button, .secondary-link, .service-custom-button {
+        padding: 5px 7px !important;
+        font-size: 15px !important;
+    }
+}
