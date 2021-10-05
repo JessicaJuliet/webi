@@ -320,11 +320,12 @@ Due to time constraints, User Story ID 23 was not implemented. This has been inc
 * Allow users to see the progress of their order
 * Provide Admins/ Store Owners with the funcitonality to edit/update the status of an order
 * Implement website Bundles/ Packages to group related services for the user
-* Improve Product Management functionality to allow admins to upload a new service image and format the text
+* Improve Services Management functionality to allow admins to upload a new service image and format the text (e.g. bold text & bullet points)
 
 **Styling Fixes**
 Some minor styling fixes are still to be implemented:
 * Wrap text around blog post images
+* The 'Description' box on the Services Management page for Admin users is appearing lesser in width than the other form input fields. A fix couldn't be found for this minor issue prior to the app launch and will be addressed in a future release
 
 [Back to top](#webi)
 

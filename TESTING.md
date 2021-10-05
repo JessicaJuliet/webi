@@ -1,6 +1,21 @@
 # Testing
 
-Extensive automated and manual tests were carried out across all user stories and features. The results are documented below:
+
+## Table of Contents
+* [Manual Testing](#manual-testing)
+    * [Gitpod Branches](#gitpod-branches)
+* [Automated Testing](#automated-testing)
+    * [Website Accessibility](#website-accessibility)
+    * [CSS Validation](#css-validation-check)
+    * [Python Flake8 Linter](#python-flake8-linter)
+
+
+
+Extensive automated and manual tests were carried out across the entire website encompassing all user stories and features. The devices used to carry out the testing were as follows:
+
+* **Desktop:** MacBook 12
+* **Mobile:** Apple iPhone XS Max, Samsung A71
+* **Tablet:** Apple iPad (6th generation)
 
 ## Manual Testing
 
@@ -369,6 +384,10 @@ Extensive automated and manual tests were carried out across all user stories an
 
 **Pass/Fail:** Pass
 
+**Issues and Fixes during testing of deployed website**
+* **Issue:** Although Super Admin users are able to format service descriptions when adding them via the Heroku Admin panel (e.g. bullet points & bold text), admin users do not have the same functionality when adding through the Service Management page. They would need to use html to achieve the same results. They are also only able to select an image that has been uploaded through the Heroku admin panel but cannot add their own.
+* **Fix:** It's important that admin users can achieve the same formatting of services when adding them to the website, so this has been included in the features to be implemented section outlined in the README.
+
 > [USER STORY ID - 21] As an Admin/ Store Owner, I want to be able to edit/ update a service so that I can ammend service descriptions, prices and images
 
 #### Test Case 21.1
@@ -422,6 +441,13 @@ Extensive automated and manual tests were carried out across all user stories an
 
 **As outlined in the README under Features, User Story ID 22 has been moved to Features To Be Added.**
 
+### Gitpod Branches
+
+Please note that additional branches were used during the creation of this project and they were purposefully left in so that the accessor could see that branches have been used. Ordinarily, these would be removed as they are stale branches.
+
+
+[Back to Top](#table-of-contents)
+
 --- 
 
 ## Automated Testing
@@ -437,3 +463,24 @@ WEBI received a health score of 96% on [Web Accessibility.com](https://www.webac
 The website's CSS passed the W3C CSS Validation checker:
 
 ![W3C CSS Validation Check](readme-files/images/css-validation.png)
+
+### Python Flake8 Linter
+
+Flake8 was used as the linting utility in Gitpod to review any errors in the code. The majority of errors which appeared were as follows:
+* E501 - Line too long
+* F401 - Imported but unused
+* DJO1 - Avoid using null=True on string-based fields
+* W291 - Trailing whitespace
+* E122 - Continuation line missing indentation or outdented
+* F841 - Local variable 'e' is assigned to but never used
+
+![WEBI Flake8 Errors](readme-files/images/flake8-errors.png)
+
+These Flake8 errors were rectified where possible and some where left unchanged due to the following reasons:
+* There were a number of E501 errors reported in the Settings.py file. These were left unchanged as they related to comments with URLs or strings which if put on two lines would break the code
+* The migration files contained E501 errors. These errors were left unchanged as automatically generated files such as migration files may intentionally ignore style rules for efficiency reasons
+* Some false positive errors were ignored such as Class 'ClassName' has no 'objects' member, as this is simply a pylint error specific to django. However, it could be removed by installing  pylint-django
+
+[Back to Top](#table-of-contents)
+
+---
