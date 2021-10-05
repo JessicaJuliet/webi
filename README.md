@@ -42,7 +42,7 @@ Visit WEBI at [https://webi-development.herokuapp.com](https://webi-development.
     * [Hosting Files via AWS](#hosting-files-via-aws)
     * [Sending Emails Through Gmail](#sending-emails-through-gmail)
 * [Credits](#credits)
-    * Code
+    * [Code](#code)
     * [Acknowledgements](#acknowledgements)
 
 --- 
@@ -58,7 +58,7 @@ Visit WEBI at [https://webi-development.herokuapp.com](https://webi-development.
 | 2                              | Prospect   | View specific types of services                        | Easily find a service suited to my needs                                      |
 | 3                              | Prospect   | View individual service details                             | Identify the service price, description and suitability                       |
 | 4                              | Prospect   | Easily view the total of my purchases                       | Ensure total cost falls within my budget                                      |
-| 5                              | Prospect   | Read blogs                                                  | Expand my knowledge on design and development                                 |
+| 5                              | Prospect   | Read blogs                                                  | Expand my knowledge on digital                                 |
 | 6                              | Prospect   | Review case studies                                         | Trust the quality of the freelancing services on offer                        |
 | **Registration and User Accounts** |            |                                                             |                                                                               |
 | 7                              | Client     | Easily register for an account                              | Setup my own personal area on the website to see my order history and profile |
@@ -78,7 +78,7 @@ Visit WEBI at [https://webi-development.herokuapp.com](https://webi-development.
 | 19                             | Prospect   | View the progress of my order                               | I know when I can expect it to be ready                                       |
 | **Admin and Store Owner**     |            |                                                             |                                                                               |
 | 20                             | Admin/ Store Owner | Add a service                                      | Add new items to my store                                                     |
-| 21                             | Admin/ Store Owner | Edit/update a service                              | Ammend service/ product decriptions, price and images                         |
+| 21                             | Admin/ Store Owner | Edit/update a service                              | Ammend service decriptions, price and images                         |
 | 22                             | Admin/ Store Owner | Delete a service                                            | Remove any services which are no longer being sold                            |
 | 23                             | Admin/ Store Owner | Edit/ update the status of an order                         | Update clients of their order progress                                        |
 
@@ -133,7 +133,7 @@ These Bundles consisted of services such as an E-commerce store Bundle, a Static
 
 The initial build of this website was setup to include the above and this can be demonstrated by the wireframes created and the models listed below under the 'Services App'. However, setting up the website bag, checkout and Stripe payments to house two separate Services models made for a complex build. Given the time constraints to launch the initial build of the web app, a decision was made to narrow the scope down into one Services model.
 
-The new Services model does not offer the user Bundles, however users are free to purchase as many services as they wish to make up their own package. The result of this was a more straightforward website build and it ensured it was completed within the time constraints. Furthermore, the design of the new Services model closely matches that on the initial 'Add-ons' page and thus a new wireframe was not created for this. 
+The result of this was a more straightforward website build and it ensured it was completed within the time constraints. Furthermore, the design of the new Services model closely matches that on the initial 'Add-ons' page and thus a new wireframe was not created for this. 
 
 ### Data Schema
 
@@ -172,7 +172,7 @@ The new Services model does not offer the user Bundles, however users are free t
 | Image       | image        | ForeignKey 'Image'    | null=True, blank=True, on_delete=models.SET_NULL |
 
 
-#### OLD Services App Models
+#### OLD Services App's 'Bundles' and 'Add-ons' Models
 
 
 **Bundle Model**
@@ -289,7 +289,7 @@ In this section I will map out all of the existing features, and features left t
 * Users will receive notifications upon sucessfully signing in and signing out
 * Logged in users will have access to a personal profile which displays their order history
 
-Due to time constraints, User Story ID 9 and 10 were not implemented and the 'progress' part of User ID 11; however, they have been moved to the upcoming Features To Be Added below.
+Due to time constraints, the 'progress' part of User ID 11 was not implemented.  However, this has been moved to the upcoming features to be implemented below.
 
 #### Sorting and Searching
 **[User Story ID's 12-13]**
@@ -297,7 +297,7 @@ Due to time constraints, User Story ID 9 and 10 were not implemented and the 'pr
 * Users are presented with a clear list of service types to choose from at the start so they can filter the results to match their needs or view all
 * Users can change between different filter options to see the available services for that specific filter
 
-User story 13 no longer applies as the website is not devided into Bundles and Addons. Instead Services is the only category which can be narrowed down by type.
+User story 12 no longer applies as the website is not devided into Bundles and Addons. Instead Services is the only category which can be narrowed down by type.
 
 #### Purchasing and Checkout
 **[User Story ID's 14-19]**
@@ -307,18 +307,17 @@ User story 13 no longer applies as the website is not devided into Bundles and A
 * When users have finished a purchase, they are presented with a clear overview of their order afterwards
 * The 'Secure Checkout' button ensures that users feel comfortable to provide payment information
 
-Due to time constraints, User Story ID 19 was not implemented. This has been included in the upcoming Features To Be Added below.
+Due to time constraints, User Story ID 19 was not implemented. This has been included in the upcoming features to be added below.
 
 #### Admin and Store Owner
 **[User Story ID's 20-23]**
 * The store owner or admin can easily edit, add or remove an existing service from the store by navigating to the 'Service Management' page in the 'My Account' drop down menu
 * Super Admins can edit the store via the Admin panel
 
-Due to time constraints, User Story ID 23 was not implemented. This has been included in the upcoming Features To Be Added below.
+Due to time constraints, User Story ID 23 was not implemented. This has been included in the upcoming features to be added below.
 
 ### Features Left To Be Implemented
 
-* Send users a personalised email after completing the registrationg process
 * Allow users to see the progress of their order
 * Provide Admins/ Store Owners with the funcitonality to edit/update the status of an order
 * Implement website Bundles/ Packages to group related services for the user
@@ -326,9 +325,9 @@ Due to time constraints, User Story ID 23 was not implemented. This has been inc
 
 **Styling Fixes**
 Below I have outlined the styling fixes which are still to be implemented in a future udpate:
-* The 'Description' box on the Services Management page for Admin users is appearing lesser in width than the other form input fields. A fix couldn't be found for this minor issue prior to the app launch and will be addressed in a future release
+* The 'Description' box on the Services Management page for Admin users is appearing lesser in width than the other form input fields. A fix couldn't be found for this issue prior to the app launch and will be addressed in a future release
 * Wrap text around blog post images
-* Implement JavaScript on the nav bar to update the text to bold when users change page location
+* Implement JavaScript on the nav bar to update the text to bold when users click to change page
 * Implement JavaScript on the services filter menu so it changes colour when users change between service types
 
 [Back to top](#webi)

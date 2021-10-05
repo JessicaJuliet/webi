@@ -9,8 +9,10 @@
     * [Website Accessibility](#website-accessibility)
     * [CSS Validation](#css-validation-check)
     * [Python Flake8 Linter](#python-flake8-linter)
+    * [JSHint](#jshint)
+    * [HTML](#html)
 
-
+---
 
 Extensive automated and manual tests were carried out across the entire website encompassing all user stories and features. The devices used to carry out the testing were as follows:
 
@@ -488,6 +490,16 @@ These Flake8 errors were rectified where possible and some where left unchanged 
 * There were a number of E501 errors reported in the Settings.py file. These were left unchanged as they related to comments with URLs or strings which if put on two lines would break the code
 * The migration files contained E501 errors. These errors were left unchanged as automatically generated files such as migration files may intentionally ignore style rules for efficiency reasons
 * Some false positive errors were ignored such as Class 'ClassName' has no 'objects' member, as this is simply a pylint error specific to django. However, it could be removed by installing  pylint-django
+
+### JSHint
+
+JavaScript used on the website was passed into [JSHint's JavaScript code quality tool](https://jshint.com/). No major errors. Several warnings occured notifying that 	'template literal syntax' is only available in ES6 (use 'esversion: 6').
+
+### HTML
+
+Automated testing was attempted for the HTML on the website; however, at this time the W3 Validator was throwing a 'ERR_CONNECTION_TIMED_OUT' error (image below). All HTML on the website was reviewed manually again to ensure that it was correctly formatted.
+
+![HTML error](readme-files/images/html-error.png)
 
 [Back to Top](#table-of-contents)
 
