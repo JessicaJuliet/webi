@@ -283,6 +283,8 @@ Extensive automated and manual tests were carried out across the entire website 
 **Issues and Fixes during testing of deployed website**
 * **Issue:** On the bag and checkout page, the buttons didn't align side-by-side and instead wrapped onto two lines
 * **Fix:** The font size and padding was reduced on the buttons so that they displayed side-by-side
+* **Issue:** On desktop on the bag page, users can decrement the quanity of items lower than 1
+* **Fix:** JavaScript needs to be implemented to fix this problem. Due to time constraints it has been left but will be addressed in a future update.
 
 > [USER STORY ID - 15] As a prospect, I want to be able to adjust the quanitity of individual items in my bag so that I can make changes to items in my basket before checking out
 
