@@ -10,7 +10,7 @@ WEBI is a multi-page e-commerce web application which not only offers services t
 
 **IMPORTANT: Please note, this project is for educational purposes only.**
 
-Visit WEBI at [https://webi-development.herokuapp.com](https://webi-development.herokuapp.com/)
+Visit WEBI at [webi-t0p6.onrender.com/](webi-t0p6.onrender.com/)
 
 ---
 
